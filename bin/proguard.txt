@@ -1,0 +1,13 @@
+# view res/layout/grafica_1.xml #generated:7
+# view res/layout/grafica_2.xml #generated:7
+-keep class com.androidplot.xy.XYPlot { <init>(...); }
+
+# view AndroidManifest.xml #generated:24
+-keep class net.thempra.overmind.Grafica_1 { <init>(...); }
+
+# view AndroidManifest.xml #generated:28
+-keep class net.thempra.overmind.Grafica_2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:15
+-keep class net.thempra.overmind.MainActivity { <init>(...); }
+

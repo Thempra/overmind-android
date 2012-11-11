@@ -1,0 +1,1517 @@
+android.support.v4.app.ActivityCompatHoneycomb -> android.support.v4.app.a:
+    void invalidateOptionsMenu(android.app.Activity) -> a
+android.support.v4.app.BackStackRecord -> android.support.v4.app.b:
+    android.support.v4.app.FragmentManagerImpl mManager -> a
+    android.support.v4.app.BackStackRecord$Op mHead -> b
+    android.support.v4.app.BackStackRecord$Op mTail -> c
+    int mNumOp -> d
+    int mEnterAnim -> e
+    int mExitAnim -> f
+    int mPopEnterAnim -> g
+    int mPopExitAnim -> h
+    int mTransition -> i
+    int mTransitionStyle -> j
+    boolean mAddToBackStack -> k
+    boolean mAllowAddToBackStack -> l
+    java.lang.String mName -> m
+    boolean mCommitted -> n
+    int mIndex -> o
+    int mBreadCrumbTitleRes -> p
+    java.lang.CharSequence mBreadCrumbTitleText -> q
+    int mBreadCrumbShortTitleRes -> r
+    java.lang.CharSequence mBreadCrumbShortTitleText -> s
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void addOp(android.support.v4.app.BackStackRecord$Op) -> a
+    void bumpBackStackNesting(int) -> a
+    void run() -> run
+    void popFromBackStack(boolean) -> a
+    java.lang.String getName() -> a
+android.support.v4.app.BackStackRecord$Op -> android.support.v4.app.c:
+    android.support.v4.app.BackStackRecord$Op next -> a
+    android.support.v4.app.BackStackRecord$Op prev -> b
+    int cmd -> c
+    android.support.v4.app.Fragment fragment -> d
+    int enterAnim -> e
+    int exitAnim -> f
+    int popEnterAnim -> g
+    int popExitAnim -> h
+    java.util.ArrayList removed -> i
+android.support.v4.app.BackStackState -> android.support.v4.app.BackStackState:
+    int[] mOps -> a
+    int mTransition -> b
+    int mTransitionStyle -> c
+    java.lang.String mName -> d
+    int mIndex -> e
+    int mBreadCrumbTitleRes -> f
+    java.lang.CharSequence mBreadCrumbTitleText -> g
+    int mBreadCrumbShortTitleRes -> h
+    java.lang.CharSequence mBreadCrumbShortTitleText -> i
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.BackStackRecord instantiate(android.support.v4.app.FragmentManagerImpl) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.BackStackState$1 -> android.support.v4.app.d:
+    android.support.v4.app.BackStackState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.BackStackState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
+    java.util.HashMap sClassMap -> N
+    int mState -> a
+    android.view.View mAnimatingAway -> b
+    int mStateAfterAnimating -> c
+    android.os.Bundle mSavedFragmentState -> d
+    android.util.SparseArray mSavedViewState -> e
+    int mIndex -> f
+    java.lang.String mWho -> g
+    android.os.Bundle mArguments -> h
+    android.support.v4.app.Fragment mTarget -> i
+    int mTargetIndex -> j
+    int mTargetRequestCode -> k
+    boolean mAdded -> l
+    boolean mRemoving -> m
+    boolean mResumed -> n
+    boolean mFromLayout -> o
+    boolean mInLayout -> p
+    boolean mRestored -> q
+    int mBackStackNesting -> r
+    android.support.v4.app.FragmentManagerImpl mFragmentManager -> s
+    android.support.v4.app.FragmentActivity mActivity -> t
+    int mFragmentId -> u
+    int mContainerId -> v
+    java.lang.String mTag -> w
+    boolean mHidden -> x
+    boolean mDetached -> y
+    boolean mRetainInstance -> z
+    boolean mRetaining -> A
+    boolean mHasMenu -> B
+    boolean mMenuVisible -> C
+    boolean mCalled -> D
+    int mNextAnim -> E
+    android.view.ViewGroup mContainer -> F
+    android.view.View mView -> G
+    android.view.View mInnerView -> H
+    boolean mDeferStart -> I
+    boolean mUserVisibleHint -> J
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> K
+    boolean mLoadersStarted -> L
+    boolean mCheckedForLoaderManager -> M
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
+    void restoreViewState() -> a
+    void setIndex(int) -> a
+    boolean isInBackStack() -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    android.support.v4.app.FragmentActivity getActivity() -> c
+    void onHiddenChanged(boolean) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> a
+    void onInflate(android.app.Activity,android.util.AttributeSet,android.os.Bundle) -> a
+    void onAttach(android.app.Activity) -> a
+    android.view.animation.Animation onCreateAnimation(int,boolean,int) -> a
+    void onCreate(android.os.Bundle) -> b
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+    void onViewCreated(android.view.View,android.os.Bundle) -> a
+    void onActivityCreated(android.os.Bundle) -> c
+    void onStart() -> d
+    void onResume() -> e
+    void onSaveInstanceState(android.os.Bundle) -> d
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onPause() -> f
+    void onStop() -> g
+    void onLowMemory() -> onLowMemory
+    void onDestroyView() -> h
+    void onDestroy() -> i
+    void initState() -> j
+    void onDetach() -> k
+    void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    void onPrepareOptionsMenu(android.view.Menu) -> a
+    void onDestroyOptionsMenu() -> l
+    boolean onOptionsItemSelected(android.view.MenuItem) -> a
+    void onOptionsMenuClosed(android.view.Menu) -> b
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected(android.view.MenuItem) -> b
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void performStart() -> m
+    void performStop() -> n
+    void performReallyStop() -> o
+    void performDestroyView() -> p
+android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.e:
+android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
+    android.os.Bundle mState -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.f:
+    android.support.v4.app.Fragment$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.Fragment$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentActivity -> android.support.v4.app.g:
+    android.os.Handler mHandler -> a
+    android.support.v4.app.FragmentManagerImpl mFragments -> b
+    boolean mCreated -> c
+    boolean mResumed -> d
+    boolean mStopped -> e
+    boolean mReallyStopped -> f
+    boolean mRetaining -> g
+    boolean mOptionsMenuInvalidated -> h
+    boolean mCheckedForLoaderManager -> i
+    boolean mLoadersStarted -> j
+    android.support.v4.app.HCSparseArray mAllLoaderManagers -> k
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> l
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onBackPressed() -> onBackPressed
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreatePanelMenu(int,android.view.Menu) -> onCreatePanelMenu
+    android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onLowMemory() -> onLowMemory
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    void onPanelClosed(int,android.view.Menu) -> onPanelClosed
+    void onPause() -> onPause
+    void onResume() -> onResume
+    void onPostResume() -> onPostResume
+    boolean onPreparePanel(int,android.view.View,android.view.Menu) -> onPreparePanel
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onStart() -> onStart
+    void onStop() -> onStop
+    java.lang.Object onRetainCustomNonConfigurationInstance() -> a
+    void supportInvalidateOptionsMenu() -> b
+    void doReallyStop(boolean) -> a
+    void onReallyStop() -> c
+    void onAttachFragment(android.support.v4.app.Fragment) -> a
+    void startActivityForResult(android.content.Intent,int) -> startActivityForResult
+    void invalidateSupportFragmentIndex(int) -> a
+    android.support.v4.app.LoaderManagerImpl getLoaderManager(int,boolean,boolean) -> a
+android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.h:
+    int[] Fragment -> a
+android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.i:
+    java.lang.Object activity -> a
+    java.lang.Object custom -> b
+    java.util.HashMap children -> c
+    java.util.ArrayList fragments -> d
+    android.support.v4.app.HCSparseArray loaders -> e
+android.support.v4.app.FragmentManager -> android.support.v4.app.j:
+android.support.v4.app.FragmentManager$OnBackStackChangedListener -> android.support.v4.app.k:
+    void onBackStackChanged() -> a
+android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.l:
+    boolean DEBUG -> a
+    boolean HONEYCOMB -> b
+    java.util.ArrayList mPendingActions -> c
+    java.lang.Runnable[] mTmpActions -> d
+    boolean mExecutingActions -> e
+    java.util.ArrayList mActive -> f
+    java.util.ArrayList mAdded -> g
+    java.util.ArrayList mAvailIndices -> h
+    java.util.ArrayList mBackStack -> i
+    java.util.ArrayList mCreatedMenus -> j
+    java.util.ArrayList mBackStackIndices -> k
+    java.util.ArrayList mAvailBackStackIndices -> l
+    java.util.ArrayList mBackStackChangeListeners -> m
+    int mCurState -> n
+    android.support.v4.app.FragmentActivity mActivity -> o
+    boolean mNeedMenuInvalidate -> p
+    boolean mStateSaved -> q
+    boolean mDestroyed -> r
+    java.lang.String mNoTransactionsBecause -> s
+    boolean mHavePendingDeferredStart -> t
+    android.os.Bundle mStateBundle -> u
+    android.util.SparseArray mStateArray -> v
+    java.lang.Runnable mExecCommit -> w
+    android.view.animation.Interpolator DECELERATE_QUINT -> x
+    android.view.animation.Interpolator DECELERATE_CUBIC -> y
+    android.view.animation.Interpolator ACCELERATE_QUINT -> z
+    android.view.animation.Interpolator ACCELERATE_CUBIC -> A
+    boolean executePendingTransactions() -> a
+    boolean popBackStackImmediate() -> b
+    void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    android.view.animation.Animation makeOpenCloseAnimation(android.content.Context,float,float,float,float) -> a
+    android.view.animation.Animation makeFadeAnimation(android.content.Context,float,float) -> a
+    android.view.animation.Animation loadAnimation(android.support.v4.app.Fragment,int,boolean,int) -> a
+    void performPendingDeferredStart(android.support.v4.app.Fragment) -> a
+    void moveToState(android.support.v4.app.Fragment,int,int,int) -> a
+    void moveToState(android.support.v4.app.Fragment) -> b
+    void moveToState(int,boolean) -> a
+    void moveToState(int,int,int,boolean) -> a
+    void startPendingDeferredFragments() -> c
+    void makeActive(android.support.v4.app.Fragment) -> c
+    void makeInactive(android.support.v4.app.Fragment) -> d
+    void addFragment(android.support.v4.app.Fragment,boolean) -> a
+    void removeFragment(android.support.v4.app.Fragment,int,int) -> a
+    void hideFragment(android.support.v4.app.Fragment,int,int) -> b
+    void showFragment(android.support.v4.app.Fragment,int,int) -> c
+    void detachFragment(android.support.v4.app.Fragment,int,int) -> d
+    void attachFragment(android.support.v4.app.Fragment,int,int) -> e
+    android.support.v4.app.Fragment findFragmentById(int) -> a
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+    void checkStateLoss() -> r
+    void setBackStackIndex(int,android.support.v4.app.BackStackRecord) -> a
+    void freeBackStackIndex(int) -> b
+    boolean execPendingActions() -> d
+    void reportBackStackChanged() -> e
+    void addBackStackState(android.support.v4.app.BackStackRecord) -> a
+    boolean popBackStackState(android.os.Handler,java.lang.String,int,int) -> a
+    java.util.ArrayList retainNonConfig() -> f
+    void saveFragmentViewState(android.support.v4.app.Fragment) -> e
+    android.os.Bundle saveFragmentBasicState(android.support.v4.app.Fragment) -> f
+    android.os.Parcelable saveAllState() -> g
+    void restoreAllState(android.os.Parcelable,java.util.ArrayList) -> a
+    void attachActivity(android.support.v4.app.FragmentActivity) -> a
+    void noteStateNotSaved() -> h
+    void dispatchCreate() -> i
+    void dispatchActivityCreated() -> j
+    void dispatchStart() -> k
+    void dispatchResume() -> l
+    void dispatchPause() -> m
+    void dispatchStop() -> n
+    void dispatchReallyStop() -> o
+    void dispatchDestroy() -> p
+    void dispatchConfigurationChanged(android.content.res.Configuration) -> a
+    void dispatchLowMemory() -> q
+    boolean dispatchCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    boolean dispatchPrepareOptionsMenu(android.view.Menu) -> a
+    boolean dispatchOptionsItemSelected(android.view.MenuItem) -> a
+    boolean dispatchContextItemSelected(android.view.MenuItem) -> b
+    void dispatchOptionsMenuClosed(android.view.Menu) -> b
+    int reverseTransit(int) -> c
+    int transitToStyleIndex(int,boolean) -> b
+android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.m:
+    android.support.v4.app.Fragment val$fragment -> a
+    android.support.v4.app.FragmentManagerImpl this$0 -> b
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+android.support.v4.app.FragmentManagerState -> android.support.v4.app.FragmentManagerState:
+    android.support.v4.app.FragmentState[] mActive -> a
+    int[] mAdded -> b
+    android.support.v4.app.BackStackState[] mBackStack -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.n:
+    android.support.v4.app.FragmentManagerState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentManagerState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
+    java.lang.String mClassName -> a
+    int mIndex -> b
+    boolean mFromLayout -> c
+    int mFragmentId -> d
+    int mContainerId -> e
+    java.lang.String mTag -> f
+    boolean mRetainInstance -> g
+    boolean mDetached -> h
+    android.os.Bundle mArguments -> i
+    android.os.Bundle mSavedFragmentState -> j
+    android.support.v4.app.Fragment mInstance -> k
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.Fragment instantiate(android.support.v4.app.FragmentActivity) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentState$1 -> android.support.v4.app.o:
+    android.support.v4.app.FragmentState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTransaction -> android.support.v4.app.p:
+android.support.v4.app.HCSparseArray -> android.support.v4.app.q:
+    java.lang.Object DELETED -> a
+    boolean mGarbage -> b
+    int[] mKeys -> c
+    java.lang.Object[] mValues -> d
+    int mSize -> e
+    java.lang.Object get(int) -> a
+    java.lang.Object get(int,java.lang.Object) -> a
+    void delete(int) -> b
+    void remove(int) -> c
+    void removeAt(int) -> d
+    void gc() -> c
+    void put(int,java.lang.Object) -> b
+    int size() -> a
+    int keyAt(int) -> e
+    java.lang.Object valueAt(int) -> f
+    void clear() -> b
+    int binarySearch(int[],int,int,int) -> a
+    int idealByteArraySize(int) -> g
+    int idealIntArraySize(int) -> h
+android.support.v4.app.LoaderManager -> android.support.v4.app.r:
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.s:
+    android.support.v4.content.Loader onCreateLoader(int,android.os.Bundle) -> a
+    void onLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    void onLoaderReset(android.support.v4.content.Loader) -> a
+android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.t:
+    boolean DEBUG -> a
+    android.support.v4.app.HCSparseArray mLoaders -> b
+    android.support.v4.app.HCSparseArray mInactiveLoaders -> c
+    android.support.v4.app.FragmentActivity mActivity -> d
+    boolean mStarted -> e
+    boolean mRetaining -> f
+    void updateActivity(android.support.v4.app.FragmentActivity) -> a
+    void doStart() -> b
+    void doStop() -> c
+    void doRetain() -> d
+    void finishRetain() -> e
+    void doReportNextStart() -> f
+    void doReportStart() -> g
+    void doDestroy() -> h
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.u:
+    int mId -> a
+    android.os.Bundle mArgs -> b
+    android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> c
+    android.support.v4.content.Loader mLoader -> d
+    boolean mHaveData -> e
+    boolean mDeliveredData -> f
+    java.lang.Object mData -> g
+    boolean mStarted -> h
+    boolean mRetaining -> i
+    boolean mRetainingStarted -> j
+    boolean mReportNextStart -> k
+    boolean mDestroyed -> l
+    boolean mListenerRegistered -> m
+    android.support.v4.app.LoaderManagerImpl$LoaderInfo mPendingLoader -> n
+    android.support.v4.app.LoaderManagerImpl this$0 -> o
+    void start() -> a
+    void retain() -> b
+    void finishRetain() -> c
+    void reportStart() -> d
+    void stop() -> e
+    void destroy() -> f
+    void callOnLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.v:
+    android.view.ViewGroup wrap(android.view.View) -> a
+    void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
+    void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
+android.support.v4.app.SuperNotCalledException -> android.support.v4.app.w:
+android.support.v4.content.Loader -> android.support.v4.a.a:
+    int mId -> a
+    android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
+    boolean mStarted -> c
+    boolean mAbandoned -> d
+    boolean mReset -> e
+    boolean mContentChanged -> f
+    void registerListener(int,android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void unregisterListener(android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void startLoading() -> a
+    void onStartLoading() -> b
+    void stopLoading() -> c
+    void onStopLoading() -> d
+    void reset() -> e
+    void onReset() -> f
+    java.lang.String dataToString(java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.a.b:
+android.support.v4.os.ParcelableCompat -> android.support.v4.b.a:
+    android.os.Parcelable$Creator newCreator(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.os.ParcelableCompat$CompatCreator -> android.support.v4.b.b:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorCallbacks -> android.support.v4.b.c:
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+    java.lang.Object[] newArray(int) -> a
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> android.support.v4.b.d:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub -> android.support.v4.b.e:
+    android.os.Parcelable$Creator instantiate(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.util.DebugUtils -> android.support.v4.c.a:
+    void buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> a
+android.support.v4.util.LogWriter -> android.support.v4.c.b:
+    java.lang.String mTag -> a
+    java.lang.StringBuilder mBuilder -> b
+    void close() -> close
+    void flush() -> flush
+    void write(char[],int,int) -> write
+    void flushBuilder() -> a
+android.support.v4.view.KeyEventCompat -> android.support.v4.view.a:
+    android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
+    boolean hasModifiers(android.view.KeyEvent,int) -> a
+    boolean hasNoModifiers(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.b:
+    int metaStateFilterDirectionalModifiers(int,int,int,int,int) -> a
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.c:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.d:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompatHoneycomb -> android.support.v4.view.e:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> a
+android.support.v4.view.MotionEventCompat -> android.support.v4.view.f:
+    android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
+    int getActionIndex(android.view.MotionEvent) -> a
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.g:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.h:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.i:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompatEclair -> android.support.v4.view.j:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.PagerAdapter -> android.support.v4.view.k:
+    android.database.DataSetObservable mObservable -> a
+    int getCount() -> a
+    void startUpdate(android.view.ViewGroup) -> a
+    java.lang.Object instantiateItem(android.view.ViewGroup,int) -> a
+    void destroyItem(android.view.ViewGroup,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.ViewGroup,int,java.lang.Object) -> b
+    void finishUpdate(android.view.ViewGroup) -> b
+    void startUpdate(android.view.View) -> a
+    java.lang.Object instantiateItem(android.view.View,int) -> a
+    void destroyItem(android.view.View,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.View,int,java.lang.Object) -> b
+    void finishUpdate(android.view.View) -> b
+    boolean isViewFromObject(android.view.View,java.lang.Object) -> a
+    android.os.Parcelable saveState() -> b
+    void restoreState(android.os.Parcelable,java.lang.ClassLoader) -> a
+    int getItemPosition(java.lang.Object) -> a
+    void registerDataSetObserver(android.database.DataSetObserver) -> a
+    void unregisterDataSetObserver(android.database.DataSetObserver) -> b
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.l:
+    android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.m:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.n:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.o:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompatHoneycomb -> android.support.v4.view.p:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.ViewCompat -> android.support.v4.view.q:
+    android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.r:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.s:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.t:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.u:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompatGingerbread -> android.support.v4.view.v:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompatICS -> android.support.v4.view.w:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
+    int[] LAYOUT_ATTRS -> a
+    java.util.Comparator COMPARATOR -> b
+    android.view.animation.Interpolator sInterpolator -> c
+    java.util.ArrayList mItems -> d
+    android.support.v4.view.PagerAdapter mAdapter -> e
+    int mCurItem -> f
+    int mRestoredCurItem -> g
+    android.os.Parcelable mRestoredAdapterState -> h
+    java.lang.ClassLoader mRestoredClassLoader -> i
+    android.widget.Scroller mScroller -> j
+    android.support.v4.view.ViewPager$PagerObserver mObserver -> k
+    int mPageMargin -> l
+    android.graphics.drawable.Drawable mMarginDrawable -> m
+    int mTopPageBounds -> n
+    int mBottomPageBounds -> o
+    int mChildWidthMeasureSpec -> p
+    int mChildHeightMeasureSpec -> q
+    boolean mInLayout -> r
+    boolean mScrollingCacheEnabled -> s
+    boolean mPopulatePending -> t
+    boolean mScrolling -> u
+    int mOffscreenPageLimit -> v
+    boolean mIsBeingDragged -> w
+    boolean mIsUnableToDrag -> x
+    int mTouchSlop -> y
+    float mInitialMotionX -> z
+    float mLastMotionX -> A
+    float mLastMotionY -> B
+    int mActivePointerId -> C
+    android.view.VelocityTracker mVelocityTracker -> D
+    int mMinimumVelocity -> E
+    int mMaximumVelocity -> F
+    int mFlingDistance -> G
+    boolean mFakeDragging -> H
+    android.support.v4.widget.EdgeEffectCompat mLeftEdge -> I
+    android.support.v4.widget.EdgeEffectCompat mRightEdge -> J
+    boolean mFirstLayout -> K
+    boolean mCalledSuper -> L
+    int mDecorChildCount -> M
+    android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> N
+    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> O
+    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> P
+    int mScrollState -> Q
+    void setScrollState(int) -> setScrollState
+    void setAdapter(android.support.v4.view.PagerAdapter) -> setAdapter
+    void removeNonDecorViews() -> f
+    android.support.v4.view.PagerAdapter getAdapter() -> getAdapter
+    void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener) -> setOnAdapterChangeListener
+    void setCurrentItem(int) -> setCurrentItem
+    void setCurrentItem(int,boolean) -> a
+    int getCurrentItem() -> getCurrentItem
+    void setCurrentItemInternal(int,boolean,boolean) -> a
+    void setCurrentItemInternal(int,boolean,boolean,int) -> a
+    void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> setOnPageChangeListener
+    int getOffscreenPageLimit() -> getOffscreenPageLimit
+    void setOffscreenPageLimit(int) -> setOffscreenPageLimit
+    void setPageMargin(int) -> setPageMargin
+    int getPageMargin() -> getPageMargin
+    void setPageMarginDrawable(android.graphics.drawable.Drawable) -> setPageMarginDrawable
+    void setPageMarginDrawable(int) -> setPageMarginDrawable
+    boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
+    void drawableStateChanged() -> drawableStateChanged
+    float distanceInfluenceForSnapDuration(float) -> a
+    void smoothScrollTo(int,int,int) -> a
+    void addNewItem(int,int) -> a
+    void dataSetChanged() -> a
+    void populate() -> b
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
+    android.support.v4.view.ViewPager$ItemInfo infoForChild(android.view.View) -> a
+    android.support.v4.view.ViewPager$ItemInfo infoForAnyChild(android.view.View) -> b
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void recomputeScrollPosition(int,int,int,int) -> a
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void computeScroll() -> computeScroll
+    void pageScrolled(int) -> b
+    void onPageScrolled(int,float,int) -> a
+    void completeScroll() -> g
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    int determineTargetPage(int,float,int,int) -> a
+    void draw(android.graphics.Canvas) -> draw
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onSecondaryPointerUp(android.view.MotionEvent) -> a
+    void endDrag() -> h
+    void setScrollingCacheEnabled(boolean) -> setScrollingCacheEnabled
+    boolean canScroll(android.view.View,boolean,int,int,int) -> a
+    boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
+    boolean executeKeyEvent(android.view.KeyEvent) -> a
+    boolean arrowScroll(int) -> a
+    boolean pageLeft() -> c
+    boolean pageRight() -> d
+    void addFocusables(java.util.ArrayList,int,int) -> addFocusables
+    void addTouchables(java.util.ArrayList) -> addTouchables
+    boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
+    boolean dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    int[] access$100() -> e
+android.support.v4.view.ViewPager$1 -> android.support.v4.view.x:
+    int compare(android.support.v4.view.ViewPager$ItemInfo,android.support.v4.view.ViewPager$ItemInfo) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.view.ViewPager$2 -> android.support.v4.view.y:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.view.ViewPager$Decor -> android.support.v4.view.z:
+android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.aa:
+    java.lang.Object object -> a
+    int position -> b
+    boolean scrolling -> c
+android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ab:
+    boolean isDecor -> a
+    int gravity -> b
+android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.ac:
+    void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
+android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.ad:
+    void onPageScrolled(int,float,int) -> a
+    void onPageSelected(int) -> a
+    void onPageScrollStateChanged(int) -> b
+android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.ae:
+    android.support.v4.view.ViewPager this$0 -> a
+    void onChanged() -> onChanged
+    void onInvalidated() -> onInvalidated
+android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPager$SavedState:
+    int position -> a
+    android.os.Parcelable adapterState -> b
+    java.lang.ClassLoader loader -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.af:
+    android.support.v4.view.ViewPager$SavedState createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> b
+    android.support.v4.view.ViewPager$SavedState[] newArray(int) -> b
+    java.lang.Object[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+android.support.v4.widget.EdgeEffectCompat -> android.support.v4.d.a:
+    java.lang.Object mEdgeEffect -> a
+    android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> b
+    void setSize(int,int) -> a
+    boolean isFinished() -> a
+    void finish() -> b
+    boolean onPull(float) -> a
+    boolean onRelease() -> c
+    boolean draw(android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.d.b:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.d.c:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.d.d:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompatIcs -> android.support.v4.d.e:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+com.androidplot.LineRegion -> com.androidplot.a:
+    java.lang.Number a -> a
+    java.lang.Number b -> b
+    boolean contains(java.lang.Number) -> a
+    boolean intersects(java.lang.Number,java.lang.Number) -> a
+    java.lang.Number getMinVal() -> a
+    void setMinVal(java.lang.Number) -> b
+    java.lang.Number getMaxVal() -> b
+    void setMaxVal(java.lang.Number) -> c
+com.androidplot.Plot -> com.androidplot.b:
+    java.lang.String a -> a
+    com.androidplot.ui.BoxModel b -> b
+    com.androidplot.Plot$BorderStyle c -> c
+    float d -> d
+    float e -> e
+    boolean f -> f
+    android.graphics.Paint g -> g
+    android.graphics.Paint h -> h
+    com.androidplot.ui.LayoutManager i -> i
+    com.androidplot.ui.widget.TitleWidget j -> j
+    java.util.LinkedList k -> k
+    java.util.LinkedHashMap l -> l
+    java.util.ArrayList m -> m
+    void b() -> e
+    void a(android.util.AttributeSet) -> a
+    void a(com.androidplot.PlotEvent) -> a
+    com.androidplot.ui.DataRenderer a(java.lang.Class) -> a
+    boolean addSeries(com.androidplot.series.Series,java.lang.Class,java.lang.Object) -> a
+    boolean isEmpty() -> a
+    java.lang.Object getFormatter(com.androidplot.series.Series,java.lang.Class) -> a
+    com.androidplot.ui.SeriesAndFormatterList getSeriesAndFormatterListForRenderer(java.lang.Class) -> b
+    java.util.Set getSeriesSet() -> getSeriesSet
+    java.util.List getSeriesListForRenderer(java.lang.Class) -> c
+    com.androidplot.ui.DataRenderer getRenderer(java.lang.Class) -> d
+    java.util.List getRendererList() -> getRendererList
+    void disableAllMarkup() -> b
+    void a() -> c
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void setBorderStyle(com.androidplot.Plot$BorderStyle,java.lang.Float,java.lang.Float) -> a
+    java.lang.String getTitle() -> getTitle
+    void setTitle(java.lang.String) -> setTitle
+    com.androidplot.ui.LayoutManager getLayoutManager() -> getLayoutManager
+    void setLayoutManager(com.androidplot.ui.LayoutManager) -> setLayoutManager
+    boolean isDrawBorderEnabled() -> d
+    void setDrawBorderEnabled(boolean) -> setDrawBorderEnabled
+    com.androidplot.ui.widget.TitleWidget getTitleWidget() -> getTitleWidget
+    void setTitleWidget(com.androidplot.ui.widget.TitleWidget) -> setTitleWidget
+    android.graphics.Paint getBackgroundPaint() -> getBackgroundPaint
+    void setBackgroundPaint(android.graphics.Paint) -> setBackgroundPaint
+    float getPlotMarginTop() -> getPlotMarginTop
+    void setPlotMarginTop(float) -> setPlotMarginTop
+    float getPlotMarginBottom() -> getPlotMarginBottom
+    void setPlotMarginBottom(float) -> setPlotMarginBottom
+    float getPlotMarginLeft() -> getPlotMarginLeft
+    void setPlotMarginLeft(float) -> setPlotMarginLeft
+    float getPlotMarginRight() -> getPlotMarginRight
+    void setPlotMarginRight(float) -> setPlotMarginRight
+    float getPlotPaddingTop() -> getPlotPaddingTop
+    void setPlotPaddingTop(float) -> setPlotPaddingTop
+    float getPlotPaddingBottom() -> getPlotPaddingBottom
+    void setPlotPaddingBottom(float) -> setPlotPaddingBottom
+    float getPlotPaddingLeft() -> getPlotPaddingLeft
+    void setPlotPaddingLeft(float) -> setPlotPaddingLeft
+    float getPlotPaddingRight() -> getPlotPaddingRight
+    void setPlotPaddingRight(float) -> setPlotPaddingRight
+    android.graphics.Paint getBorderPaint() -> getBorderPaint
+    void setBorderPaint(android.graphics.Paint) -> setBorderPaint
+com.androidplot.Plot$BorderStyle -> com.androidplot.c:
+    com.androidplot.Plot$BorderStyle ROUNDED -> a
+    com.androidplot.Plot$BorderStyle SQUARE -> b
+    com.androidplot.Plot$BorderStyle NONE -> c
+    com.androidplot.Plot$BorderStyle[] a -> d
+    com.androidplot.Plot$BorderStyle[] values() -> values
+    com.androidplot.Plot$BorderStyle valueOf(java.lang.String) -> valueOf
+com.androidplot.Plot$a -> com.androidplot.d:
+    int[] a -> a
+com.androidplot.PlotEvent -> com.androidplot.e:
+    com.androidplot.Plot a -> a
+com.androidplot.PlotEvent$Type -> com.androidplot.f:
+    com.androidplot.PlotEvent$Type PLOT_REDRAWN -> a
+    com.androidplot.PlotEvent$Type[] a -> b
+    com.androidplot.PlotEvent$Type[] values() -> values
+    com.androidplot.PlotEvent$Type valueOf(java.lang.String) -> valueOf
+com.androidplot.PlotListener -> com.androidplot.g:
+    void onPlotUpdate(com.androidplot.PlotEvent) -> a
+com.androidplot.exception.PlotRenderException -> com.androidplot.a.a:
+com.androidplot.series.Series -> com.androidplot.b.a:
+    java.lang.String getTitle() -> a
+    int size() -> b
+com.androidplot.series.XYSeries -> com.androidplot.b.b:
+    java.lang.Number getX(int) -> a
+    java.lang.Number getY(int) -> b
+com.androidplot.ui.AnchorPosition -> com.androidplot.c.a:
+    com.androidplot.ui.AnchorPosition TOP_MIDDLE -> a
+    com.androidplot.ui.AnchorPosition LEFT_TOP -> b
+    com.androidplot.ui.AnchorPosition LEFT_MIDDLE -> c
+    com.androidplot.ui.AnchorPosition LEFT_BOTTOM -> d
+    com.androidplot.ui.AnchorPosition RIGHT_TOP -> e
+    com.androidplot.ui.AnchorPosition RIGHT_MIDDLE -> f
+    com.androidplot.ui.AnchorPosition RIGHT_BOTTOM -> g
+    com.androidplot.ui.AnchorPosition BOTTOM_MIDDLE -> h
+    com.androidplot.ui.AnchorPosition CENTER -> i
+    com.androidplot.ui.AnchorPosition[] a -> j
+    com.androidplot.ui.AnchorPosition[] values() -> values
+    com.androidplot.ui.AnchorPosition valueOf(java.lang.String) -> valueOf
+com.androidplot.ui.BoxModel -> com.androidplot.c.b:
+    float a -> a
+    float b -> b
+    float c -> c
+    float d -> d
+    float e -> e
+    float f -> f
+    float g -> g
+    float h -> h
+    android.graphics.RectF getMarginatedRect(android.graphics.RectF) -> a
+    android.graphics.RectF getPaddedRect(android.graphics.RectF) -> b
+    float getMarginLeft() -> a
+    void setMarginLeft(float) -> a
+    float getMarginTop() -> b
+    void setMarginTop(float) -> b
+    float getMarginRight() -> c
+    void setMarginRight(float) -> c
+    float getMarginBottom() -> d
+    void setMarginBottom(float) -> d
+    float getPaddingLeft() -> e
+    void setPaddingLeft(float) -> e
+    float getPaddingTop() -> f
+    void setPaddingTop(float) -> f
+    float getPaddingRight() -> g
+    void setPaddingRight(float) -> g
+    float getPaddingBottom() -> h
+    void setPaddingBottom(float) -> h
+com.androidplot.ui.DataRenderer -> com.androidplot.c.c:
+    com.androidplot.Plot a -> a
+    com.androidplot.Plot getPlot() -> a
+    com.androidplot.ui.SeriesAndFormatterList getSeriesAndFormatterList() -> b
+    com.androidplot.ui.Formatter getFormatter(com.androidplot.series.Series) -> a
+    void render(android.graphics.Canvas,android.graphics.RectF) -> a
+    void onRender(android.graphics.Canvas,android.graphics.RectF) -> b
+    void doDrawLegendIcon(android.graphics.Canvas,android.graphics.RectF,com.androidplot.ui.Formatter) -> a
+    void drawSeriesLegendIcon(android.graphics.Canvas,android.graphics.RectF,com.androidplot.ui.Formatter) -> b
+    void drawRegionLegendIcon(android.graphics.Canvas,android.graphics.RectF,com.androidplot.xy.XYRegionFormatter) -> a
+com.androidplot.ui.DynamicTableModel -> com.androidplot.c.d:
+    int a -> a
+    int b -> b
+    com.androidplot.ui.DynamicTableModel$a getIterator(android.graphics.RectF,int) -> a
+    android.graphics.RectF getCellRect(android.graphics.RectF,int) -> b
+    float a(android.graphics.RectF,com.androidplot.ui.TableModel$Axis,int) -> a
+    int getNumRows() -> a
+    int getNumColumns() -> b
+    java.util.Iterator getIterator(android.graphics.RectF,int) -> c
+com.androidplot.ui.DynamicTableModel$a -> com.androidplot.c.e:
+    boolean a -> a
+    int b -> b
+    int c -> c
+    int d -> d
+    com.androidplot.ui.DynamicTableModel e -> e
+    android.graphics.RectF f -> f
+    android.graphics.RectF g -> g
+    com.androidplot.ui.TableOrder h -> h
+    int i -> i
+    int j -> j
+    int k -> k
+    boolean hasNext() -> hasNext
+    void remove() -> remove
+    java.lang.Object next() -> next
+com.androidplot.ui.DynamicTableModel$b -> com.androidplot.c.f:
+    int[] a -> a
+    int[] b -> b
+com.androidplot.ui.Formatter -> com.androidplot.c.g:
+com.androidplot.ui.LayoutManager -> com.androidplot.c.h:
+    boolean a -> a
+    android.graphics.Paint b -> b
+    boolean c -> c
+    android.graphics.Paint d -> d
+    boolean e -> e
+    android.graphics.Paint f -> f
+    boolean g -> g
+    android.graphics.Paint h -> h
+    boolean i -> i
+    android.graphics.Paint j -> j
+    void disableAllMarkup() -> a
+    android.graphics.PointF getAnchorCoordinates(android.graphics.RectF,com.androidplot.ui.AnchorPosition) -> a
+    android.graphics.PointF getAnchorCoordinates(float,float,float,float,com.androidplot.ui.AnchorPosition) -> a
+    android.graphics.PointF getAnchorOffset(float,float,com.androidplot.ui.AnchorPosition) -> a
+    android.graphics.PointF getElementCoordinates(float,float,android.graphics.RectF,com.androidplot.ui.PositionMetrics) -> a
+    void draw(android.graphics.Canvas,android.graphics.RectF,android.graphics.RectF,android.graphics.RectF) -> a
+    void a(android.graphics.Canvas,android.graphics.RectF,android.graphics.RectF,android.graphics.Paint) -> a
+    void position(com.androidplot.ui.widget.Widget,float,com.androidplot.xy.XLayoutStyle,float,com.androidplot.xy.YLayoutStyle,com.androidplot.ui.AnchorPosition) -> a
+    void setDrawOutlinesEnabled(boolean) -> a
+    void setDrawAnchorsEnabled(boolean) -> b
+    boolean isDrawMarginsEnabled() -> b
+    void setDrawMarginsEnabled(boolean) -> c
+    android.graphics.Paint getMarginPaint() -> c
+    boolean isDrawPaddingEnabled() -> d
+    void setDrawPaddingEnabled(boolean) -> d
+    android.graphics.Paint getPaddingPaint() -> e
+    void setDrawOutlineShadowsEnabled(boolean) -> e
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.androidplot.ui.LayoutManager$a -> com.androidplot.c.i:
+    int[] a -> a
+com.androidplot.ui.PositionMetric -> com.androidplot.c.j:
+    void a(float,com.androidplot.ui.PositionMetric$LayoutMode) -> a
+    float a(float,com.androidplot.ui.PositionMetric$Origin) -> a
+    float b(float,com.androidplot.ui.PositionMetric$Origin) -> b
+    java.lang.Enum getLayoutType() -> a
+    float getValue() -> b
+    void set(float,java.lang.Enum) -> a
+com.androidplot.ui.PositionMetric$LayoutMode -> com.androidplot.c.k:
+    com.androidplot.ui.PositionMetric$LayoutMode ABSOLUTE -> a
+    com.androidplot.ui.PositionMetric$LayoutMode RELATIVE -> b
+    com.androidplot.ui.PositionMetric$LayoutMode[] a -> c
+    com.androidplot.ui.PositionMetric$LayoutMode[] values() -> values
+    com.androidplot.ui.PositionMetric$LayoutMode valueOf(java.lang.String) -> valueOf
+com.androidplot.ui.PositionMetric$Origin -> com.androidplot.c.l:
+    com.androidplot.ui.PositionMetric$Origin FROM_BEGINING -> a
+    com.androidplot.ui.PositionMetric$Origin FROM_CENTER -> b
+    com.androidplot.ui.PositionMetric$Origin FROM_END -> c
+    com.androidplot.ui.PositionMetric$Origin[] a -> d
+    com.androidplot.ui.PositionMetric$Origin[] values() -> values
+    com.androidplot.ui.PositionMetric$Origin valueOf(java.lang.String) -> valueOf
+com.androidplot.ui.PositionMetric$a -> com.androidplot.c.m:
+    int[] a -> a
+    int[] b -> b
+com.androidplot.ui.PositionMetrics -> com.androidplot.c.n:
+    com.androidplot.xy.XPositionMetric a -> a
+    com.androidplot.xy.YPositionMetric b -> b
+    com.androidplot.ui.AnchorPosition c -> c
+    com.androidplot.xy.XPositionMetric getxPositionMetric() -> a
+    void setxPositionMetric(com.androidplot.xy.XPositionMetric) -> a
+    com.androidplot.xy.YPositionMetric getyPositionMetric() -> b
+    void setyPositionMetric(com.androidplot.xy.YPositionMetric) -> a
+    com.androidplot.ui.AnchorPosition getAnchor() -> c
+    void setAnchor(com.androidplot.ui.AnchorPosition) -> a
+    int compareTo(com.androidplot.ui.PositionMetrics) -> a
+    int compareTo(java.lang.Object) -> compareTo
+com.androidplot.ui.SeriesAndFormatterList -> com.androidplot.c.o:
+    java.util.LinkedList a -> a
+    java.util.LinkedList b -> b
+    boolean contains(com.androidplot.series.Series) -> a
+    int size() -> a
+    java.util.List getSeriesList() -> b
+    java.util.List getFormatterList() -> c
+    boolean add(com.androidplot.series.Series,java.lang.Object) -> a
+    java.lang.Object getFormatter(com.androidplot.series.Series) -> b
+    java.lang.Object getFormatter(int) -> a
+    com.androidplot.series.Series getSeries(int) -> b
+com.androidplot.ui.SizeLayoutType -> com.androidplot.c.p:
+    com.androidplot.ui.SizeLayoutType ABSOLUTE -> a
+    com.androidplot.ui.SizeLayoutType RELATIVE -> b
+    com.androidplot.ui.SizeLayoutType FILL -> c
+    com.androidplot.ui.SizeLayoutType[] a -> d
+    com.androidplot.ui.SizeLayoutType[] values() -> values
+    com.androidplot.ui.SizeLayoutType valueOf(java.lang.String) -> valueOf
+com.androidplot.ui.SizeMetric -> com.androidplot.c.q:
+    float getPixelValue(float) -> a
+    float getValue() -> b
+    void a(float,java.lang.Enum) -> b
+com.androidplot.ui.SizeMetric$a -> com.androidplot.c.r:
+    int[] a -> a
+com.androidplot.ui.SizeMetrics -> com.androidplot.c.s:
+    com.androidplot.ui.SizeMetric a -> a
+    com.androidplot.ui.SizeMetric b -> b
+    com.androidplot.ui.SizeMetric getHeightMetric() -> a
+    com.androidplot.ui.SizeMetric getWidthMetric() -> b
+    android.graphics.RectF getRectF(android.graphics.RectF) -> a
+com.androidplot.ui.TableModel -> com.androidplot.c.t:
+    com.androidplot.ui.TableOrder a -> a
+    java.util.Iterator getIterator(android.graphics.RectF,int) -> c
+    com.androidplot.ui.TableOrder getOrder() -> c
+    void setOrder(com.androidplot.ui.TableOrder) -> a
+com.androidplot.ui.TableModel$Axis -> com.androidplot.c.u:
+    com.androidplot.ui.TableModel$Axis ROW -> a
+    com.androidplot.ui.TableModel$Axis COLUMN -> b
+    com.androidplot.ui.TableModel$Axis[] a -> c
+    com.androidplot.ui.TableModel$Axis[] values() -> values
+    com.androidplot.ui.TableModel$Axis valueOf(java.lang.String) -> valueOf
+com.androidplot.ui.TableOrder -> com.androidplot.c.v:
+    com.androidplot.ui.TableOrder ROW_MAJOR -> a
+    com.androidplot.ui.TableOrder COLUMN_MAJOR -> b
+    com.androidplot.ui.TableOrder[] a -> c
+    com.androidplot.ui.TableOrder[] values() -> values
+    com.androidplot.ui.TableOrder valueOf(java.lang.String) -> valueOf
+com.androidplot.ui.TextOrientationType -> com.androidplot.c.w:
+    com.androidplot.ui.TextOrientationType HORIZONTAL -> a
+    com.androidplot.ui.TextOrientationType VERTICAL_ASCENDING -> b
+    com.androidplot.ui.TextOrientationType VERTICAL_DESCENDING -> c
+    com.androidplot.ui.TextOrientationType[] a -> d
+    com.androidplot.ui.TextOrientationType[] values() -> values
+    com.androidplot.ui.TextOrientationType valueOf(java.lang.String) -> valueOf
+com.androidplot.ui.a -> com.androidplot.c.x:
+    java.lang.Enum a -> a
+    float b -> b
+    void a(float,java.lang.Enum) -> b
+    void set(float,java.lang.Enum) -> a
+    float getValue() -> b
+    java.lang.Enum getLayoutType() -> a
+com.androidplot.ui.widget.DomainLabelWidget -> com.androidplot.c.a.a:
+    com.androidplot.xy.XYPlot a -> a
+    java.lang.String a() -> a
+com.androidplot.ui.widget.RangeLabelWidget -> com.androidplot.c.a.b:
+    com.androidplot.xy.XYPlot a -> a
+    java.lang.String a() -> a
+com.androidplot.ui.widget.TextLabelWidget -> com.androidplot.c.a.c:
+    android.graphics.Paint a -> a
+    com.androidplot.ui.TextOrientationType b -> b
+    java.lang.String a() -> a
+    void pack() -> b
+    void doOnDraw(android.graphics.Canvas,android.graphics.RectF) -> a
+    android.graphics.Paint getLabelPaint() -> c
+com.androidplot.ui.widget.TextLabelWidget$a -> com.androidplot.c.a.d:
+    int[] a -> a
+com.androidplot.ui.widget.TitleWidget -> com.androidplot.c.a.e:
+    com.androidplot.Plot a -> a
+    java.lang.String a() -> a
+com.androidplot.ui.widget.Widget -> com.androidplot.c.a.f:
+    android.graphics.Paint a -> a
+    android.graphics.Paint b -> b
+    boolean c -> c
+    com.androidplot.ui.BoxModel d -> d
+    com.androidplot.ui.SizeMetrics e -> e
+    android.graphics.RectF f -> f
+    boolean g -> g
+    void setSize(com.androidplot.ui.SizeMetrics) -> a
+    float getWidthPix(float) -> a
+    float getHeightPix(float) -> b
+    android.graphics.RectF getMarginatedRect(android.graphics.RectF) -> a
+    android.graphics.RectF getPaddedRect(android.graphics.RectF) -> b
+    void setMarginRight(float) -> c
+    void setMarginTop(float) -> d
+    void setMarginBottom(float) -> e
+    void draw(android.graphics.Canvas,android.graphics.RectF) -> b
+    void doOnDraw(android.graphics.Canvas,android.graphics.RectF) -> a
+    void setBackgroundPaint(android.graphics.Paint) -> a
+    boolean isClippingEnabled() -> d
+    boolean isVisible() -> e
+com.androidplot.util.FontUtils -> com.androidplot.d.a:
+    float getFontHeight(android.graphics.Paint) -> a
+    android.graphics.Rect getPackedStringDimensions(java.lang.String,android.graphics.Paint) -> a
+    android.graphics.Rect getStringDimensions(java.lang.String,android.graphics.Paint) -> b
+com.androidplot.util.ListOrganizer -> com.androidplot.d.b:
+    java.util.List a -> a
+    boolean moveToTop(java.lang.Object) -> a
+    java.util.List elements() -> a_
+    void addToTop(java.lang.Object) -> b
+com.androidplot.util.PixelUtils -> com.androidplot.d.c:
+    android.graphics.PointF add(android.graphics.PointF,android.graphics.PointF) -> a
+    android.graphics.PointF sub(android.graphics.PointF,android.graphics.PointF) -> b
+    float dpToPix(android.content.Context,float) -> a
+com.androidplot.util.ValPixConverter -> com.androidplot.d.d:
+    float valToPix(double,double,double,float,boolean) -> a
+    double range(double,double) -> a
+    double valPerPix(double,double,float) -> a
+    double pixToVal(float,double,double,float,boolean) -> a
+    android.graphics.PointF valToPix(java.lang.Number,java.lang.Number,android.graphics.RectF,java.lang.Number,java.lang.Number,java.lang.Number,java.lang.Number) -> a
+com.androidplot.util.ZHash -> com.androidplot.d.e:
+    java.util.HashMap a -> a
+    com.androidplot.util.ZLinkedList b -> b
+    java.lang.Object get(java.lang.Object) -> a
+    java.util.List getKeysAsList() -> f
+    void addToTop(java.lang.Object,java.lang.Object) -> a
+    boolean moveToTop(java.lang.Object) -> b
+    java.util.List elements() -> a_
+com.androidplot.util.ZIndexable -> com.androidplot.d.f:
+    java.util.List elements() -> a_
+com.androidplot.util.ZLinkedList -> com.androidplot.d.g:
+    com.androidplot.util.ListOrganizer a -> a
+    boolean moveToTop(java.lang.Object) -> a
+    java.util.List elements() -> a_
+    void addToTop(java.lang.Object) -> b
+com.androidplot.xy.AxisValueLabelFormatter -> com.androidplot.xy.a:
+    int a -> a
+    int getColor() -> a
+com.androidplot.xy.BarFormatter -> com.androidplot.xy.b:
+    android.graphics.Paint a -> a
+    android.graphics.Paint b -> b
+    android.graphics.Paint getFillPaint() -> a
+    android.graphics.Paint getBorderPaint() -> b
+com.androidplot.xy.BarRenderer -> com.androidplot.xy.c:
+    com.androidplot.xy.BarRenderer$BarWidthStyle a -> a
+    float b -> b
+    void onRender(android.graphics.Canvas,android.graphics.RectF) -> b
+    void doDrawLegendIcon(android.graphics.Canvas,android.graphics.RectF,com.androidplot.xy.BarFormatter) -> a
+    void a(android.graphics.Canvas,android.graphics.RectF,java.util.TreeMap,int) -> a
+    void doDrawLegendIcon(android.graphics.Canvas,android.graphics.RectF,com.androidplot.ui.Formatter) -> a
+com.androidplot.xy.BarRenderer$BarWidthStyle -> com.androidplot.xy.d:
+    com.androidplot.xy.BarRenderer$BarWidthStyle FIXED_WIDTH -> a
+    com.androidplot.xy.BarRenderer$BarWidthStyle FIXED_SPACING -> b
+    com.androidplot.xy.BarRenderer$BarWidthStyle[] a -> c
+    com.androidplot.xy.BarRenderer$BarWidthStyle[] values() -> values
+    com.androidplot.xy.BarRenderer$BarWidthStyle valueOf(java.lang.String) -> valueOf
+com.androidplot.xy.BarRenderer$a -> com.androidplot.xy.e:
+    int[] a -> a
+com.androidplot.xy.BezierLineAndPointFormatter -> com.androidplot.xy.f:
+com.androidplot.xy.BezierLineAndPointRenderer -> com.androidplot.xy.g:
+    void a(android.graphics.Path,android.graphics.PointF,android.graphics.PointF) -> a
+com.androidplot.xy.BoundaryMode -> com.androidplot.xy.h:
+    com.androidplot.xy.BoundaryMode FIXED -> a
+    com.androidplot.xy.BoundaryMode AUTO -> b
+    com.androidplot.xy.BoundaryMode GROW -> c
+    com.androidplot.xy.BoundaryMode SHRINNK -> d
+    com.androidplot.xy.BoundaryMode[] a -> e
+    com.androidplot.xy.BoundaryMode[] values() -> values
+    com.androidplot.xy.BoundaryMode valueOf(java.lang.String) -> valueOf
+com.androidplot.xy.FillDirection -> com.androidplot.xy.i:
+    com.androidplot.xy.FillDirection TOP -> a
+    com.androidplot.xy.FillDirection BOTTOM -> b
+    com.androidplot.xy.FillDirection LEFT -> c
+    com.androidplot.xy.FillDirection RIGHT -> d
+    com.androidplot.xy.FillDirection DOMAIN_ORIGIN -> e
+    com.androidplot.xy.FillDirection RANGE_ORIGIN -> f
+    com.androidplot.xy.FillDirection[] a -> g
+    com.androidplot.xy.FillDirection[] values() -> values
+    com.androidplot.xy.FillDirection valueOf(java.lang.String) -> valueOf
+com.androidplot.xy.LineAndPointFormatter -> com.androidplot.xy.j:
+    int a -> a
+    com.androidplot.xy.FillDirection b -> b
+    android.graphics.Paint c -> c
+    android.graphics.Paint d -> d
+    android.graphics.Paint e -> e
+    com.androidplot.xy.FillDirection getFillDirection() -> a
+    void setFillDirection(com.androidplot.xy.FillDirection) -> a
+    void a(java.lang.Integer) -> a
+    void b(java.lang.Integer) -> b
+    android.graphics.Paint getLinePaint() -> b
+    android.graphics.Paint getVertexPaint() -> c
+    android.graphics.Paint getFillPaint() -> d
+    void setFillPaint(android.graphics.Paint) -> a
+com.androidplot.xy.LineAndPointRenderer -> com.androidplot.xy.k:
+    void onRender(android.graphics.Canvas,android.graphics.RectF) -> b
+    void doDrawLegendIcon(android.graphics.Canvas,android.graphics.RectF,com.androidplot.xy.LineAndPointFormatter) -> a
+    void a(android.graphics.Path,android.graphics.PointF,android.graphics.PointF) -> a
+    void a(android.graphics.Canvas,android.graphics.RectF,android.graphics.Path,android.graphics.PointF,android.graphics.PointF,com.androidplot.xy.LineAndPointFormatter) -> a
+    void doDrawLegendIcon(android.graphics.Canvas,android.graphics.RectF,com.androidplot.ui.Formatter) -> a
+com.androidplot.xy.LineAndPointRenderer$a -> com.androidplot.xy.l:
+    int[] a -> a
+com.androidplot.xy.RectRegion -> com.androidplot.xy.m:
+    com.androidplot.LineRegion a -> a
+    com.androidplot.LineRegion b -> b
+    java.lang.String c -> c
+    boolean containsDomainValue(java.lang.Number) -> a
+    boolean containsRangeValue(java.lang.Number) -> b
+    boolean intersects(java.lang.Number,java.lang.Number,java.lang.Number,java.lang.Number) -> a
+    android.graphics.RectF getRectF(android.graphics.RectF,java.lang.Number,java.lang.Number,java.lang.Number,java.lang.Number) -> a
+    java.util.List regionsWithin(java.util.List,java.lang.Number,java.lang.Number,java.lang.Number,java.lang.Number) -> a
+    java.lang.Number getMinX() -> a
+    java.lang.Number getMaxX() -> b
+    java.lang.Number getMinY() -> c
+    java.lang.Number getMaxY() -> d
+    java.lang.String getLabel() -> e
+    void setLabel(java.lang.String) -> a
+com.androidplot.xy.SimpleXYSeries -> com.androidplot.xy.n:
+    java.util.LinkedList a -> a
+    java.util.LinkedList b -> b
+    java.lang.String c -> c
+    void setModel(java.util.List,com.androidplot.xy.SimpleXYSeries$ArrayFormat) -> a
+    java.lang.String getTitle() -> a
+    int size() -> b
+    java.lang.Number getX(int) -> a
+    java.lang.Number getY(int) -> b
+com.androidplot.xy.SimpleXYSeries$ArrayFormat -> com.androidplot.xy.o:
+    com.androidplot.xy.SimpleXYSeries$ArrayFormat Y_VALS_ONLY -> a
+    com.androidplot.xy.SimpleXYSeries$ArrayFormat XY_VALS_INTERLEAVED -> b
+    com.androidplot.xy.SimpleXYSeries$ArrayFormat[] a -> c
+    com.androidplot.xy.SimpleXYSeries$ArrayFormat[] values() -> values
+    com.androidplot.xy.SimpleXYSeries$ArrayFormat valueOf(java.lang.String) -> valueOf
+com.androidplot.xy.SimpleXYSeries$a -> com.androidplot.xy.p:
+    int[] a -> a
+com.androidplot.xy.StepFormatter -> com.androidplot.xy.q:
+com.androidplot.xy.StepRenderer -> com.androidplot.xy.r:
+    void a(android.graphics.Path,android.graphics.PointF,android.graphics.PointF) -> a
+com.androidplot.xy.ValueMarker -> com.androidplot.xy.s:
+    java.lang.Number a -> a
+    android.graphics.Paint b -> b
+    android.graphics.Paint c -> c
+    com.androidplot.ui.PositionMetric f -> d
+    java.lang.String g -> e
+    java.lang.String getText() -> a
+    java.lang.Number getValue() -> b
+    android.graphics.Paint getLinePaint() -> c
+    android.graphics.Paint getTextPaint() -> d
+    com.androidplot.ui.PositionMetric getTextPosition() -> e
+com.androidplot.xy.XLayoutStyle -> com.androidplot.xy.t:
+    com.androidplot.xy.XLayoutStyle ABSOLUTE_FROM_LEFT -> a
+    com.androidplot.xy.XLayoutStyle ABSOLUTE_FROM_RIGHT -> b
+    com.androidplot.xy.XLayoutStyle ABSOLUTE_FROM_CENTER -> c
+    com.androidplot.xy.XLayoutStyle RELATIVE_TO_LEFT -> d
+    com.androidplot.xy.XLayoutStyle RELATIVE_TO_RIGHT -> e
+    com.androidplot.xy.XLayoutStyle RELATIVE_TO_CENTER -> f
+    com.androidplot.xy.XLayoutStyle[] a -> g
+    com.androidplot.xy.XLayoutStyle[] values() -> values
+    com.androidplot.xy.XLayoutStyle valueOf(java.lang.String) -> valueOf
+com.androidplot.xy.XPositionMetric -> com.androidplot.xy.u:
+    void a(float,com.androidplot.xy.XLayoutStyle) -> a
+    float getPixelValue(float) -> a
+    void a(float,java.lang.Enum) -> b
+com.androidplot.xy.XPositionMetric$a -> com.androidplot.xy.v:
+    int[] a -> a
+com.androidplot.xy.XValueMarker -> com.androidplot.xy.w:
+com.androidplot.xy.XYAxisType -> com.androidplot.xy.x:
+    com.androidplot.xy.XYAxisType DOMAIN -> a
+    com.androidplot.xy.XYAxisType RANGE -> b
+    com.androidplot.xy.XYAxisType[] a -> c
+    com.androidplot.xy.XYAxisType[] values() -> values
+    com.androidplot.xy.XYAxisType valueOf(java.lang.String) -> valueOf
+com.androidplot.xy.XYFramingModel -> com.androidplot.xy.y:
+    com.androidplot.xy.XYFramingModel ORIGIN -> a
+    com.androidplot.xy.XYFramingModel EDGE -> b
+    com.androidplot.xy.XYFramingModel[] a -> c
+    com.androidplot.xy.XYFramingModel[] values() -> values
+    com.androidplot.xy.XYFramingModel valueOf(java.lang.String) -> valueOf
+com.androidplot.xy.XYGraphWidget -> com.androidplot.xy.z:
+    float a -> a
+    float b -> b
+    float c -> c
+    float d -> d
+    float e -> e
+    float f -> f
+    int g -> g
+    int h -> h
+    float i -> i
+    float j -> j
+    float k -> k
+    float l -> l
+    int m -> m
+    int n -> n
+    android.graphics.Paint o -> o
+    android.graphics.Paint p -> p
+    android.graphics.Paint q -> q
+    android.graphics.Paint r -> r
+    android.graphics.Paint s -> s
+    android.graphics.Paint t -> t
+    android.graphics.Paint u -> u
+    android.graphics.Paint v -> v
+    android.graphics.Paint w -> w
+    android.graphics.Paint x -> x
+    com.androidplot.xy.XYPlot y -> y
+    java.text.Format z -> z
+    java.text.Format A -> A
+    android.graphics.Paint B -> B
+    android.graphics.Paint C -> C
+    android.graphics.Paint D -> D
+    android.graphics.Paint E -> E
+    android.graphics.RectF F -> F
+    android.graphics.RectF G -> G
+    float H -> H
+    float I -> I
+    boolean J -> J
+    boolean K -> K
+    boolean L -> L
+    boolean M -> M
+    com.androidplot.util.ZHash N -> N
+    com.androidplot.xy.AxisValueLabelFormatter getAxisValueLabelFormatterForDomainVal(double) -> a
+    com.androidplot.xy.AxisValueLabelFormatter getAxisValueLabelFormatterForRangeVal(double) -> b
+    java.lang.String a(java.lang.Number) -> a
+    java.lang.String b(java.lang.Number) -> b
+    java.lang.Double getYVal(float) -> f
+    java.lang.Double getXVal(float) -> g
+    void doOnDraw(android.graphics.Canvas,android.graphics.RectF) -> a
+    void a(android.graphics.Canvas,com.androidplot.xy.XYAxisType,java.lang.Number,float,float,android.graphics.Paint) -> a
+    void a(android.graphics.Canvas,float,java.lang.Number,android.graphics.Paint,android.graphics.Paint,boolean) -> b
+    void drawRangeTick(android.graphics.Canvas,float,java.lang.Number,android.graphics.Paint,android.graphics.Paint,boolean) -> a
+    void a(android.graphics.Canvas) -> a
+    void a(android.graphics.Canvas,java.lang.String,com.androidplot.xy.ValueMarker,float,float) -> a
+    void b(android.graphics.Canvas) -> b
+    void c(android.graphics.Canvas) -> c
+    android.graphics.Paint getGridBackgroundPaint() -> a
+    android.graphics.Paint getGridLinePaint() -> b
+    java.text.Format getRangeValueFormat() -> c
+    void setRangeValueFormat(java.text.Format) -> a
+    java.text.Format getDomainValueFormat() -> f
+    void setDomainValueFormat(java.text.Format) -> b
+    int getTicksPerRangeLabel() -> g
+    void setTicksPerRangeLabel(int) -> a
+    int getTicksPerDomainLabel() -> h
+    void setTicksPerDomainLabel(int) -> b
+    android.graphics.Paint getDomainOriginLinePaint() -> i
+    android.graphics.Paint getRangeOriginLinePaint() -> j
+    void setCursorPosition(float,float) -> a
+    void setCursorPosition(android.graphics.PointF) -> a
+    float getDomainCursorPosition() -> k
+    java.lang.Double getDomainCursorVal() -> l
+    void setDomainCursorPosition(float) -> h
+    float getRangeCursorPosition() -> m
+    java.lang.Double getRangeCursorVal() -> n
+    void setRangeCursorPosition(float) -> i
+    boolean isDrawMarkersEnabled() -> o
+com.androidplot.xy.XYGraphWidget$a -> com.androidplot.xy.aa:
+    int[] a -> a
+com.androidplot.xy.XYLegendWidget -> com.androidplot.xy.ab:
+    com.androidplot.xy.XYPlot a -> a
+    android.graphics.Paint b -> b
+    android.graphics.Paint c -> c
+    com.androidplot.ui.TableModel d -> d
+    boolean e -> e
+    boolean f -> f
+    com.androidplot.ui.SizeMetrics g -> g
+    void setTableModel(com.androidplot.ui.TableModel) -> a
+    android.graphics.RectF a(android.graphics.RectF) -> c
+    void a(android.graphics.Canvas,android.graphics.RectF) -> c
+    void a(android.graphics.Canvas,android.graphics.RectF,android.graphics.RectF,java.lang.String) -> a
+    void doOnDraw(android.graphics.Canvas,android.graphics.RectF) -> a
+com.androidplot.xy.XYLegendWidget$a -> com.androidplot.xy.ac:
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.androidplot.xy.XYPlot -> com.androidplot.xy.XYPlot:
+    com.androidplot.xy.BoundaryMode c -> c
+    com.androidplot.xy.BoundaryMode d -> d
+    com.androidplot.xy.XYLegendWidget e -> e
+    com.androidplot.xy.XYGraphWidget f -> f
+    com.androidplot.ui.widget.DomainLabelWidget g -> g
+    com.androidplot.ui.widget.RangeLabelWidget h -> h
+    com.androidplot.xy.XYStepMode i -> i
+    double j -> j
+    com.androidplot.xy.XYStepMode k -> k
+    double l -> l
+    java.lang.String m -> m
+    java.lang.String n -> n
+    java.lang.Number o -> o
+    java.lang.Number p -> p
+    java.lang.Number q -> q
+    java.lang.Number r -> r
+    java.lang.Number s -> s
+    java.lang.Number t -> t
+    java.lang.Number u -> u
+    java.lang.Number v -> v
+    java.lang.Number w -> w
+    java.lang.Number x -> x
+    java.lang.Number y -> y
+    java.lang.Number z -> z
+    java.lang.Number A -> A
+    java.lang.Number B -> B
+    java.lang.Number C -> C
+    java.lang.Number D -> D
+    java.lang.Number E -> E
+    java.lang.Number F -> F
+    java.lang.Number G -> G
+    java.lang.Number H -> H
+    com.androidplot.xy.XYFramingModel I -> I
+    com.androidplot.xy.XYFramingModel J -> J
+    java.lang.Number K -> K
+    java.lang.Number L -> L
+    java.lang.Number M -> M
+    java.lang.Number N -> N
+    java.lang.Number O -> O
+    java.lang.Number P -> P
+    com.androidplot.xy.BoundaryMode Q -> Q
+    com.androidplot.xy.BoundaryMode R -> R
+    com.androidplot.xy.BoundaryMode S -> S
+    com.androidplot.xy.BoundaryMode T -> T
+    boolean U -> U
+    boolean V -> V
+    java.util.ArrayList a -> a
+    java.util.ArrayList b -> b
+    com.androidplot.xy.RectRegion W -> W
+    void a(android.content.Context) -> a
+    void a() -> c
+    void setCursorPosition(android.graphics.PointF) -> setCursorPosition
+    boolean a(double,java.lang.Number,java.lang.Number) -> a
+    void calculateMinMaxVals() -> e
+    void updateRangeMinMaxForEdgeModel() -> f
+    java.lang.Number a(java.lang.Number,java.lang.Number,java.lang.Number) -> a
+    double a(double,double) -> a
+    void updateDomainMinMaxForOriginModel() -> g
+    void updateRangeMinMaxForOriginModel() -> h
+    boolean addSeries(com.androidplot.series.XYSeries,com.androidplot.xy.XYSeriesFormatter) -> a
+    int getTicksPerRangeLabel() -> getTicksPerRangeLabel
+    void setTicksPerRangeLabel(int) -> setTicksPerRangeLabel
+    int getTicksPerDomainLabel() -> getTicksPerDomainLabel
+    void setTicksPerDomainLabel(int) -> setTicksPerDomainLabel
+    com.androidplot.xy.XYStepMode getDomainStepMode() -> getDomainStepMode
+    void setDomainStepMode(com.androidplot.xy.XYStepMode) -> setDomainStepMode
+    double getDomainStepValue() -> getDomainStepValue
+    void setDomainStepValue(double) -> setDomainStepValue
+    void setDomainStep(com.androidplot.xy.XYStepMode,double) -> a
+    com.androidplot.xy.XYStepMode getRangeStepMode() -> getRangeStepMode
+    void setRangeStepMode(com.androidplot.xy.XYStepMode) -> setRangeStepMode
+    double getRangeStepValue() -> getRangeStepValue
+    void setRangeStepValue(double) -> setRangeStepValue
+    void setRangeStep(com.androidplot.xy.XYStepMode,double) -> b
+    java.lang.String getDomainLabel() -> getDomainLabel
+    void setDomainLabel(java.lang.String) -> setDomainLabel
+    java.lang.String getRangeLabel() -> getRangeLabel
+    void setRangeLabel(java.lang.String) -> setRangeLabel
+    com.androidplot.xy.XYLegendWidget getLegendWidget() -> getLegendWidget
+    void setLegendWidget(com.androidplot.xy.XYLegendWidget) -> setLegendWidget
+    com.androidplot.xy.XYGraphWidget getGraphWidget() -> getGraphWidget
+    void setGraphWidget(com.androidplot.xy.XYGraphWidget) -> setGraphWidget
+    com.androidplot.ui.widget.DomainLabelWidget getDomainLabelWidget() -> getDomainLabelWidget
+    void setDomainLabelWidget(com.androidplot.ui.widget.DomainLabelWidget) -> setDomainLabelWidget
+    com.androidplot.ui.widget.RangeLabelWidget getRangeLabelWidget() -> getRangeLabelWidget
+    void setRangeLabelWidget(com.androidplot.ui.widget.RangeLabelWidget) -> setRangeLabelWidget
+    java.text.Format getRangeValueFormat() -> getRangeValueFormat
+    void setRangeValueFormat(java.text.Format) -> setRangeValueFormat
+    java.text.Format getDomainValueFormat() -> getDomainValueFormat
+    void setDomainValueFormat(java.text.Format) -> setDomainValueFormat
+    java.lang.Number getDomainOrigin() -> getDomainOrigin
+    java.lang.Number getRangeOrigin() -> getRangeOrigin
+    void setUserDomainOrigin(java.lang.Number) -> setUserDomainOrigin
+    void setUserRangeOrigin(java.lang.Number) -> setUserRangeOrigin
+    com.androidplot.xy.XYFramingModel getDomainFramingModel() -> getDomainFramingModel
+    com.androidplot.xy.XYFramingModel getRangeFramingModel() -> getRangeFramingModel
+    java.lang.Number getCalculatedMinX() -> getCalculatedMinX
+    java.lang.Number getCalculatedMaxX() -> getCalculatedMaxX
+    java.lang.Number getCalculatedMinY() -> getCalculatedMinY
+    java.lang.Number getCalculatedMaxY() -> getCalculatedMaxY
+    void setDrawDomainOriginEnabled(boolean) -> setDrawDomainOriginEnabled
+    void setDrawRangeOriginEnabled(boolean) -> setDrawRangeOriginEnabled
+    com.androidplot.xy.RectRegion getDefaultBounds() -> getDefaultBounds
+    void setDefaultBounds(com.androidplot.xy.RectRegion) -> setDefaultBounds
+    java.lang.Number getRangeTopMin() -> getRangeTopMin
+    void setRangeTopMin(java.lang.Number) -> setRangeTopMin
+    java.lang.Number getRangeTopMax() -> getRangeTopMax
+    void setRangeTopMax(java.lang.Number) -> setRangeTopMax
+    java.lang.Number getRangeBottomMin() -> getRangeBottomMin
+    void setRangeBottomMin(java.lang.Number) -> setRangeBottomMin
+    java.lang.Number getRangeBottomMax() -> getRangeBottomMax
+    void setRangeBottomMax(java.lang.Number) -> setRangeBottomMax
+    java.lang.Number getDomainLeftMin() -> getDomainLeftMin
+    void setDomainLeftMin(java.lang.Number) -> setDomainLeftMin
+    java.lang.Number getDomainLeftMax() -> getDomainLeftMax
+    void setDomainLeftMax(java.lang.Number) -> setDomainLeftMax
+    java.lang.Number getDomainRightMin() -> getDomainRightMin
+    void setDomainRightMin(java.lang.Number) -> setDomainRightMin
+    java.lang.Number getDomainRightMax() -> getDomainRightMax
+    void setDomainRightMax(java.lang.Number) -> setDomainRightMax
+    com.androidplot.ui.DataRenderer a(java.lang.Class) -> a
+com.androidplot.xy.XYPlot$a -> com.androidplot.xy.ad:
+    int[] a -> a
+    int[] b -> b
+com.androidplot.xy.XYRegionFormatter -> com.androidplot.xy.ae:
+    android.graphics.Paint a -> a
+    android.graphics.Paint getPaint() -> a
+com.androidplot.xy.XYSeriesFormatter -> com.androidplot.xy.af:
+    com.androidplot.util.ZHash a -> a
+    com.androidplot.util.ZIndexable getRegions() -> e
+    com.androidplot.xy.XYRegionFormatter getRegionFormatter(com.androidplot.xy.RectRegion) -> a
+com.androidplot.xy.XYSeriesRenderer -> com.androidplot.xy.ag:
+    java.util.Hashtable getUniqueRegionFormatters() -> c
+    void render(android.graphics.Canvas,android.graphics.RectF) -> a
+com.androidplot.xy.XYStep -> com.androidplot.xy.ah:
+    float a -> a
+    float b -> b
+    double c -> c
+    float getStepPix() -> a
+    double getStepVal() -> b
+com.androidplot.xy.XYStepCalculator -> com.androidplot.xy.ai:
+    com.androidplot.xy.XYStep getStep(com.androidplot.xy.XYPlot,com.androidplot.xy.XYAxisType,android.graphics.RectF,java.lang.Number,java.lang.Number) -> a
+    com.androidplot.xy.XYStep getStep(com.androidplot.xy.XYStepMode,float,double,java.lang.Number,java.lang.Number) -> a
+com.androidplot.xy.XYStepCalculator$a -> com.androidplot.xy.aj:
+    int[] a -> a
+    int[] b -> b
+com.androidplot.xy.XYStepMode -> com.androidplot.xy.ak:
+    com.androidplot.xy.XYStepMode SUBDIVIDE -> a
+    com.androidplot.xy.XYStepMode INCREMENT_BY_VAL -> b
+    com.androidplot.xy.XYStepMode INCREMENT_BY_PIXELS -> c
+    com.androidplot.xy.XYStepMode[] a -> d
+    com.androidplot.xy.XYStepMode[] values() -> values
+    com.androidplot.xy.XYStepMode valueOf(java.lang.String) -> valueOf
+com.androidplot.xy.YLayoutStyle -> com.androidplot.xy.al:
+    com.androidplot.xy.YLayoutStyle ABSOLUTE_FROM_TOP -> a
+    com.androidplot.xy.YLayoutStyle ABSOLUTE_FROM_BOTTOM -> b
+    com.androidplot.xy.YLayoutStyle ABSOLUTE_FROM_CENTER -> c
+    com.androidplot.xy.YLayoutStyle RELATIVE_TO_TOP -> d
+    com.androidplot.xy.YLayoutStyle RELATIVE_TO_BOTTOM -> e
+    com.androidplot.xy.YLayoutStyle RELATIVE_TO_CENTER -> f
+    com.androidplot.xy.YLayoutStyle[] a -> g
+    com.androidplot.xy.YLayoutStyle[] values() -> values
+    com.androidplot.xy.YLayoutStyle valueOf(java.lang.String) -> valueOf
+com.androidplot.xy.YPositionMetric -> com.androidplot.xy.am:
+    float getPixelValue(float) -> a
+    void a(float,java.lang.Enum) -> b
+com.androidplot.xy.YPositionMetric$a -> com.androidplot.xy.an:
+    int[] a -> a
+com.androidplot.xy.YValueMarker -> com.androidplot.xy.ao:
+net.thempra.overmind.Grafica_1 -> net.thempra.overmind.Grafica_1:
+    com.androidplot.xy.XYPlot mySimpleXYPlot -> a
+    void onCreate(android.os.Bundle) -> onCreate
+net.thempra.overmind.Grafica_2 -> net.thempra.overmind.Grafica_2:
+    com.androidplot.xy.XYPlot mySimpleXYPlot -> a
+    java.lang.Number[] series1Numbers -> b
+    android.os.Handler mHandler -> c
+    java.lang.Runnable mMuestraMensaje -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void access$0(net.thempra.overmind.Grafica_2,com.androidplot.xy.XYPlot) -> a
+    java.lang.Number[] access$1(net.thempra.overmind.Grafica_2) -> a
+    com.androidplot.xy.XYPlot access$2(net.thempra.overmind.Grafica_2) -> b
+    android.os.Handler access$3(net.thempra.overmind.Grafica_2) -> c
+    java.lang.Runnable access$4(net.thempra.overmind.Grafica_2) -> d
+net.thempra.overmind.Grafica_2$1 -> net.thempra.overmind.a:
+    net.thempra.overmind.Grafica_2 this$0 -> a
+    void run() -> run
+net.thempra.overmind.MainActivity -> net.thempra.overmind.MainActivity:
+    android.widget.Button btnGrafica_1 -> a
+    android.widget.Button btnGrafica_2 -> b
+    android.widget.Button btnGame -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+net.thempra.overmind.MainActivity$1 -> net.thempra.overmind.b:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.MainActivity$2 -> net.thempra.overmind.c:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.WavesIndexFormat -> net.thempra.overmind.d:
+    java.lang.StringBuffer format(java.lang.Object,java.lang.StringBuffer,java.text.FieldPosition) -> format
+    java.lang.Object parseObject(java.lang.String,java.text.ParsePosition) -> parseObject
