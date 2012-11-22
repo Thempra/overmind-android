@@ -2,12 +2,15 @@
 # view res/layout/grafica_2.xml #generated:7
 -keep class com.androidplot.xy.XYPlot { <init>(...); }
 
-# view AndroidManifest.xml #generated:24
+# view AndroidManifest.xml #generated:35
+-keep class net.thempra.overgame.SimpleGame { <init>(...); }
+
+# view AndroidManifest.xml #generated:26
 -keep class net.thempra.overmind.Grafica_1 { <init>(...); }
 
-# view AndroidManifest.xml #generated:28
+# view AndroidManifest.xml #generated:30
 -keep class net.thempra.overmind.Grafica_2 { <init>(...); }
 
-# view AndroidManifest.xml #generated:15
+# view AndroidManifest.xml #generated:17
 -keep class net.thempra.overmind.MainActivity { <init>(...); }
 

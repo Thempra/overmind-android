@@ -25,7 +25,7 @@ public class Grafica_2 extends Activity {
 
 	private static final int N_VALUE = 11;
 	private XYPlot mySimpleXYPlot;
-	private Number[] series1Numbers={ 0, 0,0,0,0,0,0,0,0,0,0};
+	private Number[] series1Numbers={ 0, 0,0,0,0,0,0,0,0,0,0,0};
 	 private Handler mHandler = new Handler();
 	 
 	 
@@ -54,7 +54,7 @@ public class Grafica_2 extends Activity {
      		//series1Numbers = { 1, 2, 3, 4, 2, 3, 4, 2, 2, 2, 3, 4, 2, 3,	2, 2 };
      			series1Numbers[i] = r.nextInt(100);
      		series1Numbers[0] = 100;
-     		series1Numbers[10] = 0;
+     		series1Numbers[11] = 0;
      		
      		
      	// create our series from our array of nums:
@@ -107,7 +107,7 @@ public class Grafica_2 extends Activity {
     		mySimpleXYPlot.setTicksPerDomainLabel(1);
 
     		// customize our domain/range labels
-    		mySimpleXYPlot.setDomainLabel("Value");
+    		mySimpleXYPlot.setDomainLabel("Waves");
     		mySimpleXYPlot.setRangeLabel("Level");
     		mySimpleXYPlot.setRangeTopMax(100);
     	

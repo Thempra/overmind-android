@@ -9,4 +9,5 @@
     <string name="data_analice">Analisis de datos</string>
     <string name="levels">Niveles mentales</string>
     <string name="play">Jugar</string>
+    <string name="bluetooth_disconnect">Bluetooth disconnect</string>
 </resources>

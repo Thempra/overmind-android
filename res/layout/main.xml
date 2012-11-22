@@ -3,40 +3,55 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/background"
     >
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="40dip"
         android:text="@string/app_name"
-        android:textAppearance="?android:attr/textAppearanceMedium" android:layout_gravity="center" android:layout_margin="10dip"/>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/reading_minds"
-        android:textAppearance="?android:attr/textAppearanceMedium" android:layout_margin="15dip"/>
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="50dp" />
 
       <Button
-        android:id="@+id/btnGrafica_1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/data_analice" android:layout_margin="5dip"/>
+          android:id="@+id/btnGrafica_1"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_margin="15dip"
+          android:text="@string/data_analice"
+          style="@style/button_black"
+           />
 
     <Button
         android:id="@+id/btnGrafica_2"
-        android:layout_width="fill_parent"
+		android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"
-        android:text="@string/levels" />
-     <Button
-        android:id="@+id/btnGame"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dip"
-        android:text="@string/play" />
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dip"
+        android:text="@string/levels"
+        style="@style/button_black"
+         />
 
+     <Button
+         android:id="@+id/btnGame"
+         style="@style/button_black"
+         android:layout_width="200dp"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:layout_margin="15dip"
+         android:text="@string/play" />
+
+     <TextView
+         android:id="@+id/txtStatus"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:layout_margin="25dip"
+         android:text="@string/bluetooth_disconnect"
+         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>

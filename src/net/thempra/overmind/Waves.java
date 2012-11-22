@@ -9,6 +9,11 @@ import java.text.ParsePosition;
  */
 class WavesIndexFormat extends Format {
     
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3626863847760160495L;
+
 	@Override
     public StringBuffer format(Object obj, StringBuffer toAppendTo, FieldPosition pos) {
         Number num = (Number) obj;
@@ -50,7 +55,7 @@ class WavesIndexFormat extends Format {
                 toAppendTo.append("High Gamma");
                 break;
             default:
-                toAppendTo.append("Unknown");
+                toAppendTo.append("");
         }
         return toAppendTo;
     }
