@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package net.thempra.overmind;
+package com.gallysoft.andromind;
 
 public final class R {
     public static final class attr {

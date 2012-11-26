@@ -21,13 +21,13 @@ import com.androidplot.xy.StepFormatter;
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYStepMode;
 
-public class Grafica_2 extends Activity {
+public class Grafica_2 extends Activity  {
 
 	private static final int N_VALUE = 11;
 	private XYPlot mySimpleXYPlot;
 	private Number[] series1Numbers={ 0, 0,0,0,0,0,0,0,0,0,0,0};
-	 private Handler mHandler = new Handler();
-	 
+	private Handler mHandler = new Handler();
+
 	 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +35,10 @@ public class Grafica_2 extends Activity {
 		
 
 		
-		 mHandler.removeCallbacks(mMuestraMensaje);
-	      mHandler.postDelayed(mMuestraMensaje, 1000);
+		mHandler.removeCallbacks(mMuestraMensaje);
+	    mHandler.postDelayed(mMuestraMensaje, 1000);
 
-
+	  
 	}
 	
 	 private Runnable mMuestraMensaje = new Runnable() {
@@ -48,13 +48,26 @@ public class Grafica_2 extends Activity {
      		mySimpleXYPlot = (XYPlot) findViewById(R.id.mySimpleXYPlot);
      		
             //Toast.makeText(this, "Lanzado temporizador", Toast.LENGTH_LONG).show();
-        	 Random r = new Random();
+     		/*
+     		Random r = new Random();
+     		
      		
      		for(int i=0; i< N_VALUE; i++)
-     		//series1Numbers = { 1, 2, 3, 4, 2, 3, 4, 2, 2, 2, 3, 4, 2, 3,	2, 2 };
      			series1Numbers[i] = r.nextInt(100);
-     		series1Numbers[0] = 100;
+     		*/
+     		series1Numbers[0] = MainActivity.currentEeg.signal;
+     		series1Numbers[1] = MainActivity.currentEeg.attention;
+     		series1Numbers[2] = MainActivity.currentEeg.meditation;
+     		series1Numbers[3] = MainActivity.currentEeg.theta;
+     		series1Numbers[4] = MainActivity.currentEeg.delta;
+     		series1Numbers[5] = MainActivity.currentEeg.lalpha;
+     		series1Numbers[6] = MainActivity.currentEeg.halpha;
+     		series1Numbers[7] = MainActivity.currentEeg.lbeta;
+     		series1Numbers[8] = MainActivity.currentEeg.hbeta;
+     		series1Numbers[9] = MainActivity.currentEeg.lgamma;
+     		series1Numbers[10] = MainActivity.currentEeg.hgamma;
      		series1Numbers[11] = 0;
+     		
      		
      		
      	// create our series from our array of nums:
@@ -163,6 +176,9 @@ public class Grafica_2 extends Activity {
             mHandler.postDelayed(this, 1000);
          }
        };
+
+
+
        
        
        
