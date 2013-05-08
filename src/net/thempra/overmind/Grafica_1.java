@@ -52,8 +52,8 @@ public class Grafica_1 extends Activity {
 		}
 		// Creamos dos arrays de prueba. En el caso real debemos reemplazar
 		// estos datos por los que realmente queremos mostrar
-		series1Numbers[series1Numbers.length-1] = MainActivity.currentEeg.attention;
-		series2Numbers[series2Numbers.length-1] = MainActivity.currentEeg.meditation;
+		series1Numbers[series1Numbers.length-1] = MainActivity.currentEeg[0].attention;
+		series2Numbers[series2Numbers.length-1] = MainActivity.currentEeg[0].meditation;
 
 		// Añadimos Línea Número UNO:
 		XYSeries series1 = new SimpleXYSeries(Arrays.asList(series1Numbers), // Array

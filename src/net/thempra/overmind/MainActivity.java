@@ -14,6 +14,7 @@ import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -33,6 +34,7 @@ public class MainActivity extends Activity implements android.content.DialogInte
 	private Button btnGrafica_1;
 	private Button btnGrafica_2;
 	private Button btnGame;
+	private static Button btndevice0;
 	private static Button btndevice1;
 	private static Button btndevice2;
 	private Button btndevice3;
@@ -40,9 +42,9 @@ public class MainActivity extends Activity implements android.content.DialogInte
 	private Button btndevice5;
 	private Button btndevice6;
 	private Button btndevice7;
-	private Button btndevice8;  
+	  
 	private static TextView txtStatus;
-	public static Eeg currentEeg = new Eeg();
+	public static Eeg currentEeg[] = new Eeg[8];
 
 	//private Handler mHandlerTest = new Handler();
 
@@ -112,9 +114,9 @@ public class MainActivity extends Activity implements android.content.DialogInte
 	            return;   
 	        }
 
-	     //················· Device 1 ································
-	     btndevice1 = (Button) findViewById(R.id.device1);
-	     btndevice1.setOnClickListener(new OnClickListener() {
+	     //················· Device 0 ································
+	     btndevice0 = (Button) findViewById(R.id.device0);
+	     btndevice0.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				 if (!mBluetoothAdapter.isEnabled()) {
@@ -127,9 +129,9 @@ public class MainActivity extends Activity implements android.content.DialogInte
 			}
 	     });
 	     
-	     //················· Device 2 ································
-	     btndevice2 = (Button) findViewById(R.id.device2);
-	     btndevice2.setOnClickListener(new OnClickListener() {
+	     //················· Device 1 ································
+	     btndevice1 = (Button) findViewById(R.id.device1);
+	     btndevice1.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				 if (!mBluetoothAdapter.isEnabled()) {
@@ -213,10 +215,12 @@ public class MainActivity extends Activity implements android.content.DialogInte
             	txtStatus.setText("Bluetooth is disable");
             }
         }
+        
+        
     }
     
     
-    private static void conectar( final Context context){
+    private static void conectar(  final Context context){
     	//Toast.makeText(this, "Bluetooth is enable", Toast.LENGTH_LONG).show();
     	txtStatus.setText("Bluetooth is enable");
     	
@@ -236,20 +240,27 @@ public class MainActivity extends Activity implements android.content.DialogInte
     	    	
     	    		BluetoothDevice tmp = (BluetoothDevice) pairedDevices.toArray()[item];
     	    		
-    	    		devBlue.add(devN, new AndroMindLib(tmp));
+    	    		devBlue.add(devN, new AndroMindLib(tmp, devN ));
     	    		devBlue.get(devN).setNewCaptureListener(mindListerner);
     	    		devBlue.get(devN).start();
     	    		
-    	    		if (devN==0)
+    	    		switch(devN)
     	    		{
-    	    			btndevice1.setCompoundDrawables(null, context.getResources().getDrawable(R.drawable.bluetooth_enable),null,null);
-    	    			btndevice1.setText(pairedDevices.toArray()[item].toString());
+	    	    		case 0:
+	    	    			//btndevice0.setCompoundDrawables(null, context.getResources().getDrawable(R.drawable.bluetooth_enable),null,null);
+	    	    			btndevice0.setText(pairedDevices.toArray()[item].toString());
+	    	    			btndevice0.setBackgroundColor(Color.GREEN);
+	    	    			break;
+	    	    		case 1:
+	    	    			btndevice1.setBackgroundColor(Color.GREEN);
+	    	    			btndevice1.setText(pairedDevices.toArray()[item].toString());
+	    	    			break;
+	    	    			
+	    	    			default:
+	    	    				
     	    		}
-    	    		if (devN==1)
-    	    		{
-    	    			btndevice2.setCompoundDrawables(null, context.getResources().getDrawable(R.drawable.bluetooth_enable),null,null);
-    	    			btndevice2.setText(pairedDevices.toArray()[item].toString());
-    	    		}
+    	    		currentEeg[devN] = new Eeg();
+    	    		
     	    		/*
     	    		if (devBlue.isconected() )
     	            	txtStatus.setText("Bluetooth is connected");
@@ -334,62 +345,62 @@ public class MainActivity extends Activity implements android.content.DialogInte
     };
 	*/
 	@Override
-	public void newCaptured(AndroMindLib andromind) {
+	public void newCaptured(AndroMindLib andromind, int deviceN) {
 		
 		if (andromind.getSignal() > 0 )
 		{
 			//txtStatus.setText("Bluetooth is connected");
-			currentEeg.signal=(int) andromind.getSignal()/2;
-			
-			currentEeg.meditation=(int) andromind.getMeditation();
-			currentEeg.attention=(int) andromind.getAttention();
+			currentEeg[deviceN].signal=(int) andromind.getSignal()/2;
+		
+			currentEeg[deviceN].meditation=(int) andromind.getMeditation();
+			currentEeg[deviceN].attention=(int) andromind.getAttention();
 			
 			if (andromind.getProdelta() > 0)
-				currentEeg.delta=(int) andromind.getProdelta()*100/1800;
+				currentEeg[deviceN].delta=(int) andromind.getProdelta()*100/1800;
 			else
-				currentEeg.delta=0;
+				currentEeg[deviceN].delta=0;
 			if (andromind.getProtheta() > 0)
-				currentEeg.theta=(int) andromind.getProtheta()*100/1800;
+				currentEeg[deviceN].theta=(int) andromind.getProtheta()*100/1800;
 			else
-				currentEeg.theta=0;
+				currentEeg[deviceN].theta=0;
 			if (andromind.getProlalpha() > 0)
-				currentEeg.lalpha=(int) andromind.getProlalpha()*100/1800;
+				currentEeg[deviceN].lalpha=(int) andromind.getProlalpha()*100/1800;
 			else
-				currentEeg.lalpha=0;
+				currentEeg[deviceN].lalpha=0;
 			if (andromind.getProhalpha() > 0)
-				currentEeg.halpha=(int) andromind.getProhalpha()*100/1800;
+				currentEeg[deviceN].halpha=(int) andromind.getProhalpha()*100/1800;
 			else
-				currentEeg.halpha=0;
+				currentEeg[deviceN].halpha=0;
 			if (andromind.getProlbeta() > 0)
-				currentEeg.lbeta=(int) andromind.getProlbeta()*100/1800;
+				currentEeg[deviceN].lbeta=(int) andromind.getProlbeta()*100/1800;
 			else
-				currentEeg.lbeta=0;
+				currentEeg[deviceN].lbeta=0;
 			if (andromind.getProhbeta() > 0)
-				currentEeg.hbeta=(int) andromind.getProhbeta()*100/1800;
+				currentEeg[deviceN].hbeta=(int) andromind.getProhbeta()*100/1800;
 			else
-				currentEeg.hbeta=0;
+				currentEeg[deviceN].hbeta=0;
 			if (andromind.getProlgamma() > 0)
-				currentEeg.lgamma=(int) andromind.getProlgamma()*100/1800;
+				currentEeg[deviceN].lgamma=(int) andromind.getProlgamma()*100/1800;
 			else
-				currentEeg.lgamma=0;
+				currentEeg[deviceN].lgamma=0;
 			if (andromind.getProhgamma() > 0)
-				currentEeg.hgamma=(int) andromind.getProhgamma()*100/1800;
+				currentEeg[deviceN].hgamma=(int) andromind.getProhgamma()*100/1800;
 			else
-				currentEeg.hgamma=0;
+				currentEeg[deviceN].hgamma=0;
 		
 		}else
 		{
-			currentEeg.signal=0;
-			currentEeg.attention=0;
-			currentEeg.meditation=0;
-			currentEeg.delta=0;
-			currentEeg.theta=0;
-			currentEeg.lalpha=0;
-			currentEeg.halpha=0;
-			currentEeg.lbeta=0;
-			currentEeg.hbeta=0;
-			currentEeg.lgamma=0;
-			currentEeg.hgamma=0;
+			currentEeg[deviceN].signal=0;
+			currentEeg[deviceN].attention=0;
+			currentEeg[deviceN].meditation=0;
+			currentEeg[deviceN].delta=0;
+			currentEeg[deviceN].theta=0;
+			currentEeg[deviceN].lalpha=0;
+			currentEeg[deviceN].halpha=0;
+			currentEeg[deviceN].lbeta=0;
+			currentEeg[deviceN].hbeta=0;
+			currentEeg[deviceN].lgamma=0;
+			currentEeg[deviceN].hgamma=0;
 			
 		
 		}
@@ -417,4 +428,12 @@ public class MainActivity extends Activity implements android.content.DialogInte
 		
 	}
 
+
+	@Override
+	public void newCaptured(AndroMindLib andromind) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
+

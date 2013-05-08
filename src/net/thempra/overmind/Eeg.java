@@ -28,4 +28,14 @@ public class Eeg {
 		lgamma=0;
 		hgamma=0;
 	}
+
+	public int getAttention() {
+		return attention;
+		
+	}
+
+	public int getMeditation() {
+		return meditation;
+		
+	}
 }

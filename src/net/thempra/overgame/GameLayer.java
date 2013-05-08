@@ -3,6 +3,7 @@ package net.thempra.overgame;
 import java.util.ArrayList;
 import java.util.Random;
 
+import net.thempra.overmind.MainActivity;
 import net.thempra.overmind.R;
 import net.thempra.overmind.R.raw;
 
@@ -191,7 +192,10 @@ public class GameLayer extends CCColorLayer
 		int minDuration = 2;
 		int maxDuration = 4;
 		int rangeDuration = maxDuration - minDuration;
+		
 		int actualDuration = rand.nextInt(rangeDuration) + minDuration;
+		
+		
 		
 		// Create the actions
 		CCMoveTo actionMove = CCMoveTo.action(actualDuration, CGPoint.ccp(-target.getContentSize().width / 2.0f, actualY));
