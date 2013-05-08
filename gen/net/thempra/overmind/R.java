@@ -15,20 +15,35 @@ public final class R {
         public static final int background_original=0x7f020001;
         public static final int black_button=0x7f020002;
         public static final int bluetooth=0x7f020003;
-        public static final int button_black=0x7f020004;
-        public static final int button_black_tap=0x7f020005;
-        public static final int button_blacktap=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
+        public static final int bluetooth_disable=0x7f020004;
+        public static final int bluetooth_disable_original=0x7f020005;
+        public static final int bluetooth_enable=0x7f020006;
+        public static final int bluetooth_enable_original=0x7f020007;
+        public static final int button_black=0x7f020008;
+        public static final int button_black_tap=0x7f020009;
+        public static final int button_blacktap=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
     }
     public static final class id {
+        public static final int HorizontalScrollView01=0x7f080006;
+        public static final int LinearLayout02=0x7f080007;
+        public static final int ScrollView01=0x7f080005;
         public static final int btnGame=0x7f080004;
         public static final int btnGrafica_1=0x7f080002;
         public static final int btnGrafica_2=0x7f080003;
-        public static final int menu_about=0x7f080007;
-        public static final int menu_connect=0x7f080006;
+        public static final int device1=0x7f080008;
+        public static final int device2=0x7f080009;
+        public static final int device3=0x7f08000a;
+        public static final int device4=0x7f08000b;
+        public static final int device5=0x7f08000c;
+        public static final int device6=0x7f08000d;
+        public static final int device7=0x7f08000e;
+        public static final int device8=0x7f08000f;
+        public static final int menu_about=0x7f080012;
+        public static final int menu_connect=0x7f080011;
         public static final int mySimpleXYPlot=0x7f080000;
         public static final int textView1=0x7f080001;
-        public static final int txtStatus=0x7f080005;
+        public static final int txtStatus=0x7f080010;
     }
     public static final class layout {
         public static final int grafica_1=0x7f030000;
@@ -47,6 +62,7 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int bluetooth_disconnect=0x7f050009;
         public static final int data_analice=0x7f050006;
+        public static final int device_not_assigned=0x7f05000a;
         public static final int hello_world=0x7f050001;
         public static final int levels=0x7f050007;
         public static final int menu_about=0x7f050003;

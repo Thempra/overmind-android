@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background"
-    >
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/textView1"
@@ -16,42 +15,143 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="50dp" />
 
-      <Button
-          android:id="@+id/btnGrafica_1"
-          android:layout_width="200dp"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center_horizontal"
-          android:layout_margin="15dip"
-          android:text="@string/data_analice"
-          style="@style/button_black"
-           />
-
     <Button
-        android:id="@+id/btnGrafica_2"
-		android:layout_width="200dp"
+        android:id="@+id/btnGrafica_1"
+        style="@style/button_black"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="15dip"
-        android:text="@string/levels"
+        android:text="@string/data_analice" />
+
+    <Button
+        android:id="@+id/btnGrafica_2"
         style="@style/button_black"
-         />
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dip"
+        android:text="@string/levels" />
 
-     <Button
-         android:id="@+id/btnGame"
-         style="@style/button_black"
-         android:layout_width="200dp"
-         android:layout_height="wrap_content"
-         android:layout_gravity="center_horizontal"
-         android:layout_margin="15dip"
-         android:text="@string/play" />
+    <Button
+        android:id="@+id/btnGame"
+        style="@style/button_black"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dip"
+        android:text="@string/play" />
+     // Adding Scrollview
 
-     <TextView
-         android:id="@+id/txtStatus"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_gravity="center_horizontal"
-         android:layout_margin="25dip"
-         android:text="@string/bluetooth_disconnect"
-         android:textAppearance="?android:attr/textAppearanceLarge" />
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal" >
+		// Adding HorizontalScrollview
+
+        <HorizontalScrollView
+            android:id="@+id/HorizontalScrollView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/LinearLayout02"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/device1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/bluetooth_disable"
+                    android:text="@string/device_not_assigned"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <Button
+                    android:id="@+id/device2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/bluetooth_disable"
+                    android:text="@string/device_not_assigned" 
+                     android:textColor="@android:color/white"
+                      android:layout_marginRight="5dp"/>
+
+                <Button
+                    android:id="@+id/device3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/bluetooth_disable"
+                    android:text="@string/device_not_assigned"
+                     android:textColor="@android:color/white"
+                      android:layout_marginRight="5dp"
+                     />
+
+                <Button
+                    android:id="@+id/device4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/bluetooth_disable"
+                    android:text="@string/device_not_assigned"
+                     android:textColor="@android:color/white"
+                      android:layout_marginRight="5dp" />
+
+                <Button
+                    android:id="@+id/device5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/bluetooth_disable"
+                    android:text="@string/device_not_assigned"
+                     android:textColor="@android:color/white"
+                      android:layout_marginRight="5dp" />
+
+                <Button
+                    android:id="@+id/device6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/bluetooth_disable"
+                    android:text="@string/device_not_assigned"
+                     android:textColor="@android:color/white"
+                      android:layout_marginRight="5dp" />
+
+                <Button
+                    android:id="@+id/device7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/bluetooth_disable"
+                    android:text="@string/device_not_assigned"
+                     android:textColor="@android:color/white"
+                      android:layout_marginRight="5dp" />
+
+                <Button
+                    android:id="@+id/device8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/bluetooth_disable"
+                    android:text="@string/device_not_assigned" 
+                     android:textColor="@android:color/white"
+                      android:layout_marginRight="5dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/bluetooth_disconnect"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>

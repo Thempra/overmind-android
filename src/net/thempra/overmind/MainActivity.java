@@ -2,6 +2,7 @@ package net.thempra.overmind;
 
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Set;
 
 import net.thempra.overgame.SimpleGame;
@@ -10,8 +11,10 @@ import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -30,6 +33,14 @@ public class MainActivity extends Activity implements android.content.DialogInte
 	private Button btnGrafica_1;
 	private Button btnGrafica_2;
 	private Button btnGame;
+	private static Button btndevice1;
+	private static Button btndevice2;
+	private Button btndevice3;
+	private Button btndevice4;
+	private Button btndevice5;
+	private Button btndevice6;
+	private Button btndevice7;
+	private Button btndevice8;  
 	private static TextView txtStatus;
 	public static Eeg currentEeg = new Eeg();
 
@@ -39,10 +50,11 @@ public class MainActivity extends Activity implements android.content.DialogInte
 	BluetoothSocket cone;
 	InputStream in;
 	int REQUEST_ENABLE_BT = 2;
-	BluetoothAdapter mBluetoothAdapter;
-	Set<BluetoothDevice> pairedDevices;
-	AndroMindLib devBlue;
-	AndroMindListener mindListerner;
+	static BluetoothAdapter mBluetoothAdapter;
+	static Set<BluetoothDevice> pairedDevices;
+	static ArrayList<AndroMindLib> devBlue = new ArrayList<AndroMindLib>();
+	static AndroMindListener mindListerner;
+	static int devN;
 
 
 
@@ -100,6 +112,40 @@ public class MainActivity extends Activity implements android.content.DialogInte
 	            return;   
 	        }
 
+	     //················· Device 1 ································
+	     btndevice1 = (Button) findViewById(R.id.device1);
+	     btndevice1.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				 if (!mBluetoothAdapter.isEnabled()) {
+			       	    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);	   
+						startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);	
+			       	}else{
+			       		devN=0;
+			       		MainActivity.conectar(MainActivity.this);
+			       	}
+			}
+	     });
+	     
+	     //················· Device 2 ································
+	     btndevice2 = (Button) findViewById(R.id.device2);
+	     btndevice2.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				 if (!mBluetoothAdapter.isEnabled()) {
+			       	    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);	   
+						startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);	
+			       	}else{
+			       		devN=1;
+			       		MainActivity.conectar(MainActivity.this);
+			       	}
+			}
+	     });
+	     
+	     
+	     
+	     
+	     
 	      mindListerner = this;
 	}
 
@@ -129,13 +175,13 @@ public class MainActivity extends Activity implements android.content.DialogInte
 		*/
 		int id = item.getItemId();
     	if (id == R.id.menu_connect) {
-    		 if (!mBluetoothAdapter.isEnabled()) {
+    		if (!mBluetoothAdapter.isEnabled()) {
           	    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
           	   
   				startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
   				
           	}else{
-          		this.conectar();
+          		this.conectar(this);
           	}
              return true;
     	/*} else if (id == R.id.menu_desconectar) {
@@ -159,7 +205,7 @@ public class MainActivity extends Activity implements android.content.DialogInte
         if (requestCode == REQUEST_ENABLE_BT) {
             if (resultCode == RESULT_OK) {
             	
-            	this.conectar();
+            	this.conectar(this);
             	
             }else{
             	
@@ -170,45 +216,40 @@ public class MainActivity extends Activity implements android.content.DialogInte
     }
     
     
-    private void conectar(){
+    private static void conectar( final Context context){
     	//Toast.makeText(this, "Bluetooth is enable", Toast.LENGTH_LONG).show();
     	txtStatus.setText("Bluetooth is enable");
     	
-    	CharSequence[] items;
-    	pairedDevices = mBluetoothAdapter.getBondedDevices();
-    	// If there are paired devices
-    	if (pairedDevices.size() > 0) {
-    		
-    		items = new CharSequence[pairedDevices.size()];
-    		int i=0;
-    	    for (BluetoothDevice device : pairedDevices) {
-    	        // Add the name and address to an array adapter to show in a ListView
-    	        items[i]=(device.getName() + "\n" + device.getAddress());
-    	        i++;
-    	    }
-    	    
-    	    
-    	}else{
-    		items = new CharSequence[1];
-    		items[0]=("No found");
-    	}
-    	
-    	
-    	
+    	CharSequence[] items = getPairedDevices();
     	
 
-    	AlertDialog.Builder pbuilder = new AlertDialog.Builder(this);
+    	AlertDialog.Builder pbuilder = new AlertDialog.Builder(context);
+    	
     	pbuilder.setTitle("Select a device:");
     	pbuilder.setItems(items, new DialogInterface.OnClickListener() {
     	    public void onClick(DialogInterface dialog, int item) {
     	        
     	    	if(item<pairedDevices.size()){
     	    		if(mBluetoothAdapter.isDiscovering())
-    	    		mBluetoothAdapter.cancelDiscovery();
+    	    			mBluetoothAdapter.cancelDiscovery();
+    	    		
+    	    	
     	    		BluetoothDevice tmp = (BluetoothDevice) pairedDevices.toArray()[item];
-    	    		 devBlue = new AndroMindLib(tmp);
-    	    		 devBlue.setNewCaptureListener(mindListerner);
-    	    		devBlue.start();
+    	    		
+    	    		devBlue.add(devN, new AndroMindLib(tmp));
+    	    		devBlue.get(devN).setNewCaptureListener(mindListerner);
+    	    		devBlue.get(devN).start();
+    	    		
+    	    		if (devN==0)
+    	    		{
+    	    			btndevice1.setCompoundDrawables(null, context.getResources().getDrawable(R.drawable.bluetooth_enable),null,null);
+    	    			btndevice1.setText(pairedDevices.toArray()[item].toString());
+    	    		}
+    	    		if (devN==1)
+    	    		{
+    	    			btndevice2.setCompoundDrawables(null, context.getResources().getDrawable(R.drawable.bluetooth_enable),null,null);
+    	    			btndevice2.setText(pairedDevices.toArray()[item].toString());
+    	    		}
     	    		/*
     	    		if (devBlue.isconected() )
     	            	txtStatus.setText("Bluetooth is connected");
@@ -232,6 +273,29 @@ public class MainActivity extends Activity implements android.content.DialogInte
     	
     	
     }
+
+
+	private static CharSequence[] getPairedDevices() {
+		CharSequence[] items;
+    	pairedDevices = mBluetoothAdapter.getBondedDevices();
+    	// If there are paired devices
+    	if (pairedDevices.size() > 0) {
+    		
+    		items = new CharSequence[pairedDevices.size()];
+    		int i=0;
+    	    for (BluetoothDevice device : pairedDevices) {
+    	        // Add the name and address to an array adapter to show in a ListView
+    	        items[i]=(device.getName() + "\n" + device.getAddress());
+    	        i++;
+    	    }
+    	    
+    	    
+    	}else{
+    		items = new CharSequence[1];
+    		items[0]=("No found");
+    	}
+		return items;
+	}
 
   /*  
 	@Override
@@ -338,10 +402,11 @@ public class MainActivity extends Activity implements android.content.DialogInte
 
 	 @Override
 	    protected void onDestroy(){
-	    	if(devBlue != null){
-	    	devBlue.cancel();
-	    	devBlue = null;
-	    	}
+			 for(int n=0;n<8;n++)
+		    	if(devBlue.get(n) != null){
+			    	devBlue.get(n).cancel();
+			    	devBlue = null;
+		    	}
 	    	super.onDestroy();
 	    }
 	    
