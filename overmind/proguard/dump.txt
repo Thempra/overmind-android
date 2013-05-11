@@ -56851,14 +56851,19 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 77):
+Constant Pool (count = 102):
+  + String [Only touch, we are working to play with your mind]
   + Class [a/a/f/b]
   + Class [a/a/g/b]
   + Class [android/app/Activity]
+  + Class [android/widget/Toast]
+  + Class [java/util/ArrayList]
   + Class [net/thempra/overgame/SimpleGame]
   + Class [net/thempra/overgame/a]
   + Double [0.01666666753590107]
   + Fieldref [net/thempra/overgame/SimpleGame.a La/a/g/b;]
+  + Fieldref [net/thempra/overgame/SimpleGame.b I]
+  + Fieldref [net/thempra/overgame/SimpleGame.c Ljava/util/ArrayList;]
   + Methodref [a/a/f/b.a (D)V]
   + Methodref [a/a/f/b.a (La/a/e/c;)V]
   + Methodref [a/a/f/b.a (Landroid/view/View;)Z]
@@ -56875,6 +56880,10 @@ Constant Pool (count = 77):
   + Methodref [android/app/Activity.onResume ()V]
   + Methodref [android/app/Activity.onStart ()V]
   + Methodref [android/app/Activity.onStop ()V]
+  + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + Methodref [android/widget/Toast.show ()V]
+  + Methodref [java/util/ArrayList.<init> ()V]
+  + Methodref [net/thempra/overgame/SimpleGame.getBaseContext ()Landroid/content/Context;]
   + Methodref [net/thempra/overgame/SimpleGame.setContentView (Landroid/view/View;)V]
   + Methodref [net/thempra/overgame/a.a ()La/a/e/c;]
   + NameAndType [<init> ()V]
@@ -56886,39 +56895,54 @@ Constant Pool (count = 77):
   + NameAndType [a (Z)V]
   + NameAndType [a La/a/g/b;]
   + NameAndType [b (I)V]
+  + NameAndType [b I]
+  + NameAndType [c Ljava/util/ArrayList;]
   + NameAndType [d ()La/a/f/b;]
+  + NameAndType [getBaseContext ()Landroid/content/Context;]
   + NameAndType [h ()V]
   + NameAndType [j ()V]
   + NameAndType [k ()V]
+  + NameAndType [makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
   + NameAndType [onCreate (Landroid/os/Bundle;)V]
   + NameAndType [onPause ()V]
   + NameAndType [onResume ()V]
   + NameAndType [onStart ()V]
   + NameAndType [onStop ()V]
   + NameAndType [setContentView (Landroid/view/View;)V]
+  + NameAndType [show ()V]
   + Utf8 [()La/a/e/c;]
   + Utf8 [()La/a/f/b;]
+  + Utf8 [()Landroid/content/Context;]
   + Utf8 [()V]
   + Utf8 [(D)V]
   + Utf8 [(I)V]
   + Utf8 [(La/a/e/c;)V]
   + Utf8 [(Landroid/content/Context;)V]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
   + Utf8 [(Landroid/os/Bundle;)V]
   + Utf8 [(Landroid/view/View;)V]
   + Utf8 [(Landroid/view/View;)Z]
   + Utf8 [(Z)V]
   + Utf8 [<init>]
   + Utf8 [Code]
+  + Utf8 [I]
   + Utf8 [La/a/g/b;]
+  + Utf8 [Ljava/util/ArrayList;]
+  + Utf8 [Only touch, we are working to play with your mind]
   + Utf8 [a]
   + Utf8 [a/a/f/b]
   + Utf8 [a/a/g/b]
   + Utf8 [android/app/Activity]
+  + Utf8 [android/widget/Toast]
   + Utf8 [b]
+  + Utf8 [c]
   + Utf8 [d]
+  + Utf8 [getBaseContext]
   + Utf8 [h]
   + Utf8 [j]
+  + Utf8 [java/util/ArrayList]
   + Utf8 [k]
+  + Utf8 [makeText]
   + Utf8 [net/thempra/overgame/SimpleGame]
   + Utf8 [net/thempra/overgame/a]
   + Utf8 [onCreate]
@@ -56927,49 +56951,82 @@ Constant Pool (count = 77):
   + Utf8 [onStart]
   + Utf8 [onStop]
   + Utf8 [setContentView]
+  + Utf8 [show]
 
-Fields (count = 1):
+Fields (count = 3):
   + Field:        a La/a/g/b;
     Access flags: 0x4
       = protected a.a.g.b a
+  + Field:        b I
+    Access flags: 0x2
+      = private int b
+  + Field:        c Ljava/util/ArrayList;
+    Access flags: 0x2
+      = private java.util.ArrayList c
 
 Methods (count = 6):
   - Method:       <init>()V
     Access flags: 0x1
       = public SimpleGame()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+    + Code attribute instructions (code length = 21, locals = 1, stack = 3):
       [0] aload_0 v0
-      [1] invokespecial #19
+      [1] invokespecial #24
         + Methodref [android/app/Activity.<init> ()V]
-      [4] return
+      [4] aload_0 v0
+      [5] iconst_0
+      [6] putfield #12
+        + Fieldref [net/thempra/overgame/SimpleGame.b I]
+      [9] aload_0 v0
+      [10] new #6
+        + Class [java/util/ArrayList]
+      [13] dup
+      [14] invokespecial #32
+        + Methodref [java/util/ArrayList.<init> ()V]
+      [17] putfield #13
+        + Fieldref [net/thempra/overgame/SimpleGame.c Ljava/util/ArrayList;]
+      [20] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onCreate(Landroid/os/Bundle;)V
     Access flags: 0x1
       = public void onCreate(android.os.Bundle)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 26, locals = 2, stack = 4):
+    + Code attribute instructions (code length = 45, locals = 2, stack = 4):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #20
+      [2] invokespecial #25
         + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
-      [6] new #2
+      [6] new #3
         + Class [a/a/g/b]
       [9] dup
       [10] aload_0 v0
-      [11] invokespecial #18
+      [11] invokespecial #23
         + Methodref [a/a/g/b.<init> (Landroid/content/Context;)V]
-      [14] putfield #8
+      [14] putfield #11
         + Fieldref [net/thempra/overgame/SimpleGame.a La/a/g/b;]
       [17] aload_0 v0
       [18] aload_0 v0
-      [19] getfield #8
+      [19] getfield #11
         + Fieldref [net/thempra/overgame/SimpleGame.a La/a/g/b;]
-      [22] invokevirtual #25
+      [22] invokevirtual #34
         + Methodref [net/thempra/overgame/SimpleGame.setContentView (Landroid/view/View;)V]
-      [25] return
+      [25] aload_0 v0
+      [26] invokevirtual #33
+        + Methodref [net/thempra/overgame/SimpleGame.getBaseContext ()Landroid/content/Context;]
+      [29] ldc #1
+        + String [Only touch, we are working to play with your mind]
+      [31] iconst_1
+      [32] invokestatic #30
+        + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+      [35] invokevirtual #31
+        + Methodref [android/widget/Toast.show ()V]
+      [38] invokestatic #19
+        + Methodref [a/a/f/b.d ()La/a/f/b;]
+      [41] invokevirtual #21
+        + Methodref [a/a/f/b.j ()V]
+      [44] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onStart()V
@@ -56978,39 +57035,39 @@ Methods (count = 6):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 50, locals = 2, stack = 3):
       [0] aload_0 v0
-      [1] invokespecial #23
+      [1] invokespecial #28
         + Methodref [android/app/Activity.onStart ()V]
-      [4] invokestatic #14
+      [4] invokestatic #19
         + Methodref [a/a/f/b.d ()La/a/f/b;]
       [7] aload_0 v0
-      [8] getfield #8
+      [8] getfield #11
         + Fieldref [net/thempra/overgame/SimpleGame.a La/a/g/b;]
-      [11] invokevirtual #11
+      [11] invokevirtual #16
         + Methodref [a/a/f/b.a (Landroid/view/View;)Z]
       [14] pop
-      [15] invokestatic #14
+      [15] invokestatic #19
         + Methodref [a/a/f/b.d ()La/a/f/b;]
       [18] iconst_2
-      [19] invokevirtual #13
+      [19] invokevirtual #18
         + Methodref [a/a/f/b.b (I)V]
-      [22] invokestatic #14
+      [22] invokestatic #19
         + Methodref [a/a/f/b.d ()La/a/f/b;]
       [25] iconst_1
-      [26] invokevirtual #12
+      [26] invokevirtual #17
         + Methodref [a/a/f/b.a (Z)V]
-      [29] invokestatic #14
+      [29] invokestatic #19
         + Methodref [a/a/f/b.d ()La/a/f/b;]
-      [32] ldc2_w #6
+      [32] ldc2_w #9
         + Double [0.01666666753590107]
-      [35] invokevirtual #9
+      [35] invokevirtual #14
         + Methodref [a/a/f/b.a (D)V]
-      [38] invokestatic #26
+      [38] invokestatic #35
         + Methodref [net/thempra/overgame/a.a ()La/a/e/c;]
       [41] astore_1 v1
-      [42] invokestatic #14
+      [42] invokestatic #19
         + Methodref [a/a/f/b.d ()La/a/f/b;]
       [45] aload_1 v1
-      [46] invokevirtual #10
+      [46] invokevirtual #15
         + Methodref [a/a/f/b.a (La/a/e/c;)V]
       [49] return
       Code attribute exceptions (count = 0):
@@ -57021,11 +57078,11 @@ Methods (count = 6):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 11, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #21
+      [1] invokespecial #26
         + Methodref [android/app/Activity.onPause ()V]
-      [4] invokestatic #14
+      [4] invokestatic #19
         + Methodref [a/a/f/b.d ()La/a/f/b;]
-      [7] invokevirtual #16
+      [7] invokevirtual #21
         + Methodref [a/a/f/b.j ()V]
       [10] return
       Code attribute exceptions (count = 0):
@@ -57036,11 +57093,11 @@ Methods (count = 6):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 11, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #22
+      [1] invokespecial #27
         + Methodref [android/app/Activity.onResume ()V]
-      [4] invokestatic #14
+      [4] invokestatic #19
         + Methodref [a/a/f/b.d ()La/a/f/b;]
-      [7] invokevirtual #17
+      [7] invokevirtual #22
         + Methodref [a/a/f/b.k ()V]
       [10] return
       Code attribute exceptions (count = 0):
@@ -57051,11 +57108,11 @@ Methods (count = 6):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 11, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #24
+      [1] invokespecial #29
         + Methodref [android/app/Activity.onStop ()V]
-      [4] invokestatic #14
+      [4] invokestatic #19
         + Methodref [a/a/f/b.d ()La/a/f/b;]
-      [7] invokevirtual #15
+      [7] invokevirtual #20
         + Methodref [a/a/f/b.h ()V]
       [10] return
       Code attribute exceptions (count = 0):
@@ -57225,7 +57282,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 127):
+Constant Pool (count = 128):
   + String []
   + String [
 ]
@@ -57244,11 +57301,11 @@ Constant Pool (count = 127):
   + Class [net/thempra/overmind/b]
   + Class [net/thempra/overmind/c]
   + Long [1000]
-  + Fieldref [net/thempra/overmind/Grafica_1.a [Ljava/lang/Number;]
-  + Fieldref [net/thempra/overmind/Grafica_1.b [Ljava/lang/Number;]
-  + Fieldref [net/thempra/overmind/Grafica_1.c I]
-  + Fieldref [net/thempra/overmind/Grafica_1.d Lcom/androidplot/xy/XYPlot;]
-  + Fieldref [net/thempra/overmind/Grafica_1.e Landroid/os/Handler;]
+  + Fieldref [net/thempra/overmind/Grafica_1.a Lcom/androidplot/xy/XYPlot;]
+  + Fieldref [net/thempra/overmind/Grafica_1.b Landroid/os/Handler;]
+  + Fieldref [net/thempra/overmind/Grafica_1.c [Ljava/lang/Number;]
+  + Fieldref [net/thempra/overmind/Grafica_1.d [Ljava/lang/Number;]
+  + Fieldref [net/thempra/overmind/Grafica_1.e I]
   + Fieldref [net/thempra/overmind/Grafica_1.f I]
   + Fieldref [net/thempra/overmind/Grafica_1.g [Ljava/lang/CharSequence;]
   + Fieldref [net/thempra/overmind/Grafica_1.h Ljava/lang/Runnable;]
@@ -57272,13 +57329,13 @@ Constant Pool (count = 127):
   + NameAndType [<init> (Landroid/content/Context;)V]
   + NameAndType [<init> (Lnet/thempra/overmind/Grafica_1;)V]
   + NameAndType [a ()Ljava/lang/String;]
-  + NameAndType [a [Ljava/lang/Number;]
+  + NameAndType [a Lcom/androidplot/xy/XYPlot;]
   + NameAndType [a [Lnet/thempra/overmind/a;]
-  + NameAndType [b [Ljava/lang/Number;]
-  + NameAndType [c I]
+  + NameAndType [b Landroid/os/Handler;]
+  + NameAndType [c [Ljava/lang/Number;]
   + NameAndType [create ()Landroid/app/AlertDialog;]
-  + NameAndType [d Lcom/androidplot/xy/XYPlot;]
-  + NameAndType [e Landroid/os/Handler;]
+  + NameAndType [d [Ljava/lang/Number;]
+  + NameAndType [e I]
   + NameAndType [f I]
   + NameAndType [g [Ljava/lang/CharSequence;]
   + NameAndType [h Ljava/lang/Runnable;]
@@ -57309,6 +57366,7 @@ Constant Pool (count = 127):
   + Utf8 [(Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;]
   + Utf8 [(Lnet/thempra/overmind/Grafica_1;)V]
   + Utf8 [(Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/CharSequence;]
+  + Utf8 [(Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
   + Utf8 [(Lnet/thempra/overmind/Grafica_1;I)V]
   + Utf8 [(Lnet/thempra/overmind/Grafica_1;Lcom/androidplot/xy/XYPlot;)V]
   + Utf8 [([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
@@ -57355,21 +57413,21 @@ Constant Pool (count = 127):
   + Utf8 [valueOf]
 
 Fields (count = 8):
-  + Field:        d Lcom/androidplot/xy/XYPlot;
+  + Field:        a Lcom/androidplot/xy/XYPlot;
     Access flags: 0x2
-      = private com.androidplot.xy.XYPlot d
-  + Field:        e Landroid/os/Handler;
+      = private com.androidplot.xy.XYPlot a
+  + Field:        b Landroid/os/Handler;
     Access flags: 0x2
-      = private android.os.Handler e
-  + Field:        a [Ljava/lang/Number;
-    Access flags: 0x0
-      = java.lang.Number[] a
-  + Field:        b [Ljava/lang/Number;
-    Access flags: 0x0
-      = java.lang.Number[] b
-  + Field:        c I
-    Access flags: 0x0
-      = int c
+      = private android.os.Handler b
+  + Field:        c [Ljava/lang/Number;
+    Access flags: 0x2
+      = private java.lang.Number[] c
+  + Field:        d [Ljava/lang/Number;
+    Access flags: 0x2
+      = private java.lang.Number[] d
+  + Field:        e I
+    Access flags: 0x2
+      = private int e
   + Field:        f I
     Access flags: 0x2
       = private int f
@@ -57380,7 +57438,7 @@ Fields (count = 8):
     Access flags: 0x2
       = private java.lang.Runnable h
 
-Methods (count = 9):
+Methods (count = 11):
   - Method:       <init>()V
     Access flags: 0x1
       = public Grafica_1()
@@ -57395,8 +57453,8 @@ Methods (count = 9):
       [8] dup
       [9] invokespecial #35
         + Methodref [android/os/Handler.<init> ()V]
-      [12] putfield #23
-        + Fieldref [net/thempra/overmind/Grafica_1.e Landroid/os/Handler;]
+      [12] putfield #20
+        + Fieldref [net/thempra/overmind/Grafica_1.b Landroid/os/Handler;]
       [15] aload_0 v0
       [16] bipush 6
       [18] anewarray #10
@@ -57437,8 +57495,8 @@ Methods (count = 9):
       [60] invokestatic #38
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [63] aastore
-      [64] putfield #19
-        + Fieldref [net/thempra/overmind/Grafica_1.a [Ljava/lang/Number;]
+      [64] putfield #21
+        + Fieldref [net/thempra/overmind/Grafica_1.c [Ljava/lang/Number;]
       [67] aload_0 v0
       [68] bipush 6
       [70] anewarray #10
@@ -57479,12 +57537,12 @@ Methods (count = 9):
       [112] invokestatic #38
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [115] aastore
-      [116] putfield #20
-        + Fieldref [net/thempra/overmind/Grafica_1.b [Ljava/lang/Number;]
+      [116] putfield #22
+        + Fieldref [net/thempra/overmind/Grafica_1.d [Ljava/lang/Number;]
       [119] aload_0 v0
       [120] iconst_0
-      [121] putfield #21
-        + Fieldref [net/thempra/overmind/Grafica_1.c I]
+      [121] putfield #23
+        + Fieldref [net/thempra/overmind/Grafica_1.e I]
       [124] aload_0 v0
       [125] iconst_m1
       [126] putfield #24
@@ -57533,12 +57591,12 @@ Methods (count = 9):
       [31] ifnull +13 (target=44)
       [34] aload_0 v0
       [35] dup
-      [36] getfield #21
-        + Fieldref [net/thempra/overmind/Grafica_1.c I]
+      [36] getfield #23
+        + Fieldref [net/thempra/overmind/Grafica_1.e I]
       [39] iconst_1
       [40] iadd
-      [41] putfield #21
-        + Fieldref [net/thempra/overmind/Grafica_1.c I]
+      [41] putfield #23
+        + Fieldref [net/thempra/overmind/Grafica_1.e I]
       [44] iinc v3, 1
       [47] iload_3 v3
       [48] getstatic #27
@@ -57549,8 +57607,8 @@ Methods (count = 9):
       [56] istore_3 v3
       [57] aload_0 v0
       [58] aload_0 v0
-      [59] getfield #21
-        + Fieldref [net/thempra/overmind/Grafica_1.c I]
+      [59] getfield #23
+        + Fieldref [net/thempra/overmind/Grafica_1.e I]
       [62] anewarray #8
         + Class [java/lang/CharSequence]
       [65] putfield #25
@@ -57609,16 +57667,16 @@ Methods (count = 9):
       [145] invokevirtual #30
         + Methodref [android/app/AlertDialog.show ()V]
       [148] aload_0 v0
-      [149] getfield #23
-        + Fieldref [net/thempra/overmind/Grafica_1.e Landroid/os/Handler;]
+      [149] getfield #20
+        + Fieldref [net/thempra/overmind/Grafica_1.b Landroid/os/Handler;]
       [152] aload_0 v0
       [153] getfield #26
         + Fieldref [net/thempra/overmind/Grafica_1.h Ljava/lang/Runnable;]
       [156] invokevirtual #37
         + Methodref [android/os/Handler.removeCallbacks (Ljava/lang/Runnable;)V]
       [159] aload_0 v0
-      [160] getfield #23
-        + Fieldref [net/thempra/overmind/Grafica_1.e Landroid/os/Handler;]
+      [160] getfield #20
+        + Fieldref [net/thempra/overmind/Grafica_1.b Landroid/os/Handler;]
       [163] aload_0 v0
       [164] getfield #26
         + Fieldref [net/thempra/overmind/Grafica_1.h Ljava/lang/Runnable;]
@@ -57644,14 +57702,36 @@ Methods (count = 9):
     + Code attribute instructions (code length = 6, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #22
-        + Fieldref [net/thempra/overmind/Grafica_1.d Lcom/androidplot/xy/XYPlot;]
+      [2] putfield #19
+        + Fieldref [net/thempra/overmind/Grafica_1.a Lcom/androidplot/xy/XYPlot;]
       [5] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       a(Lnet/thempra/overmind/Grafica_1;)I
+  + Method:       a(Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;
     Access flags: 0x1008
-      = static synthetic int a(net.thempra.overmind.Grafica_1)
+      = static synthetic java.lang.Number[] a(net.thempra.overmind.Grafica_1)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #21
+        + Fieldref [net/thempra/overmind/Grafica_1.c [Ljava/lang/Number;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b(Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;
+    Access flags: 0x1008
+      = static synthetic java.lang.Number[] b(net.thempra.overmind.Grafica_1)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #22
+        + Fieldref [net/thempra/overmind/Grafica_1.d [Ljava/lang/Number;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       c(Lnet/thempra/overmind/Grafica_1;)I
+    Access flags: 0x1008
+      = static synthetic int c(net.thempra.overmind.Grafica_1)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
@@ -57660,31 +57740,31 @@ Methods (count = 9):
       [4] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       b(Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;
+  + Method:       d(Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;
     Access flags: 0x1008
-      = static synthetic com.androidplot.xy.XYPlot b(net.thempra.overmind.Grafica_1)
+      = static synthetic com.androidplot.xy.XYPlot d(net.thempra.overmind.Grafica_1)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #22
-        + Fieldref [net/thempra/overmind/Grafica_1.d Lcom/androidplot/xy/XYPlot;]
+      [1] getfield #19
+        + Fieldref [net/thempra/overmind/Grafica_1.a Lcom/androidplot/xy/XYPlot;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       c(Lnet/thempra/overmind/Grafica_1;)Landroid/os/Handler;
+  + Method:       e(Lnet/thempra/overmind/Grafica_1;)Landroid/os/Handler;
     Access flags: 0x1008
-      = static synthetic android.os.Handler c(net.thempra.overmind.Grafica_1)
+      = static synthetic android.os.Handler e(net.thempra.overmind.Grafica_1)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #23
-        + Fieldref [net/thempra/overmind/Grafica_1.e Landroid/os/Handler;]
+      [1] getfield #20
+        + Fieldref [net/thempra/overmind/Grafica_1.b Landroid/os/Handler;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       d(Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;
+  + Method:       f(Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;
     Access flags: 0x1008
-      = static synthetic java.lang.Runnable d(net.thempra.overmind.Grafica_1)
+      = static synthetic java.lang.Runnable f(net.thempra.overmind.Grafica_1)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
@@ -57693,9 +57773,9 @@ Methods (count = 9):
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       e(Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/CharSequence;
+  + Method:       g(Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/CharSequence;
     Access flags: 0x1008
-      = static synthetic java.lang.CharSequence[] e(net.thempra.overmind.Grafica_1)
+      = static synthetic java.lang.CharSequence[] g(net.thempra.overmind.Grafica_1)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
@@ -57751,8 +57831,6 @@ Constant Pool (count = 122):
   + Class [net/thempra/overmind/b]
   + Long [1000]
   + Fieldref [com/androidplot/xy/o.a Lcom/androidplot/xy/o;]
-  + Fieldref [net/thempra/overmind/Grafica_1.a [Ljava/lang/Number;]
-  + Fieldref [net/thempra/overmind/Grafica_1.b [Ljava/lang/Number;]
   + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
   + Fieldref [net/thempra/overmind/a.e I]
   + Fieldref [net/thempra/overmind/a.f I]
@@ -57766,29 +57844,31 @@ Constant Pool (count = 122):
   + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
   + Methodref [java/lang/Object.<init> ()V]
   + Methodref [java/util/Arrays.asList ([Ljava/lang/Object;)Ljava/util/List;]
-  + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)I]
+  + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
   + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;Lcom/androidplot/xy/XYPlot;)V]
-  + Methodref [net/thempra/overmind/Grafica_1.b (Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;]
-  + Methodref [net/thempra/overmind/Grafica_1.c (Lnet/thempra/overmind/Grafica_1;)Landroid/os/Handler;]
-  + Methodref [net/thempra/overmind/Grafica_1.d (Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;]
+  + Methodref [net/thempra/overmind/Grafica_1.b (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
+  + Methodref [net/thempra/overmind/Grafica_1.c (Lnet/thempra/overmind/Grafica_1;)I]
+  + Methodref [net/thempra/overmind/Grafica_1.d (Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;]
+  + Methodref [net/thempra/overmind/Grafica_1.e (Lnet/thempra/overmind/Grafica_1;)Landroid/os/Handler;]
+  + Methodref [net/thempra/overmind/Grafica_1.f (Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;]
   + Methodref [net/thempra/overmind/Grafica_1.findViewById (I)Landroid/view/View;]
   + Methodref [net/thempra/overmind/Grafica_1.setContentView (I)V]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V]
   + NameAndType [<init> (Ljava/util/List;Lcom/androidplot/xy/o;Ljava/lang/String;)V]
   + NameAndType [a (Lcom/androidplot/b/b;Lcom/androidplot/xy/af;)Z]
-  + NameAndType [a (Lnet/thempra/overmind/Grafica_1;)I]
+  + NameAndType [a (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
   + NameAndType [a (Lnet/thempra/overmind/Grafica_1;Lcom/androidplot/xy/XYPlot;)V]
   + NameAndType [a Lcom/androidplot/xy/o;]
   + NameAndType [a Lnet/thempra/overmind/Grafica_1;]
-  + NameAndType [a [Ljava/lang/Number;]
   + NameAndType [a [Lnet/thempra/overmind/a;]
   + NameAndType [asList ([Ljava/lang/Object;)Ljava/util/List;]
-  + NameAndType [b (Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;]
-  + NameAndType [b [Ljava/lang/Number;]
-  + NameAndType [c (Lnet/thempra/overmind/Grafica_1;)Landroid/os/Handler;]
-  + NameAndType [d (Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;]
+  + NameAndType [b (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
+  + NameAndType [c (Lnet/thempra/overmind/Grafica_1;)I]
+  + NameAndType [d (Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;]
+  + NameAndType [e (Lnet/thempra/overmind/Grafica_1;)Landroid/os/Handler;]
   + NameAndType [e I]
+  + NameAndType [f (Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;]
   + NameAndType [f I]
   + NameAndType [findViewById (I)Landroid/view/View;]
   + NameAndType [postDelayed (Ljava/lang/Runnable;J)Z]
@@ -57811,6 +57891,7 @@ Constant Pool (count = 122):
   + Utf8 [(Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;]
   + Utf8 [(Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;]
   + Utf8 [(Lnet/thempra/overmind/Grafica_1;)V]
+  + Utf8 [(Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
   + Utf8 [(Lnet/thempra/overmind/Grafica_1;Lcom/androidplot/xy/XYPlot;)V]
   + Utf8 [([Ljava/lang/Object;)Ljava/util/List;]
   + Utf8 [<init>]
@@ -57821,7 +57902,6 @@ Constant Pool (count = 122):
   + Utf8 [Lnet/thempra/overmind/Grafica_1;]
   + Utf8 [Meditation]
   + Utf8 [StackMapTable]
-  + Utf8 [[Ljava/lang/Number;]
   + Utf8 [[Lnet/thempra/overmind/a;]
   + Utf8 [a]
   + Utf8 [android/graphics/Color]
@@ -57865,10 +57945,10 @@ Methods (count = 2):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #27
+      [2] putfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
       [5] aload_0 v0
-      [6] invokespecial #35
+      [6] invokespecial #33
         + Methodref [java/lang/Object.<init> ()V]
       [9] return
       Code attribute exceptions (count = 0):
@@ -57879,17 +57959,17 @@ Methods (count = 2):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 367, locals = 4, stack = 8):
       [0] aload_0 v0
-      [1] getfield #27
+      [1] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
       [4] ldc #1
         + Integer [2130903040]
       [6] invokevirtual #43
         + Methodref [net/thempra/overmind/Grafica_1.setContentView (I)V]
       [9] aload_0 v0
-      [10] getfield #27
+      [10] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
       [13] aload_0 v0
-      [14] getfield #27
+      [14] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
       [17] ldc #2
         + Integer [2131230720]
@@ -57897,22 +57977,22 @@ Methods (count = 2):
         + Methodref [net/thempra/overmind/Grafica_1.findViewById (I)Landroid/view/View;]
       [22] checkcast #7
         + Class [com/androidplot/xy/XYPlot]
-      [25] invokestatic #38
+      [25] invokestatic #36
         + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;Lcom/androidplot/xy/XYPlot;)V]
       [28] iconst_0
       [29] istore_1 v1
       [30] goto +26 (target=56)
       [33] aload_0 v0
-      [34] getfield #27
+      [34] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [37] getfield #22
-        + Fieldref [net/thempra/overmind/Grafica_1.a [Ljava/lang/Number;]
+      [37] invokestatic #35
+        + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
       [40] iload_1 v1
       [41] aload_0 v0
-      [42] getfield #27
+      [42] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [45] getfield #22
-        + Fieldref [net/thempra/overmind/Grafica_1.a [Ljava/lang/Number;]
+      [45] invokestatic #35
+        + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
       [48] iload_1 v1
       [49] iconst_1
       [50] iadd
@@ -57921,10 +58001,10 @@ Methods (count = 2):
       [53] iinc v1, 1
       [56] iload_1 v1
       [57] aload_0 v0
-      [58] getfield #27
+      [58] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [61] getfield #22
-        + Fieldref [net/thempra/overmind/Grafica_1.a [Ljava/lang/Number;]
+      [61] invokestatic #35
+        + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
       [64] arraylength
       [65] iconst_1
       [66] isub
@@ -57933,16 +58013,16 @@ Methods (count = 2):
       [71] istore_1 v1
       [72] goto +26 (target=98)
       [75] aload_0 v0
-      [76] getfield #27
+      [76] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [79] getfield #23
-        + Fieldref [net/thempra/overmind/Grafica_1.b [Ljava/lang/Number;]
+      [79] invokestatic #37
+        + Methodref [net/thempra/overmind/Grafica_1.b (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
       [82] iload_1 v1
       [83] aload_0 v0
-      [84] getfield #27
+      [84] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [87] getfield #23
-        + Fieldref [net/thempra/overmind/Grafica_1.b [Ljava/lang/Number;]
+      [87] invokestatic #37
+        + Methodref [net/thempra/overmind/Grafica_1.b (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
       [90] iload_1 v1
       [91] iconst_1
       [92] iadd
@@ -57951,104 +58031,104 @@ Methods (count = 2):
       [95] iinc v1, 1
       [98] iload_1 v1
       [99] aload_0 v0
-      [100] getfield #27
+      [100] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [103] getfield #23
-        + Fieldref [net/thempra/overmind/Grafica_1.b [Ljava/lang/Number;]
+      [103] invokestatic #37
+        + Methodref [net/thempra/overmind/Grafica_1.b (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
       [106] arraylength
       [107] iconst_1
       [108] isub
       [109] ificmplt -34 (target=75)
       [112] aload_0 v0
-      [113] getfield #27
+      [113] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [116] invokestatic #37
-        + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)I]
+      [116] invokestatic #38
+        + Methodref [net/thempra/overmind/Grafica_1.c (Lnet/thempra/overmind/Grafica_1;)I]
       [119] iflt +73 (target=192)
       [122] aload_0 v0
-      [123] getfield #27
+      [123] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [126] getfield #22
-        + Fieldref [net/thempra/overmind/Grafica_1.a [Ljava/lang/Number;]
+      [126] invokestatic #35
+        + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
       [129] aload_0 v0
-      [130] getfield #27
+      [130] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [133] getfield #22
-        + Fieldref [net/thempra/overmind/Grafica_1.a [Ljava/lang/Number;]
+      [133] invokestatic #35
+        + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
       [136] arraylength
       [137] iconst_1
       [138] isub
-      [139] getstatic #24
+      [139] getstatic #22
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
       [142] aload_0 v0
-      [143] getfield #27
+      [143] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [146] invokestatic #37
-        + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)I]
+      [146] invokestatic #38
+        + Methodref [net/thempra/overmind/Grafica_1.c (Lnet/thempra/overmind/Grafica_1;)I]
       [149] aaload
-      [150] getfield #25
+      [150] getfield #23
         + Fieldref [net/thempra/overmind/a.e I]
-      [153] invokestatic #34
+      [153] invokestatic #32
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [156] aastore
       [157] aload_0 v0
-      [158] getfield #27
+      [158] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [161] getfield #23
-        + Fieldref [net/thempra/overmind/Grafica_1.b [Ljava/lang/Number;]
+      [161] invokestatic #37
+        + Methodref [net/thempra/overmind/Grafica_1.b (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
       [164] aload_0 v0
-      [165] getfield #27
+      [165] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [168] getfield #23
-        + Fieldref [net/thempra/overmind/Grafica_1.b [Ljava/lang/Number;]
+      [168] invokestatic #37
+        + Methodref [net/thempra/overmind/Grafica_1.b (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
       [171] arraylength
       [172] iconst_1
       [173] isub
-      [174] getstatic #24
+      [174] getstatic #22
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
       [177] aload_0 v0
-      [178] getfield #27
+      [178] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [181] invokestatic #37
-        + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)I]
+      [181] invokestatic #38
+        + Methodref [net/thempra/overmind/Grafica_1.c (Lnet/thempra/overmind/Grafica_1;)I]
       [184] aaload
-      [185] getfield #26
+      [185] getfield #24
         + Fieldref [net/thempra/overmind/a.f I]
-      [188] invokestatic #34
+      [188] invokestatic #32
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [191] aastore
       [192] new #9
         + Class [com/androidplot/xy/n]
       [195] dup
       [196] aload_0 v0
-      [197] getfield #27
+      [197] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [200] getfield #22
-        + Fieldref [net/thempra/overmind/Grafica_1.a [Ljava/lang/Number;]
-      [203] invokestatic #36
+      [200] invokestatic #35
+        + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
+      [203] invokestatic #34
         + Methodref [java/util/Arrays.asList ([Ljava/lang/Object;)Ljava/util/List;]
       [206] getstatic #21
         + Fieldref [com/androidplot/xy/o.a Lcom/androidplot/xy/o;]
       [209] ldc #3
         + String [Attention]
-      [211] invokespecial #33
+      [211] invokespecial #31
         + Methodref [com/androidplot/xy/n.<init> (Ljava/util/List;Lcom/androidplot/xy/o;Ljava/lang/String;)V]
       [214] astore_1 v1
       [215] new #9
         + Class [com/androidplot/xy/n]
       [218] dup
       [219] aload_0 v0
-      [220] getfield #27
+      [220] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
-      [223] getfield #23
-        + Fieldref [net/thempra/overmind/Grafica_1.b [Ljava/lang/Number;]
-      [226] invokestatic #36
+      [223] invokestatic #37
+        + Methodref [net/thempra/overmind/Grafica_1.b (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/Number;]
+      [226] invokestatic #34
         + Methodref [java/util/Arrays.asList ([Ljava/lang/Object;)Ljava/util/List;]
       [229] getstatic #21
         + Fieldref [com/androidplot/xy/o.a Lcom/androidplot/xy/o;]
       [232] ldc #4
         + String [Meditation]
-      [234] invokespecial #33
+      [234] invokespecial #31
         + Methodref [com/androidplot/xy/n.<init> (Ljava/util/List;Lcom/androidplot/xy/o;Ljava/lang/String;)V]
       [237] astore_2 v2
       [238] new #8
@@ -58057,38 +58137,38 @@ Methods (count = 2):
       [242] iconst_0
       [243] sipush 200
       [246] iconst_0
-      [247] invokestatic #28
+      [247] invokestatic #26
         + Methodref [android/graphics/Color.rgb (III)I]
-      [250] invokestatic #34
+      [250] invokestatic #32
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [253] iconst_0
       [254] bipush 100
       [256] iconst_0
-      [257] invokestatic #28
+      [257] invokestatic #26
         + Methodref [android/graphics/Color.rgb (III)I]
-      [260] invokestatic #34
+      [260] invokestatic #32
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [263] iconst_0
-      [264] invokestatic #34
+      [264] invokestatic #32
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [267] invokespecial #32
+      [267] invokespecial #30
         + Methodref [com/androidplot/xy/j.<init> (Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V]
       [270] astore_3 v3
       [271] aload_0 v0
-      [272] getfield #27
+      [272] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
       [275] invokestatic #39
-        + Methodref [net/thempra/overmind/Grafica_1.b (Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;]
+        + Methodref [net/thempra/overmind/Grafica_1.d (Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;]
       [278] aload_1 v1
       [279] aload_3 v3
-      [280] invokevirtual #31
+      [280] invokevirtual #29
         + Methodref [com/androidplot/xy/XYPlot.a (Lcom/androidplot/b/b;Lcom/androidplot/xy/af;)Z]
       [283] pop
       [284] aload_0 v0
-      [285] getfield #27
+      [285] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
       [288] invokestatic #39
-        + Methodref [net/thempra/overmind/Grafica_1.b (Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;]
+        + Methodref [net/thempra/overmind/Grafica_1.d (Lnet/thempra/overmind/Grafica_1;)Lcom/androidplot/xy/XYPlot;]
       [291] aload_2 v2
       [292] new #8
         + Class [com/androidplot/xy/j]
@@ -58096,50 +58176,50 @@ Methods (count = 2):
       [296] iconst_0
       [297] iconst_0
       [298] sipush 200
-      [301] invokestatic #28
+      [301] invokestatic #26
         + Methodref [android/graphics/Color.rgb (III)I]
-      [304] invokestatic #34
+      [304] invokestatic #32
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [307] iconst_0
       [308] iconst_0
       [309] bipush 100
-      [311] invokestatic #28
+      [311] invokestatic #26
         + Methodref [android/graphics/Color.rgb (III)I]
-      [314] invokestatic #34
+      [314] invokestatic #32
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [317] iconst_0
-      [318] invokestatic #34
+      [318] invokestatic #32
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [321] invokespecial #32
+      [321] invokespecial #30
         + Methodref [com/androidplot/xy/j.<init> (Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V]
-      [324] invokevirtual #31
+      [324] invokevirtual #29
         + Methodref [com/androidplot/xy/XYPlot.a (Lcom/androidplot/b/b;Lcom/androidplot/xy/af;)Z]
       [327] pop
       [328] aload_0 v0
-      [329] getfield #27
+      [329] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
       [332] invokestatic #40
-        + Methodref [net/thempra/overmind/Grafica_1.c (Lnet/thempra/overmind/Grafica_1;)Landroid/os/Handler;]
+        + Methodref [net/thempra/overmind/Grafica_1.e (Lnet/thempra/overmind/Grafica_1;)Landroid/os/Handler;]
       [335] aload_0 v0
-      [336] getfield #27
+      [336] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
       [339] invokestatic #41
-        + Methodref [net/thempra/overmind/Grafica_1.d (Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;]
-      [342] invokevirtual #30
+        + Methodref [net/thempra/overmind/Grafica_1.f (Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;]
+      [342] invokevirtual #28
         + Methodref [android/os/Handler.removeCallbacks (Ljava/lang/Runnable;)V]
       [345] aload_0 v0
-      [346] getfield #27
+      [346] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
       [349] invokestatic #40
-        + Methodref [net/thempra/overmind/Grafica_1.c (Lnet/thempra/overmind/Grafica_1;)Landroid/os/Handler;]
+        + Methodref [net/thempra/overmind/Grafica_1.e (Lnet/thempra/overmind/Grafica_1;)Landroid/os/Handler;]
       [352] aload_0 v0
-      [353] getfield #27
+      [353] getfield #25
         + Fieldref [net/thempra/overmind/b.a Lnet/thempra/overmind/Grafica_1;]
       [356] invokestatic #41
-        + Methodref [net/thempra/overmind/Grafica_1.d (Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;]
+        + Methodref [net/thempra/overmind/Grafica_1.f (Lnet/thempra/overmind/Grafica_1;)Ljava/lang/Runnable;]
       [359] ldc2_w #19
         + Long [1000]
-      [362] invokevirtual #29
+      [362] invokevirtual #27
         + Methodref [android/os/Handler.postDelayed (Ljava/lang/Runnable;J)Z]
       [365] pop
       [366] return
@@ -58165,7 +58245,7 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [android/content/DialogInterface$OnClickListener]
 
-Constant Pool (count = 86):
+Constant Pool (count = 87):
   + String []
   + String [
 ]
@@ -58190,22 +58270,22 @@ Constant Pool (count = 86):
   + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
   + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-  + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)I]
   + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;I)V]
-  + Methodref [net/thempra/overmind/Grafica_1.e (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/CharSequence;]
+  + Methodref [net/thempra/overmind/Grafica_1.c (Lnet/thempra/overmind/Grafica_1;)I]
+  + Methodref [net/thempra/overmind/Grafica_1.g (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/CharSequence;]
   + Methodref [net/thempra/overmind/Grafica_1.getBaseContext ()Landroid/content/Context;]
   + Methodref [net/thempra/overmind/a.a ()Ljava/lang/String;]
   + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Ljava/lang/String;)V]
   + NameAndType [a ()Ljava/lang/String;]
-  + NameAndType [a (Lnet/thempra/overmind/Grafica_1;)I]
   + NameAndType [a (Lnet/thempra/overmind/Grafica_1;I)V]
   + NameAndType [a Lnet/thempra/overmind/Grafica_1;]
   + NameAndType [a [Lnet/thempra/overmind/a;]
   + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [c (Lnet/thempra/overmind/Grafica_1;)I]
   + NameAndType [contains (Ljava/lang/CharSequence;)Z]
-  + NameAndType [e (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/CharSequence;]
+  + NameAndType [g (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/CharSequence;]
   + NameAndType [getBaseContext ()Landroid/content/Context;]
   + NameAndType [makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
   + NameAndType [replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
@@ -58237,8 +58317,9 @@ Constant Pool (count = 86):
   + Utf8 [android/content/DialogInterface$OnClickListener]
   + Utf8 [android/widget/Toast]
   + Utf8 [append]
+  + Utf8 [c]
   + Utf8 [contains]
-  + Utf8 [e]
+  + Utf8 [g]
   + Utf8 [getBaseContext]
   + Utf8 [java/lang/CharSequence]
   + Utf8 [java/lang/Object]
@@ -58292,7 +58373,7 @@ Methods (count = 2):
       [14] getfield #15
         + Fieldref [net/thempra/overmind/c.a Lnet/thempra/overmind/Grafica_1;]
       [17] invokestatic #26
-        + Methodref [net/thempra/overmind/Grafica_1.e (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/CharSequence;]
+        + Methodref [net/thempra/overmind/Grafica_1.g (Lnet/thempra/overmind/Grafica_1;)[Ljava/lang/CharSequence;]
       [20] iload_2 v2
       [21] aaload
       [22] invokeinterface #29
@@ -58317,7 +58398,7 @@ Methods (count = 2):
       [49] getfield #15
         + Fieldref [net/thempra/overmind/c.a Lnet/thempra/overmind/Grafica_1;]
       [52] iload_3 v3
-      [53] invokestatic #25
+      [53] invokestatic #24
         + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;I)V]
       [56] iinc v3, 1
       [59] iload_3 v3
@@ -58342,8 +58423,8 @@ Methods (count = 2):
       [86] aload_0 v0
       [87] getfield #15
         + Fieldref [net/thempra/overmind/c.a Lnet/thempra/overmind/Grafica_1;]
-      [90] invokestatic #24
-        + Methodref [net/thempra/overmind/Grafica_1.a (Lnet/thempra/overmind/Grafica_1;)I]
+      [90] invokestatic #25
+        + Methodref [net/thempra/overmind/Grafica_1.c (Lnet/thempra/overmind/Grafica_1;)I]
       [93] aaload
       [94] invokevirtual #28
         + Methodref [net/thempra/overmind/a.a ()Ljava/lang/String;]
@@ -58376,17 +58457,19 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 111):
+Constant Pool (count = 125):
+  + String []
+  + String [
+]
   + String [Select device to analize]
-  + Class [[Ljava/lang/CharSequence;]
   + Class [android/app/Activity]
   + Class [android/app/AlertDialog]
   + Class [android/app/AlertDialog$Builder]
-  + Class [android/os/Bundle]
   + Class [android/os/Handler]
   + Class [java/lang/CharSequence]
   + Class [java/lang/Integer]
   + Class [java/lang/Number]
+  + Class [java/lang/String]
   + Class [net/thempra/overmind/Grafica_2]
   + Class [net/thempra/overmind/MainActivity]
   + Class [net/thempra/overmind/a]
@@ -58397,7 +58480,9 @@ Constant Pool (count = 111):
   + Fieldref [net/thempra/overmind/Grafica_2.b [Ljava/lang/Number;]
   + Fieldref [net/thempra/overmind/Grafica_2.c Landroid/os/Handler;]
   + Fieldref [net/thempra/overmind/Grafica_2.d I]
-  + Fieldref [net/thempra/overmind/Grafica_2.e Ljava/lang/Runnable;]
+  + Fieldref [net/thempra/overmind/Grafica_2.e I]
+  + Fieldref [net/thempra/overmind/Grafica_2.f [Ljava/lang/CharSequence;]
+  + Fieldref [net/thempra/overmind/Grafica_2.g Ljava/lang/Runnable;]
   + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
   + Methodref [android/app/Activity.<init> ()V]
   + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
@@ -58410,6 +58495,7 @@ Constant Pool (count = 111):
   + Methodref [android/os/Handler.postDelayed (Ljava/lang/Runnable;J)Z]
   + Methodref [android/os/Handler.removeCallbacks (Ljava/lang/Runnable;)V]
   + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+  + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
   + Methodref [net/thempra/overmind/a.a ()Ljava/lang/String;]
   + Methodref [net/thempra/overmind/d.<init> (Lnet/thempra/overmind/Grafica_2;)V]
   + Methodref [net/thempra/overmind/e.<init> (Lnet/thempra/overmind/Grafica_2;)V]
@@ -58423,14 +58509,20 @@ Constant Pool (count = 111):
   + NameAndType [c Landroid/os/Handler;]
   + NameAndType [create ()Landroid/app/AlertDialog;]
   + NameAndType [d I]
-  + NameAndType [e Ljava/lang/Runnable;]
+  + NameAndType [e I]
+  + NameAndType [f [Ljava/lang/CharSequence;]
+  + NameAndType [g Ljava/lang/Runnable;]
   + NameAndType [onCreate (Landroid/os/Bundle;)V]
   + NameAndType [postDelayed (Ljava/lang/Runnable;J)Z]
   + NameAndType [removeCallbacks (Ljava/lang/Runnable;)V]
+  + NameAndType [replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
   + NameAndType [setItems ([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
   + NameAndType [setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
   + NameAndType [show ()V]
   + NameAndType [valueOf (I)Ljava/lang/Integer;]
+  + Utf8 []
+  + Utf8 [
+]
   + Utf8 [()Landroid/app/AlertDialog;]
   + Utf8 [()Ljava/lang/String;]
   + Utf8 [()V]
@@ -58438,6 +58530,7 @@ Constant Pool (count = 111):
   + Utf8 [(Landroid/content/Context;)V]
   + Utf8 [(Landroid/os/Bundle;)V]
   + Utf8 [(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + Utf8 [(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
   + Utf8 [(Ljava/lang/Runnable;)V]
   + Utf8 [(Ljava/lang/Runnable;J)Z]
   + Utf8 [(Lnet/thempra/overmind/Grafica_2;)I]
@@ -58445,6 +58538,7 @@ Constant Pool (count = 111):
   + Utf8 [(Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
   + Utf8 [(Lnet/thempra/overmind/Grafica_2;)Ljava/lang/Runnable;]
   + Utf8 [(Lnet/thempra/overmind/Grafica_2;)V]
+  + Utf8 [(Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/CharSequence;]
   + Utf8 [(Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
   + Utf8 [(Lnet/thempra/overmind/Grafica_2;I)V]
   + Utf8 [(Lnet/thempra/overmind/Grafica_2;Lcom/androidplot/xy/XYPlot;)V]
@@ -58464,16 +58558,18 @@ Constant Pool (count = 111):
   + Utf8 [android/app/Activity]
   + Utf8 [android/app/AlertDialog]
   + Utf8 [android/app/AlertDialog$Builder]
-  + Utf8 [android/os/Bundle]
   + Utf8 [android/os/Handler]
   + Utf8 [b]
   + Utf8 [c]
   + Utf8 [create]
   + Utf8 [d]
   + Utf8 [e]
+  + Utf8 [f]
+  + Utf8 [g]
   + Utf8 [java/lang/CharSequence]
   + Utf8 [java/lang/Integer]
   + Utf8 [java/lang/Number]
+  + Utf8 [java/lang/String]
   + Utf8 [net/thempra/overmind/Grafica_2]
   + Utf8 [net/thempra/overmind/MainActivity]
   + Utf8 [net/thempra/overmind/a]
@@ -58482,12 +58578,13 @@ Constant Pool (count = 111):
   + Utf8 [onCreate]
   + Utf8 [postDelayed]
   + Utf8 [removeCallbacks]
+  + Utf8 [replace]
   + Utf8 [setItems]
   + Utf8 [setTitle]
   + Utf8 [show]
   + Utf8 [valueOf]
 
-Fields (count = 5):
+Fields (count = 7):
   + Field:        a Lcom/androidplot/xy/XYPlot;
     Access flags: 0x2
       = private com.androidplot.xy.XYPlot a
@@ -58500,18 +58597,24 @@ Fields (count = 5):
   + Field:        d I
     Access flags: 0x2
       = private int d
-  + Field:        e Ljava/lang/Runnable;
+  + Field:        e I
     Access flags: 0x2
-      = private java.lang.Runnable e
+      = private int e
+  + Field:        f [Ljava/lang/CharSequence;
+    Access flags: 0x2
+      = private java.lang.CharSequence[] f
+  + Field:        g Ljava/lang/Runnable;
+    Access flags: 0x2
+      = private java.lang.Runnable g
 
-Methods (count = 9):
+Methods (count = 10):
   - Method:       <init>()V
     Access flags: 0x1
       = public Grafica_2()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 127, locals = 1, stack = 5):
+    + Code attribute instructions (code length = 137, locals = 1, stack = 5):
       [0] aload_0 v0
-      [1] invokespecial #24
+      [1] invokespecial #27
         + Methodref [android/app/Activity.<init> ()V]
       [4] aload_0 v0
       [5] bipush 12
@@ -58520,208 +58623,241 @@ Methods (count = 9):
       [10] dup
       [11] iconst_0
       [12] iconst_0
-      [13] invokestatic #34
+      [13] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [16] aastore
       [17] dup
       [18] iconst_1
       [19] iconst_0
-      [20] invokestatic #34
+      [20] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [23] aastore
       [24] dup
       [25] iconst_2
       [26] iconst_0
-      [27] invokestatic #34
+      [27] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [30] aastore
       [31] dup
       [32] iconst_3
       [33] iconst_0
-      [34] invokestatic #34
+      [34] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [37] aastore
       [38] dup
       [39] iconst_4
       [40] iconst_0
-      [41] invokestatic #34
+      [41] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [44] aastore
       [45] dup
       [46] iconst_5
       [47] iconst_0
-      [48] invokestatic #34
+      [48] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [51] aastore
       [52] dup
       [53] bipush 6
       [55] iconst_0
-      [56] invokestatic #34
+      [56] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [59] aastore
       [60] dup
       [61] bipush 7
       [63] iconst_0
-      [64] invokestatic #34
+      [64] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [67] aastore
       [68] dup
       [69] bipush 8
       [71] iconst_0
-      [72] invokestatic #34
+      [72] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [75] aastore
       [76] dup
       [77] bipush 9
       [79] iconst_0
-      [80] invokestatic #34
+      [80] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [83] aastore
       [84] dup
       [85] bipush 10
       [87] iconst_0
-      [88] invokestatic #34
+      [88] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [91] aastore
       [92] dup
       [93] bipush 11
       [95] iconst_0
-      [96] invokestatic #34
+      [96] invokestatic #37
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [99] aastore
-      [100] putfield #19
+      [100] putfield #20
         + Fieldref [net/thempra/overmind/Grafica_2.b [Ljava/lang/Number;]
       [103] aload_0 v0
       [104] new #7
         + Class [android/os/Handler]
       [107] dup
-      [108] invokespecial #31
+      [108] invokespecial #34
         + Methodref [android/os/Handler.<init> ()V]
-      [111] putfield #20
+      [111] putfield #21
         + Fieldref [net/thempra/overmind/Grafica_2.c Landroid/os/Handler;]
       [114] aload_0 v0
-      [115] new #14
-        + Class [net/thempra/overmind/d]
-      [118] dup
+      [115] iconst_0
+      [116] putfield #22
+        + Fieldref [net/thempra/overmind/Grafica_2.d I]
       [119] aload_0 v0
-      [120] invokespecial #36
+      [120] iconst_m1
+      [121] putfield #23
+        + Fieldref [net/thempra/overmind/Grafica_2.e I]
+      [124] aload_0 v0
+      [125] new #15
+        + Class [net/thempra/overmind/d]
+      [128] dup
+      [129] aload_0 v0
+      [130] invokespecial #40
         + Methodref [net/thempra/overmind/d.<init> (Lnet/thempra/overmind/Grafica_2;)V]
-      [123] putfield #22
-        + Fieldref [net/thempra/overmind/Grafica_2.e Ljava/lang/Runnable;]
-      [126] return
+      [133] putfield #25
+        + Fieldref [net/thempra/overmind/Grafica_2.g Ljava/lang/Runnable;]
+      [136] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onCreate(Landroid/os/Bundle;)V
     Access flags: 0x4
       = protected void onCreate(android.os.Bundle)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 150, locals = 6, stack = 5):
+    + Code attribute instructions (code length = 175, locals = 5, stack = 5):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #25
+      [2] invokespecial #28
         + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
-      [5] new #5
+      [5] new #6
         + Class [android/app/AlertDialog$Builder]
       [8] dup
       [9] aload_0 v0
-      [10] invokespecial #27
+      [10] invokespecial #30
         + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
       [13] astore_2 v2
       [14] aload_2 v2
-      [15] ldc #1
+      [15] ldc #3
         + String [Select device to analize]
-      [17] invokevirtual #30
+      [17] invokevirtual #33
         + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
       [20] pop
       [21] iconst_0
       [22] istore_3 v3
-      [23] iconst_0
-      [24] istore v4
-      [26] goto +18 (target=44)
-      [29] getstatic #23
+      [23] goto +24 (target=47)
+      [26] getstatic #26
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [32] iload v4
-      [34] aaload
-      [35] ifnull +6 (target=41)
-      [38] iinc v3, 1
-      [41] iinc v4, 1
-      [44] iload v4
-      [46] getstatic #23
+      [29] iload_3 v3
+      [30] aaload
+      [31] ifnull +13 (target=44)
+      [34] aload_0 v0
+      [35] dup
+      [36] getfield #22
+        + Fieldref [net/thempra/overmind/Grafica_2.d I]
+      [39] iconst_1
+      [40] iadd
+      [41] putfield #22
+        + Fieldref [net/thempra/overmind/Grafica_2.d I]
+      [44] iinc v3, 1
+      [47] iload_3 v3
+      [48] getstatic #26
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [49] arraylength
-      [50] ificmplt -21 (target=29)
-      [53] iload_3 v3
-      [54] anewarray #8
+      [51] arraylength
+      [52] ificmplt -26 (target=26)
+      [55] iconst_0
+      [56] istore_3 v3
+      [57] aload_0 v0
+      [58] aload_0 v0
+      [59] getfield #22
+        + Fieldref [net/thempra/overmind/Grafica_2.d I]
+      [62] anewarray #8
         + Class [java/lang/CharSequence]
-      [57] astore v4
-      [59] iconst_0
-      [60] istore v5
-      [62] goto +29 (target=91)
-      [65] getstatic #23
+      [65] putfield #24
+        + Fieldref [net/thempra/overmind/Grafica_2.f [Ljava/lang/CharSequence;]
+      [68] iconst_0
+      [69] istore v4
+      [71] goto +40 (target=111)
+      [74] getstatic #26
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [68] iload v5
-      [70] aaload
-      [71] ifnull +17 (target=88)
-      [74] aload v4
-      [76] iload v5
-      [78] getstatic #23
+      [77] iload v4
+      [79] aaload
+      [80] ifnull +28 (target=108)
+      [83] aload_0 v0
+      [84] getfield #24
+        + Fieldref [net/thempra/overmind/Grafica_2.f [Ljava/lang/CharSequence;]
+      [87] iload_3 v3
+      [88] getstatic #26
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [81] iload v5
-      [83] aaload
-      [84] invokevirtual #35
+      [91] iload v4
+      [93] aaload
+      [94] invokevirtual #39
         + Methodref [net/thempra/overmind/a.a ()Ljava/lang/String;]
-      [87] aastore
-      [88] iinc v5, 1
-      [91] iload v5
-      [93] iload_3 v3
-      [94] ificmplt -29 (target=65)
-      [97] aload_2 v2
-      [98] aload v4
-      [100] new #15
+      [97] ldc #2
+        + String [
+]
+      [99] ldc #1
+        + String []
+      [101] invokevirtual #38
+        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
+      [104] aastore
+      [105] iinc v3, 1
+      [108] iinc v4, 1
+      [111] iload v4
+      [113] getstatic #26
+        + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
+      [116] arraylength
+      [117] ificmplt -43 (target=74)
+      [120] aload_2 v2
+      [121] aload_0 v0
+      [122] getfield #24
+        + Fieldref [net/thempra/overmind/Grafica_2.f [Ljava/lang/CharSequence;]
+      [125] new #16
         + Class [net/thempra/overmind/e]
-      [103] dup
-      [104] aload_0 v0
-      [105] invokespecial #37
+      [128] dup
+      [129] aload_0 v0
+      [130] invokespecial #41
         + Methodref [net/thempra/overmind/e.<init> (Lnet/thempra/overmind/Grafica_2;)V]
-      [108] invokevirtual #29
+      [133] invokevirtual #32
         + Methodref [android/app/AlertDialog$Builder.setItems ([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
-      [111] pop
-      [112] aload_2 v2
-      [113] invokevirtual #28
+      [136] pop
+      [137] aload_2 v2
+      [138] invokevirtual #31
         + Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
-      [116] astore v5
-      [118] aload v5
-      [120] invokevirtual #26
+      [141] astore v4
+      [143] aload v4
+      [145] invokevirtual #29
         + Methodref [android/app/AlertDialog.show ()V]
-      [123] aload_0 v0
-      [124] getfield #20
+      [148] aload_0 v0
+      [149] getfield #21
         + Fieldref [net/thempra/overmind/Grafica_2.c Landroid/os/Handler;]
-      [127] aload_0 v0
-      [128] getfield #22
-        + Fieldref [net/thempra/overmind/Grafica_2.e Ljava/lang/Runnable;]
-      [131] invokevirtual #33
+      [152] aload_0 v0
+      [153] getfield #25
+        + Fieldref [net/thempra/overmind/Grafica_2.g Ljava/lang/Runnable;]
+      [156] invokevirtual #36
         + Methodref [android/os/Handler.removeCallbacks (Ljava/lang/Runnable;)V]
-      [134] aload_0 v0
-      [135] getfield #20
+      [159] aload_0 v0
+      [160] getfield #21
         + Fieldref [net/thempra/overmind/Grafica_2.c Landroid/os/Handler;]
-      [138] aload_0 v0
-      [139] getfield #22
-        + Fieldref [net/thempra/overmind/Grafica_2.e Ljava/lang/Runnable;]
-      [142] ldc2_w #16
+      [163] aload_0 v0
+      [164] getfield #25
+        + Fieldref [net/thempra/overmind/Grafica_2.g Ljava/lang/Runnable;]
+      [167] ldc2_w #17
         + Long [1000]
-      [145] invokevirtual #32
+      [170] invokevirtual #35
         + Methodref [android/os/Handler.postDelayed (Ljava/lang/Runnable;J)Z]
-      [148] pop
-      [149] return
+      [173] pop
+      [174] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 6):
-        - [29] Var: ...[a:android/app/AlertDialog$Builder][i][i], Stack: (empty)
-        - [41] Var: ..., Stack: (empty)
+        - [26] Var: ...[a:android/app/AlertDialog$Builder][i], Stack: (empty)
         - [44] Var: ..., Stack: (empty)
-        - [65] Var: [a:net/thempra/overmind/Grafica_2][a:android/os/Bundle][a:android/app/AlertDialog$Builder][i][a:[Ljava/lang/CharSequence;][i], Stack: 
-        - [88] Var: ..., Stack: (empty)
-        - [91] Var: ..., Stack: (empty)
+        - [47] Var: ..., Stack: (empty)
+        - [74] Var: ...[i], Stack: (empty)
+        - [108] Var: ..., Stack: (empty)
+        - [111] Var: ..., Stack: (empty)
   + Method:       a(Lnet/thempra/overmind/Grafica_2;Lcom/androidplot/xy/XYPlot;)V
     Access flags: 0x1008
       = static synthetic void a(net.thempra.overmind.Grafica_2,com.androidplot.xy.XYPlot)
@@ -58729,31 +58865,31 @@ Methods (count = 9):
     + Code attribute instructions (code length = 6, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #18
+      [2] putfield #19
         + Fieldref [net/thempra/overmind/Grafica_2.a Lcom/androidplot/xy/XYPlot;]
       [5] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       a(Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;
+  + Method:       a(Lnet/thempra/overmind/Grafica_2;)I
     Access flags: 0x1008
-      = static synthetic java.lang.Number[] a(net.thempra.overmind.Grafica_2)
+      = static synthetic int a(net.thempra.overmind.Grafica_2)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #19
-        + Fieldref [net/thempra/overmind/Grafica_2.b [Ljava/lang/Number;]
-      [4] areturn
+      [1] getfield #23
+        + Fieldref [net/thempra/overmind/Grafica_2.e I]
+      [4] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       b(Lnet/thempra/overmind/Grafica_2;)I
+  + Method:       b(Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;
     Access flags: 0x1008
-      = static synthetic int b(net.thempra.overmind.Grafica_2)
+      = static synthetic java.lang.Number[] b(net.thempra.overmind.Grafica_2)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #21
-        + Fieldref [net/thempra/overmind/Grafica_2.d I]
-      [4] ireturn
+      [1] getfield #20
+        + Fieldref [net/thempra/overmind/Grafica_2.b [Ljava/lang/Number;]
+      [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       c(Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;
@@ -58762,7 +58898,7 @@ Methods (count = 9):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #18
+      [1] getfield #19
         + Fieldref [net/thempra/overmind/Grafica_2.a Lcom/androidplot/xy/XYPlot;]
       [4] areturn
       Code attribute exceptions (count = 0):
@@ -58773,7 +58909,7 @@ Methods (count = 9):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #20
+      [1] getfield #21
         + Fieldref [net/thempra/overmind/Grafica_2.c Landroid/os/Handler;]
       [4] areturn
       Code attribute exceptions (count = 0):
@@ -58784,8 +58920,19 @@ Methods (count = 9):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #22
-        + Fieldref [net/thempra/overmind/Grafica_2.e Ljava/lang/Runnable;]
+      [1] getfield #25
+        + Fieldref [net/thempra/overmind/Grafica_2.g Ljava/lang/Runnable;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       f(Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/CharSequence;
+    Access flags: 0x1008
+      = static synthetic java.lang.CharSequence[] f(net.thempra.overmind.Grafica_2)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #24
+        + Fieldref [net/thempra/overmind/Grafica_2.f [Ljava/lang/CharSequence;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -58796,8 +58943,8 @@ Methods (count = 9):
     + Code attribute instructions (code length = 6, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] iload_1 v1
-      [2] putfield #21
-        + Fieldref [net/thempra/overmind/Grafica_2.d I]
+      [2] putfield #23
+        + Fieldref [net/thempra/overmind/Grafica_2.e I]
       [5] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -58815,7 +58962,7 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [java/lang/Runnable]
 
-Constant Pool (count = 274):
+Constant Pool (count = 275):
   + Integer [-16777216]
   + Integer [-16776961]
   + Integer [2130903041]
@@ -58908,9 +59055,9 @@ Constant Pool (count = 274):
   + Methodref [java/lang/Object.<init> ()V]
   + Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
   + Methodref [java/util/Arrays.asList ([Ljava/lang/Object;)Ljava/util/List;]
-  + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+  + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
   + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;Lcom/androidplot/xy/XYPlot;)V]
-  + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
+  + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
   + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
   + Methodref [net/thempra/overmind/Grafica_2.d (Lnet/thempra/overmind/Grafica_2;)Landroid/os/Handler;]
   + Methodref [net/thempra/overmind/Grafica_2.e (Lnet/thempra/overmind/Grafica_2;)Ljava/lang/Runnable;]
@@ -58930,7 +59077,7 @@ Constant Pool (count = 274):
   + NameAndType [a (Lcom/androidplot/b/b;Lcom/androidplot/xy/af;)Z]
   + NameAndType [a (Lcom/androidplot/c;Ljava/lang/Float;Ljava/lang/Float;)V]
   + NameAndType [a (Lcom/androidplot/xy/ak;D)V]
-  + NameAndType [a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+  + NameAndType [a (Lnet/thempra/overmind/Grafica_2;)I]
   + NameAndType [a (Lnet/thempra/overmind/Grafica_2;Lcom/androidplot/xy/XYPlot;)V]
   + NameAndType [a Lcom/androidplot/xy/o;]
   + NameAndType [a Lnet/thempra/overmind/Grafica_2;]
@@ -58939,7 +59086,7 @@ Constant Pool (count = 274):
   + NameAndType [b ()Landroid/graphics/Paint;]
   + NameAndType [b ()V]
   + NameAndType [b (Lcom/androidplot/xy/ak;D)V]
-  + NameAndType [b (Lnet/thempra/overmind/Grafica_2;)I]
+  + NameAndType [b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
   + NameAndType [b Lcom/androidplot/c;]
   + NameAndType [b Lcom/androidplot/xy/ak;]
   + NameAndType [c (F)V]
@@ -59024,6 +59171,7 @@ Constant Pool (count = 274):
   + Utf8 [Level]
   + Utf8 [Lnet/thempra/overmind/Grafica_2;]
   + Utf8 [MIRROR]
+  + Utf8 [StackMapTable]
   + Utf8 [Thread #1]
   + Utf8 [Waves]
   + Utf8 [[Lnet/thempra/overmind/a;]
@@ -59114,7 +59262,7 @@ Methods (count = 2):
     Access flags: 0x1
       = public void run()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 843, locals = 5, stack = 10):
+    + Code attribute instructions (code length = 853, locals = 5, stack = 10):
       [0] aload_0 v0
       [1] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
@@ -59140,379 +59288,378 @@ Methods (count = 2):
       [29] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
       [32] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [35] iconst_0
-      [36] getstatic #41
-        + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [39] aload_0 v0
-      [40] getfield #53
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [35] iflt +308 (target=343)
+      [38] aload_0 v0
+      [39] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [43] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [46] aaload
-      [47] getfield #42
+      [42] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [45] iconst_0
+      [46] getstatic #41
+        + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
+      [49] aload_0 v0
+      [50] getfield #53
+        + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
+      [53] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [56] aaload
+      [57] getfield #42
         + Fieldref [net/thempra/overmind/a.d I]
-      [50] invokestatic #90
+      [60] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [53] aastore
-      [54] aload_0 v0
-      [55] getfield #53
+      [63] aastore
+      [64] aload_0 v0
+      [65] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [58] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [61] iconst_1
-      [62] getstatic #41
+      [68] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [71] iconst_1
+      [72] getstatic #41
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [65] aload_0 v0
-      [66] getfield #53
+      [75] aload_0 v0
+      [76] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [69] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [72] aaload
-      [73] getfield #43
+      [79] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [82] aaload
+      [83] getfield #43
         + Fieldref [net/thempra/overmind/a.e I]
-      [76] invokestatic #90
+      [86] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [79] aastore
-      [80] aload_0 v0
-      [81] getfield #53
+      [89] aastore
+      [90] aload_0 v0
+      [91] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [84] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [87] iconst_2
-      [88] getstatic #41
+      [94] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [97] iconst_2
+      [98] getstatic #41
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [91] aload_0 v0
-      [92] getfield #53
+      [101] aload_0 v0
+      [102] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [95] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [98] aaload
-      [99] getfield #44
+      [105] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [108] aaload
+      [109] getfield #44
         + Fieldref [net/thempra/overmind/a.f I]
-      [102] invokestatic #90
+      [112] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [105] aastore
-      [106] aload_0 v0
-      [107] getfield #53
+      [115] aastore
+      [116] aload_0 v0
+      [117] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [110] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [113] iconst_3
-      [114] getstatic #41
+      [120] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [123] iconst_3
+      [124] getstatic #41
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [117] aload_0 v0
-      [118] getfield #53
+      [127] aload_0 v0
+      [128] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [121] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [124] aaload
-      [125] getfield #45
+      [131] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [134] aaload
+      [135] getfield #45
         + Fieldref [net/thempra/overmind/a.g I]
-      [128] invokestatic #90
+      [138] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [131] aastore
-      [132] aload_0 v0
-      [133] getfield #53
+      [141] aastore
+      [142] aload_0 v0
+      [143] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [136] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [139] iconst_4
-      [140] getstatic #41
+      [146] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [149] iconst_4
+      [150] getstatic #41
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [143] aload_0 v0
-      [144] getfield #53
+      [153] aload_0 v0
+      [154] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [147] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [150] aaload
-      [151] getfield #46
+      [157] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [160] aaload
+      [161] getfield #46
         + Fieldref [net/thempra/overmind/a.h I]
-      [154] invokestatic #90
+      [164] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [157] aastore
-      [158] aload_0 v0
-      [159] getfield #53
+      [167] aastore
+      [168] aload_0 v0
+      [169] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [162] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [165] iconst_5
-      [166] getstatic #41
+      [172] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [175] iconst_5
+      [176] getstatic #41
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [169] aload_0 v0
-      [170] getfield #53
+      [179] aload_0 v0
+      [180] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [173] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [176] aaload
-      [177] getfield #47
+      [183] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [186] aaload
+      [187] getfield #47
         + Fieldref [net/thempra/overmind/a.i I]
-      [180] invokestatic #90
+      [190] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [183] aastore
-      [184] aload_0 v0
-      [185] getfield #53
+      [193] aastore
+      [194] aload_0 v0
+      [195] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [188] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [191] bipush 6
-      [193] getstatic #41
+      [198] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [201] bipush 6
+      [203] getstatic #41
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [196] aload_0 v0
-      [197] getfield #53
+      [206] aload_0 v0
+      [207] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [200] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [203] aaload
-      [204] getfield #48
+      [210] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [213] aaload
+      [214] getfield #48
         + Fieldref [net/thempra/overmind/a.j I]
-      [207] invokestatic #90
+      [217] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [210] aastore
-      [211] aload_0 v0
-      [212] getfield #53
+      [220] aastore
+      [221] aload_0 v0
+      [222] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [215] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [218] bipush 7
-      [220] getstatic #41
+      [225] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [228] bipush 7
+      [230] getstatic #41
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [223] aload_0 v0
-      [224] getfield #53
+      [233] aload_0 v0
+      [234] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [227] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [230] aaload
-      [231] getfield #49
+      [237] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [240] aaload
+      [241] getfield #49
         + Fieldref [net/thempra/overmind/a.k I]
-      [234] invokestatic #90
+      [244] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [237] aastore
-      [238] aload_0 v0
-      [239] getfield #53
+      [247] aastore
+      [248] aload_0 v0
+      [249] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [242] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [245] bipush 8
-      [247] getstatic #41
+      [252] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [255] bipush 8
+      [257] getstatic #41
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [250] aload_0 v0
-      [251] getfield #53
+      [260] aload_0 v0
+      [261] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [254] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [257] aaload
-      [258] getfield #50
+      [264] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [267] aaload
+      [268] getfield #50
         + Fieldref [net/thempra/overmind/a.l I]
-      [261] invokestatic #90
+      [271] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [264] aastore
-      [265] aload_0 v0
-      [266] getfield #53
+      [274] aastore
+      [275] aload_0 v0
+      [276] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [269] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [272] bipush 9
-      [274] getstatic #41
+      [279] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [282] bipush 9
+      [284] getstatic #41
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [277] aload_0 v0
-      [278] getfield #53
+      [287] aload_0 v0
+      [288] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [281] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [284] aaload
-      [285] getfield #51
+      [291] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [294] aaload
+      [295] getfield #51
         + Fieldref [net/thempra/overmind/a.m I]
-      [288] invokestatic #90
+      [298] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [291] aastore
-      [292] aload_0 v0
-      [293] getfield #53
+      [301] aastore
+      [302] aload_0 v0
+      [303] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [296] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [299] bipush 10
-      [301] getstatic #41
+      [306] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [309] bipush 10
+      [311] getstatic #41
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [304] aload_0 v0
-      [305] getfield #53
+      [314] aload_0 v0
+      [315] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [308] invokestatic #96
-        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)I]
-      [311] aaload
-      [312] getfield #52
+      [318] invokestatic #94
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [321] aaload
+      [322] getfield #52
         + Fieldref [net/thempra/overmind/a.n I]
-      [315] invokestatic #90
+      [325] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [318] aastore
-      [319] aload_0 v0
-      [320] getfield #53
+      [328] aastore
+      [329] aload_0 v0
+      [330] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [323] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [326] bipush 11
-      [328] iconst_0
-      [329] invokestatic #90
+      [333] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [336] bipush 11
+      [338] iconst_0
+      [339] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [332] aastore
-      [333] new #21
+      [342] aastore
+      [343] new #21
         + Class [com/androidplot/xy/n]
-      [336] dup
-      [337] aload_0 v0
-      [338] getfield #53
+      [346] dup
+      [347] aload_0 v0
+      [348] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [341] invokestatic #94
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
-      [344] invokestatic #93
+      [351] invokestatic #96
+        + Methodref [net/thempra/overmind/Grafica_2.b (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/Number;]
+      [354] invokestatic #93
         + Methodref [java/util/Arrays.asList ([Ljava/lang/Object;)Ljava/util/List;]
-      [347] getstatic #40
+      [357] getstatic #40
         + Fieldref [com/androidplot/xy/o.a Lcom/androidplot/xy/o;]
-      [350] ldc #9
+      [360] ldc #9
         + String [Thread #1]
-      [352] invokespecial #81
+      [362] invokespecial #81
         + Methodref [com/androidplot/xy/n.<init> (Ljava/util/List;Lcom/androidplot/xy/o;Ljava/lang/String;)V]
-      [355] astore_1 v1
-      [356] aload_0 v0
-      [357] getfield #53
+      [365] astore_1 v1
+      [366] aload_0 v0
+      [367] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [360] invokestatic #97
+      [370] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [363] invokevirtual #72
+      [373] invokevirtual #72
         + Methodref [com/androidplot/xy/XYPlot.getGraphWidget ()Lcom/androidplot/xy/z;]
-      [366] invokevirtual #85
+      [376] invokevirtual #85
         + Methodref [com/androidplot/xy/z.a ()Landroid/graphics/Paint;]
-      [369] iconst_m1
-      [370] invokevirtual #60
+      [379] iconst_m1
+      [380] invokevirtual #60
         + Methodref [android/graphics/Paint.setColor (I)V]
-      [373] aload_0 v0
-      [374] getfield #53
+      [383] aload_0 v0
+      [384] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [377] invokestatic #97
+      [387] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [380] invokevirtual #72
+      [390] invokevirtual #72
         + Methodref [com/androidplot/xy/XYPlot.getGraphWidget ()Lcom/androidplot/xy/z;]
-      [383] invokevirtual #86
+      [393] invokevirtual #86
         + Methodref [com/androidplot/xy/z.b ()Landroid/graphics/Paint;]
-      [386] ldc #1
+      [396] ldc #1
         + Integer [-16777216]
-      [388] invokevirtual #60
+      [398] invokevirtual #60
         + Methodref [android/graphics/Paint.setColor (I)V]
-      [391] aload_0 v0
-      [392] getfield #53
+      [401] aload_0 v0
+      [402] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [395] invokestatic #97
+      [405] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [398] invokevirtual #72
+      [408] invokevirtual #72
         + Methodref [com/androidplot/xy/XYPlot.getGraphWidget ()Lcom/androidplot/xy/z;]
-      [401] invokevirtual #86
+      [411] invokevirtual #86
         + Methodref [com/androidplot/xy/z.b ()Landroid/graphics/Paint;]
-      [404] new #12
+      [414] new #12
         + Class [android/graphics/DashPathEffect]
-      [407] dup
-      [408] iconst_2
-      [409] newarray 6
-      [411] dup
-      [412] iconst_0
-      [413] fconst_1
-      [414] fastore
-      [415] dup
-      [416] iconst_1
-      [417] fconst_1
-      [418] fastore
-      [419] fconst_1
-      [420] invokespecial #55
+      [417] dup
+      [418] iconst_2
+      [419] newarray 6
+      [421] dup
+      [422] iconst_0
+      [423] fconst_1
+      [424] fastore
+      [425] dup
+      [426] iconst_1
+      [427] fconst_1
+      [428] fastore
+      [429] fconst_1
+      [430] invokespecial #55
         + Methodref [android/graphics/DashPathEffect.<init> ([FF)V]
-      [423] invokevirtual #61
+      [433] invokevirtual #61
         + Methodref [android/graphics/Paint.setPathEffect (Landroid/graphics/PathEffect;)Landroid/graphics/PathEffect;]
-      [426] pop
-      [427] aload_0 v0
-      [428] getfield #53
+      [436] pop
+      [437] aload_0 v0
+      [438] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [431] invokestatic #97
+      [441] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [434] invokevirtual #72
+      [444] invokevirtual #72
         + Methodref [com/androidplot/xy/XYPlot.getGraphWidget ()Lcom/androidplot/xy/z;]
-      [437] invokevirtual #88
+      [447] invokevirtual #88
         + Methodref [com/androidplot/xy/z.i ()Landroid/graphics/Paint;]
-      [440] ldc #1
+      [450] ldc #1
         + Integer [-16777216]
-      [442] invokevirtual #60
+      [452] invokevirtual #60
         + Methodref [android/graphics/Paint.setColor (I)V]
-      [445] aload_0 v0
-      [446] getfield #53
+      [455] aload_0 v0
+      [456] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [449] invokestatic #97
+      [459] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [452] invokevirtual #72
+      [462] invokevirtual #72
         + Methodref [com/androidplot/xy/XYPlot.getGraphWidget ()Lcom/androidplot/xy/z;]
-      [455] invokevirtual #89
+      [465] invokevirtual #89
         + Methodref [com/androidplot/xy/z.j ()Landroid/graphics/Paint;]
-      [458] ldc #1
+      [468] ldc #1
         + Integer [-16777216]
-      [460] invokevirtual #60
+      [470] invokevirtual #60
         + Methodref [android/graphics/Paint.setColor (I)V]
-      [463] aload_0 v0
-      [464] getfield #53
+      [473] aload_0 v0
+      [474] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [467] invokestatic #97
+      [477] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [470] invokevirtual #72
+      [480] invokevirtual #72
         + Methodref [com/androidplot/xy/XYPlot.getGraphWidget ()Lcom/androidplot/xy/z;]
-      [473] ldc #5
+      [483] ldc #5
         + Float [5.0]
-      [475] invokevirtual #87
+      [485] invokevirtual #87
         + Methodref [com/androidplot/xy/z.c (F)V]
-      [478] aload_0 v0
-      [479] getfield #53
+      [488] aload_0 v0
+      [489] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [482] invokestatic #97
+      [492] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [485] getstatic #38
+      [495] getstatic #38
         + Fieldref [com/androidplot/c.b Lcom/androidplot/c;]
-      [488] aconst_null
-      [489] aconst_null
-      [490] invokevirtual #67
+      [498] aconst_null
+      [499] aconst_null
+      [500] invokevirtual #67
         + Methodref [com/androidplot/xy/XYPlot.a (Lcom/androidplot/c;Ljava/lang/Float;Ljava/lang/Float;)V]
-      [493] aload_0 v0
-      [494] getfield #53
+      [503] aload_0 v0
+      [504] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [497] invokestatic #97
+      [507] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [500] invokevirtual #71
+      [510] invokevirtual #71
         + Methodref [com/androidplot/xy/XYPlot.getBorderPaint ()Landroid/graphics/Paint;]
-      [503] fconst_1
-      [504] invokevirtual #63
+      [513] fconst_1
+      [514] invokevirtual #63
         + Methodref [android/graphics/Paint.setStrokeWidth (F)V]
-      [507] aload_0 v0
-      [508] getfield #53
+      [517] aload_0 v0
+      [518] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [511] invokestatic #97
+      [521] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [514] invokevirtual #71
+      [524] invokevirtual #71
         + Methodref [com/androidplot/xy/XYPlot.getBorderPaint ()Landroid/graphics/Paint;]
-      [517] iconst_0
-      [518] invokevirtual #59
+      [527] iconst_0
+      [528] invokevirtual #59
         + Methodref [android/graphics/Paint.setAntiAlias (Z)V]
-      [521] aload_0 v0
-      [522] getfield #53
+      [531] aload_0 v0
+      [532] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [525] invokestatic #97
+      [535] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [528] invokevirtual #71
+      [538] invokevirtual #71
         + Methodref [com/androidplot/xy/XYPlot.getBorderPaint ()Landroid/graphics/Paint;]
-      [531] iconst_m1
-      [532] invokevirtual #60
+      [541] iconst_m1
+      [542] invokevirtual #60
         + Methodref [android/graphics/Paint.setColor (I)V]
-      [535] new #20
+      [545] new #20
         + Class [com/androidplot/xy/j]
-      [538] dup
-      [539] iconst_0
-      [540] bipush 100
-      [542] iconst_0
-      [543] invokestatic #54
-        + Methodref [android/graphics/Color.rgb (III)I]
-      [546] invokestatic #90
-        + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [548] dup
       [549] iconst_0
       [550] bipush 100
       [552] iconst_0
@@ -59520,211 +59667,220 @@ Methods (count = 2):
         + Methodref [android/graphics/Color.rgb (III)I]
       [556] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [559] bipush 100
-      [561] sipush 200
-      [564] iconst_0
-      [565] invokestatic #54
+      [559] iconst_0
+      [560] bipush 100
+      [562] iconst_0
+      [563] invokestatic #54
         + Methodref [android/graphics/Color.rgb (III)I]
-      [568] invokestatic #90
+      [566] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [571] invokespecial #80
+      [569] bipush 100
+      [571] sipush 200
+      [574] iconst_0
+      [575] invokestatic #54
+        + Methodref [android/graphics/Color.rgb (III)I]
+      [578] invokestatic #90
+        + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [581] invokespecial #80
         + Methodref [com/androidplot/xy/j.<init> (Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V]
-      [574] astore_2 v2
-      [575] new #14
+      [584] astore_2 v2
+      [585] new #14
         + Class [android/graphics/Paint]
-      [578] dup
-      [579] invokespecial #57
+      [588] dup
+      [589] invokespecial #57
         + Methodref [android/graphics/Paint.<init> ()V]
-      [582] astore_3 v3
-      [583] aload_3 v3
-      [584] sipush 200
-      [587] invokevirtual #58
+      [592] astore_3 v3
+      [593] aload_3 v3
+      [594] sipush 200
+      [597] invokevirtual #58
         + Methodref [android/graphics/Paint.setAlpha (I)V]
-      [590] aload_3 v3
-      [591] new #13
+      [600] aload_3 v3
+      [601] new #13
         + Class [android/graphics/LinearGradient]
-      [594] dup
-      [595] fconst_0
-      [596] fconst_0
-      [597] fconst_0
-      [598] ldc #6
+      [604] dup
+      [605] fconst_0
+      [606] fconst_0
+      [607] fconst_0
+      [608] ldc #6
         + Float [250.0]
-      [600] iconst_m1
-      [601] ldc #2
+      [610] iconst_m1
+      [611] ldc #2
         + Integer [-16776961]
-      [603] getstatic #37
+      [613] getstatic #37
         + Fieldref [android/graphics/Shader$TileMode.MIRROR Landroid/graphics/Shader$TileMode;]
-      [606] invokespecial #56
+      [616] invokespecial #56
         + Methodref [android/graphics/LinearGradient.<init> (FFFFIILandroid/graphics/Shader$TileMode;)V]
-      [609] invokevirtual #62
+      [619] invokevirtual #62
         + Methodref [android/graphics/Paint.setShader (Landroid/graphics/Shader;)Landroid/graphics/Shader;]
-      [612] pop
-      [613] new #23
+      [622] pop
+      [623] new #23
         + Class [com/androidplot/xy/q]
-      [616] dup
-      [617] iconst_0
-      [618] iconst_0
-      [619] iconst_0
-      [620] invokestatic #54
+      [626] dup
+      [627] iconst_0
+      [628] iconst_0
+      [629] iconst_0
+      [630] invokestatic #54
         + Methodref [android/graphics/Color.rgb (III)I]
-      [623] invokestatic #90
+      [633] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [626] ldc #2
+      [636] ldc #2
         + Integer [-16776961]
-      [628] invokestatic #90
+      [638] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [631] invokespecial #82
+      [641] invokespecial #82
         + Methodref [com/androidplot/xy/q.<init> (Ljava/lang/Integer;Ljava/lang/Integer;)V]
-      [634] astore v4
-      [636] aload v4
-      [638] invokevirtual #84
+      [644] astore v4
+      [646] aload v4
+      [648] invokevirtual #84
         + Methodref [com/androidplot/xy/q.b ()Landroid/graphics/Paint;]
-      [641] fconst_1
-      [642] invokevirtual #63
+      [651] fconst_1
+      [652] invokevirtual #63
         + Methodref [android/graphics/Paint.setStrokeWidth (F)V]
-      [645] aload v4
-      [647] invokevirtual #84
+      [655] aload v4
+      [657] invokevirtual #84
         + Methodref [com/androidplot/xy/q.b ()Landroid/graphics/Paint;]
-      [650] iconst_0
-      [651] invokevirtual #59
+      [660] iconst_0
+      [661] invokevirtual #59
         + Methodref [android/graphics/Paint.setAntiAlias (Z)V]
-      [654] aload v4
-      [656] aload_3 v3
-      [657] invokevirtual #83
+      [664] aload v4
+      [666] aload_3 v3
+      [667] invokevirtual #83
         + Methodref [com/androidplot/xy/q.a (Landroid/graphics/Paint;)V]
-      [660] aload_0 v0
-      [661] getfield #53
+      [670] aload_0 v0
+      [671] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [664] invokestatic #97
+      [674] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [667] aload_1 v1
-      [668] aload v4
-      [670] invokevirtual #66
+      [677] aload_1 v1
+      [678] aload v4
+      [680] invokevirtual #66
         + Methodref [com/androidplot/xy/XYPlot.a (Lcom/androidplot/b/b;Lcom/androidplot/xy/af;)Z]
-      [673] pop
-      [674] aload_0 v0
-      [675] getfield #53
+      [683] pop
+      [684] aload_0 v0
+      [685] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [678] invokestatic #97
+      [688] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [681] getstatic #39
+      [691] getstatic #39
         + Fieldref [com/androidplot/xy/ak.b Lcom/androidplot/xy/ak;]
-      [684] dconst_1
-      [685] invokevirtual #70
+      [694] dconst_1
+      [695] invokevirtual #70
         + Methodref [com/androidplot/xy/XYPlot.b (Lcom/androidplot/xy/ak;D)V]
-      [688] aload_0 v0
-      [689] getfield #53
+      [698] aload_0 v0
+      [699] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [692] invokestatic #97
+      [702] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [695] getstatic #39
+      [705] getstatic #39
         + Fieldref [com/androidplot/xy/ak.b Lcom/androidplot/xy/ak;]
-      [698] dconst_1
-      [699] invokevirtual #68
+      [708] dconst_1
+      [709] invokevirtual #68
         + Methodref [com/androidplot/xy/XYPlot.a (Lcom/androidplot/xy/ak;D)V]
-      [702] aload_0 v0
-      [703] getfield #53
+      [712] aload_0 v0
+      [713] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [706] invokestatic #97
+      [716] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [709] bipush 10
-      [711] invokevirtual #79
+      [719] bipush 10
+      [721] invokevirtual #79
         + Methodref [com/androidplot/xy/XYPlot.setTicksPerRangeLabel (I)V]
-      [714] aload_0 v0
-      [715] getfield #53
+      [724] aload_0 v0
+      [725] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [718] invokestatic #97
+      [728] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [721] iconst_1
-      [722] invokevirtual #78
+      [731] iconst_1
+      [732] invokevirtual #78
         + Methodref [com/androidplot/xy/XYPlot.setTicksPerDomainLabel (I)V]
-      [725] aload_0 v0
-      [726] getfield #53
+      [735] aload_0 v0
+      [736] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [729] invokestatic #97
+      [739] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [732] ldc #10
+      [742] ldc #10
         + String [Waves]
-      [734] invokevirtual #73
+      [744] invokevirtual #73
         + Methodref [com/androidplot/xy/XYPlot.setDomainLabel (Ljava/lang/String;)V]
-      [737] aload_0 v0
-      [738] getfield #53
+      [747] aload_0 v0
+      [748] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [741] invokestatic #97
+      [751] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [744] ldc #8
+      [754] ldc #8
         + String [Level]
-      [746] invokevirtual #75
+      [756] invokevirtual #75
         + Methodref [com/androidplot/xy/XYPlot.setRangeLabel (Ljava/lang/String;)V]
-      [749] aload_0 v0
-      [750] getfield #53
+      [759] aload_0 v0
+      [760] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [753] invokestatic #97
+      [763] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [756] bipush 100
-      [758] invokestatic #90
+      [766] bipush 100
+      [768] invokestatic #90
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [761] invokevirtual #76
+      [771] invokevirtual #76
         + Methodref [com/androidplot/xy/XYPlot.setRangeTopMax (Ljava/lang/Number;)V]
-      [764] aload_0 v0
-      [765] getfield #53
+      [774] aload_0 v0
+      [775] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [768] invokestatic #97
+      [778] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [771] new #34
+      [781] new #34
         + Class [net/thempra/overmind/r]
-      [774] dup
-      [775] invokespecial #102
+      [784] dup
+      [785] invokespecial #102
         + Methodref [net/thempra/overmind/r.<init> ()V]
-      [778] invokevirtual #74
+      [788] invokevirtual #74
         + Methodref [com/androidplot/xy/XYPlot.setDomainValueFormat (Ljava/text/Format;)V]
-      [781] aload_0 v0
-      [782] getfield #53
+      [791] aload_0 v0
+      [792] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [785] invokestatic #97
+      [795] invokestatic #97
         + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [788] new #28
+      [798] new #28
         + Class [java/text/DecimalFormat]
-      [791] dup
-      [792] ldc #7
+      [801] dup
+      [802] ldc #7
         + String [0]
-      [794] invokespecial #92
+      [804] invokespecial #92
         + Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
-      [797] invokevirtual #77
+      [807] invokevirtual #77
         + Methodref [com/androidplot/xy/XYPlot.setRangeValueFormat (Ljava/text/Format;)V]
-      [800] aload_0 v0
-      [801] getfield #53
-        + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [804] invokestatic #97
-        + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
-      [807] invokevirtual #69
-        + Methodref [com/androidplot/xy/XYPlot.b ()V]
       [810] aload_0 v0
       [811] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [814] invokestatic #98
-        + Methodref [net/thempra/overmind/Grafica_2.d (Lnet/thempra/overmind/Grafica_2;)Landroid/os/Handler;]
-      [817] aload_0 v0
-      [818] getfield #53
+      [814] invokestatic #97
+        + Methodref [net/thempra/overmind/Grafica_2.c (Lnet/thempra/overmind/Grafica_2;)Lcom/androidplot/xy/XYPlot;]
+      [817] invokevirtual #69
+        + Methodref [com/androidplot/xy/XYPlot.b ()V]
+      [820] aload_0 v0
+      [821] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [821] invokestatic #99
-        + Methodref [net/thempra/overmind/Grafica_2.e (Lnet/thempra/overmind/Grafica_2;)Ljava/lang/Runnable;]
-      [824] invokevirtual #65
-        + Methodref [android/os/Handler.removeCallbacks (Ljava/lang/Runnable;)V]
+      [824] invokestatic #98
+        + Methodref [net/thempra/overmind/Grafica_2.d (Lnet/thempra/overmind/Grafica_2;)Landroid/os/Handler;]
       [827] aload_0 v0
       [828] getfield #53
         + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
-      [831] invokestatic #98
+      [831] invokestatic #99
+        + Methodref [net/thempra/overmind/Grafica_2.e (Lnet/thempra/overmind/Grafica_2;)Ljava/lang/Runnable;]
+      [834] invokevirtual #65
+        + Methodref [android/os/Handler.removeCallbacks (Ljava/lang/Runnable;)V]
+      [837] aload_0 v0
+      [838] getfield #53
+        + Fieldref [net/thempra/overmind/d.a Lnet/thempra/overmind/Grafica_2;]
+      [841] invokestatic #98
         + Methodref [net/thempra/overmind/Grafica_2.d (Lnet/thempra/overmind/Grafica_2;)Landroid/os/Handler;]
-      [834] aload_0 v0
-      [835] ldc2_w #35
+      [844] aload_0 v0
+      [845] ldc2_w #35
         + Long [1000]
-      [838] invokevirtual #64
+      [848] invokevirtual #64
         + Methodref [android/os/Handler.postDelayed (Ljava/lang/Runnable;J)Z]
-      [841] pop
-      [842] return
+      [851] pop
+      [852] return
       Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [343] Var: ..., Stack: (empty)
 
 Class file attributes (count = 0):
 
@@ -59739,11 +59895,16 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [android/content/DialogInterface$OnClickListener]
 
-Constant Pool (count = 61):
+Constant Pool (count = 86):
+  + String []
+  + String [
+]
   + String [Select ]
   + Class [android/content/DialogInterface$OnClickListener]
   + Class [android/widget/Toast]
+  + Class [java/lang/CharSequence]
   + Class [java/lang/Object]
+  + Class [java/lang/String]
   + Class [java/lang/StringBuilder]
   + Class [net/thempra/overmind/Grafica_2]
   + Class [net/thempra/overmind/MainActivity]
@@ -59754,43 +59915,64 @@ Constant Pool (count = 61):
   + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
   + Methodref [android/widget/Toast.show ()V]
   + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+  + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
   + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
   + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
   + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;I)V]
+  + Methodref [net/thempra/overmind/Grafica_2.f (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/CharSequence;]
   + Methodref [net/thempra/overmind/Grafica_2.getBaseContext ()Landroid/content/Context;]
   + Methodref [net/thempra/overmind/a.a ()Ljava/lang/String;]
+  + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Ljava/lang/String;)V]
   + NameAndType [a ()Ljava/lang/String;]
+  + NameAndType [a (Lnet/thempra/overmind/Grafica_2;)I]
   + NameAndType [a (Lnet/thempra/overmind/Grafica_2;I)V]
   + NameAndType [a Lnet/thempra/overmind/Grafica_2;]
   + NameAndType [a [Lnet/thempra/overmind/a;]
   + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [contains (Ljava/lang/CharSequence;)Z]
+  + NameAndType [f (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/CharSequence;]
   + NameAndType [getBaseContext ()Landroid/content/Context;]
   + NameAndType [makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + NameAndType [replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
   + NameAndType [show ()V]
   + NameAndType [toString ()Ljava/lang/String;]
+  + Utf8 []
+  + Utf8 [
+]
   + Utf8 [()Landroid/content/Context;]
   + Utf8 [()Ljava/lang/String;]
   + Utf8 [()V]
   + Utf8 [(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
   + Utf8 [(Landroid/content/DialogInterface;I)V]
+  + Utf8 [(Ljava/lang/CharSequence;)Z]
+  + Utf8 [(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
   + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Lnet/thempra/overmind/Grafica_2;)I]
   + Utf8 [(Lnet/thempra/overmind/Grafica_2;)V]
+  + Utf8 [(Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/CharSequence;]
   + Utf8 [(Lnet/thempra/overmind/Grafica_2;I)V]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [Lnet/thempra/overmind/Grafica_2;]
   + Utf8 [Select ]
+  + Utf8 [StackMapTable]
   + Utf8 [[Lnet/thempra/overmind/a;]
   + Utf8 [a]
   + Utf8 [android/content/DialogInterface$OnClickListener]
   + Utf8 [android/widget/Toast]
   + Utf8 [append]
+  + Utf8 [contains]
+  + Utf8 [f]
   + Utf8 [getBaseContext]
+  + Utf8 [java/lang/CharSequence]
   + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
   + Utf8 [java/lang/StringBuilder]
   + Utf8 [makeText]
   + Utf8 [net/thempra/overmind/Grafica_2]
@@ -59798,6 +59980,7 @@ Constant Pool (count = 61):
   + Utf8 [net/thempra/overmind/a]
   + Utf8 [net/thempra/overmind/e]
   + Utf8 [onClick]
+  + Utf8 [replace]
   + Utf8 [show]
   + Utf8 [toString]
 
@@ -59814,10 +59997,10 @@ Methods (count = 2):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #11
+      [2] putfield #15
         + Fieldref [net/thempra/overmind/e.a Lnet/thempra/overmind/Grafica_2;]
       [5] aload_0 v0
-      [6] invokespecial #14
+      [6] invokespecial #18
         + Methodref [java/lang/Object.<init> ()V]
       [9] return
       Code attribute exceptions (count = 0):
@@ -59826,43 +60009,90 @@ Methods (count = 2):
     Access flags: 0x1
       = public void onClick(android.content.DialogInterface,int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 46, locals = 3, stack = 4):
-      [0] aload_0 v0
-      [1] getfield #11
-        + Fieldref [net/thempra/overmind/e.a Lnet/thempra/overmind/Grafica_2;]
-      [4] iload_2 v2
-      [5] invokestatic #18
-        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;I)V]
-      [8] aload_0 v0
-      [9] getfield #11
-        + Fieldref [net/thempra/overmind/e.a Lnet/thempra/overmind/Grafica_2;]
-      [12] invokevirtual #19
-        + Methodref [net/thempra/overmind/Grafica_2.getBaseContext ()Landroid/content/Context;]
-      [15] new #5
-        + Class [java/lang/StringBuilder]
-      [18] dup
-      [19] ldc #1
-        + String [Select ]
-      [21] invokespecial #15
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [24] getstatic #10
+    + Code attribute instructions (code length = 111, locals = 4, stack = 4):
+      [0] iconst_0
+      [1] istore_3 v3
+      [2] goto +57 (target=59)
+      [5] getstatic #14
         + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
-      [27] iload_2 v2
-      [28] aaload
-      [29] invokevirtual #20
+      [8] iload_3 v3
+      [9] aaload
+      [10] ifnull +46 (target=56)
+      [13] aload_0 v0
+      [14] getfield #15
+        + Fieldref [net/thempra/overmind/e.a Lnet/thempra/overmind/Grafica_2;]
+      [17] invokestatic #26
+        + Methodref [net/thempra/overmind/Grafica_2.f (Lnet/thempra/overmind/Grafica_2;)[Ljava/lang/CharSequence;]
+      [20] iload_2 v2
+      [21] aaload
+      [22] invokeinterface #29
+        + InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [27] getstatic #14
+        + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
+      [30] iload_3 v3
+      [31] aaload
+      [32] invokevirtual #28
         + Methodref [net/thempra/overmind/a.a ()Ljava/lang/String;]
-      [32] invokevirtual #16
+      [35] ldc #2
+        + String [
+]
+      [37] ldc #1
+        + String []
+      [39] invokevirtual #20
+        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
+      [42] invokevirtual #19
+        + Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+      [45] ifeq +11 (target=56)
+      [48] aload_0 v0
+      [49] getfield #15
+        + Fieldref [net/thempra/overmind/e.a Lnet/thempra/overmind/Grafica_2;]
+      [52] iload_3 v3
+      [53] invokestatic #25
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;I)V]
+      [56] iinc v3, 1
+      [59] iload_3 v3
+      [60] getstatic #14
+        + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
+      [63] arraylength
+      [64] ificmplt -59 (target=5)
+      [67] aload_0 v0
+      [68] getfield #15
+        + Fieldref [net/thempra/overmind/e.a Lnet/thempra/overmind/Grafica_2;]
+      [71] invokevirtual #27
+        + Methodref [net/thempra/overmind/Grafica_2.getBaseContext ()Landroid/content/Context;]
+      [74] new #9
+        + Class [java/lang/StringBuilder]
+      [77] dup
+      [78] ldc #3
+        + String [Select ]
+      [80] invokespecial #21
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [83] getstatic #14
+        + Fieldref [net/thempra/overmind/MainActivity.a [Lnet/thempra/overmind/a;]
+      [86] aload_0 v0
+      [87] getfield #15
+        + Fieldref [net/thempra/overmind/e.a Lnet/thempra/overmind/Grafica_2;]
+      [90] invokestatic #24
+        + Methodref [net/thempra/overmind/Grafica_2.a (Lnet/thempra/overmind/Grafica_2;)I]
+      [93] aaload
+      [94] invokevirtual #28
+        + Methodref [net/thempra/overmind/a.a ()Ljava/lang/String;]
+      [97] invokevirtual #22
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [35] invokevirtual #17
+      [100] invokevirtual #23
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [38] iconst_0
-      [39] invokestatic #12
+      [103] iconst_0
+      [104] invokestatic #16
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [42] invokevirtual #13
+      [107] invokevirtual #17
         + Methodref [android/widget/Toast.show ()V]
-      [45] return
+      [110] return
       Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [5] Var: ...[i], Stack: (empty)
+        - [56] Var: ..., Stack: (empty)
+        - [59] Var: ..., Stack: (empty)
 
 Class file attributes (count = 0):
 
@@ -59879,7 +60109,7 @@ Interfaces (count = 2):
   + Class [com/a/a/b]
 
 Constant Pool (count = 365):
-  + Integer [2130837509]
+  + Integer [2130837507]
   + Integer [2130903042]
   + Integer [2131165184]
   + Integer [2131230723]
@@ -60713,7 +60943,7 @@ Methods (count = 20):
       [22] invokevirtual #99
         + Methodref [android/content/Context.getResources ()Landroid/content/res/Resources;]
       [25] ldc #1
-        + Integer [2130837509]
+        + Integer [2130837507]
       [27] invokevirtual #100
         + Methodref [android/content/res/Resources.getDrawable (I)Landroid/graphics/drawable/Drawable;]
       [30] astore_3 v3

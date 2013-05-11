@@ -5,9 +5,9 @@
     <string name="menu_about">About</string>
     
     <string name="title_activity_main">Overmind</string>
-    <string name="reading_minds">Reading people\'s minds</string>
-    <string name="data_analice">Data Analysis</string>
-    <string name="levels">Wave mental levels</string>
+    <string name="reading_minds">Leyendo mentes ajenas</string>
+    <string name="data_analice">Analisis de datos</string>
+    <string name="levels">Niveles mentales</string>
     <string name="play">Jugar</string>
     <string name="bluetooth_disconnect">Bluetooth disconnect</string>
     

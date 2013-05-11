@@ -1535,6 +1535,8 @@ net.thempra.overgame.GameLayer -> net.thempra.overgame.a:
     boolean ccTouchesEnded(android.view.MotionEvent) -> a
 net.thempra.overgame.SimpleGame -> net.thempra.overgame.SimpleGame:
     org.cocos2d.opengl.CCGLSurfaceView _glSurfaceView -> a
+    int itemsConnected -> b
+    java.util.ArrayList selected -> c
     void onCreate(android.os.Bundle) -> onCreate
     void onStart() -> onStart
     void onPause() -> onPause
@@ -1560,22 +1562,24 @@ net.thempra.overmind.Eeg -> net.thempra.overmind.a:
     void setName(java.lang.String) -> b
     void setSlot(int) -> a
 net.thempra.overmind.Grafica_1 -> net.thempra.overmind.Grafica_1:
-    com.androidplot.xy.XYPlot mySimpleXYPlot -> d
-    android.os.Handler mHandler -> e
-    java.lang.Number[] series1Numbers -> a
-    java.lang.Number[] series2Numbers -> b
-    int itemsConnected -> c
+    com.androidplot.xy.XYPlot mySimpleXYPlot -> a
+    android.os.Handler mHandler -> b
+    java.lang.Number[] series1Numbers -> c
+    java.lang.Number[] series2Numbers -> d
+    int itemsConnected -> e
     int selected -> f
     java.lang.CharSequence[] choiceList -> g
     java.lang.Runnable mMuestraMensaje -> h
     void onCreate(android.os.Bundle) -> onCreate
     void access$0(net.thempra.overmind.Grafica_1,com.androidplot.xy.XYPlot) -> a
-    int access$1(net.thempra.overmind.Grafica_1) -> a
-    com.androidplot.xy.XYPlot access$2(net.thempra.overmind.Grafica_1) -> b
-    android.os.Handler access$3(net.thempra.overmind.Grafica_1) -> c
-    java.lang.Runnable access$4(net.thempra.overmind.Grafica_1) -> d
-    java.lang.CharSequence[] access$5(net.thempra.overmind.Grafica_1) -> e
-    void access$6(net.thempra.overmind.Grafica_1,int) -> a
+    java.lang.Number[] access$1(net.thempra.overmind.Grafica_1) -> a
+    java.lang.Number[] access$2(net.thempra.overmind.Grafica_1) -> b
+    int access$3(net.thempra.overmind.Grafica_1) -> c
+    com.androidplot.xy.XYPlot access$4(net.thempra.overmind.Grafica_1) -> d
+    android.os.Handler access$5(net.thempra.overmind.Grafica_1) -> e
+    java.lang.Runnable access$6(net.thempra.overmind.Grafica_1) -> f
+    java.lang.CharSequence[] access$7(net.thempra.overmind.Grafica_1) -> g
+    void access$8(net.thempra.overmind.Grafica_1,int) -> a
 net.thempra.overmind.Grafica_1$1 -> net.thempra.overmind.b:
     net.thempra.overmind.Grafica_1 this$0 -> a
     void run() -> run
@@ -1586,16 +1590,19 @@ net.thempra.overmind.Grafica_2 -> net.thempra.overmind.Grafica_2:
     com.androidplot.xy.XYPlot mySimpleXYPlot -> a
     java.lang.Number[] series1Numbers -> b
     android.os.Handler mHandler -> c
-    int selected -> d
-    java.lang.Runnable mMuestraMensaje -> e
+    int itemsConnected -> d
+    int selected -> e
+    java.lang.CharSequence[] choiceList -> f
+    java.lang.Runnable mMuestraMensaje -> g
     void onCreate(android.os.Bundle) -> onCreate
     void access$0(net.thempra.overmind.Grafica_2,com.androidplot.xy.XYPlot) -> a
-    java.lang.Number[] access$1(net.thempra.overmind.Grafica_2) -> a
-    int access$2(net.thempra.overmind.Grafica_2) -> b
+    int access$1(net.thempra.overmind.Grafica_2) -> a
+    java.lang.Number[] access$2(net.thempra.overmind.Grafica_2) -> b
     com.androidplot.xy.XYPlot access$3(net.thempra.overmind.Grafica_2) -> c
     android.os.Handler access$4(net.thempra.overmind.Grafica_2) -> d
     java.lang.Runnable access$5(net.thempra.overmind.Grafica_2) -> e
-    void access$6(net.thempra.overmind.Grafica_2,int) -> a
+    java.lang.CharSequence[] access$6(net.thempra.overmind.Grafica_2) -> f
+    void access$7(net.thempra.overmind.Grafica_2,int) -> a
 net.thempra.overmind.Grafica_2$1 -> net.thempra.overmind.d:
     net.thempra.overmind.Grafica_2 this$0 -> a
     void run() -> run

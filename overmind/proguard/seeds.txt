@@ -178,8 +178,6 @@ net.thempra.overmind.Grafica_2: Grafica_2()
 net.thempra.overmind.MainActivity
 net.thempra.overmind.MainActivity: MainActivity()
 net.thempra.overmind.R$drawable: int background
-net.thempra.overmind.R$drawable: int background_2
-net.thempra.overmind.R$drawable: int background_original
 net.thempra.overmind.R$drawable: int black_button
 net.thempra.overmind.R$drawable: int bluetooth
 net.thempra.overmind.R$drawable: int bluetooth_disable

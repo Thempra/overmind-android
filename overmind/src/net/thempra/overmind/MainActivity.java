@@ -282,7 +282,6 @@ public class MainActivity extends Activity implements android.content.DialogInte
 
     	AlertDialog.Builder pbuilder = new AlertDialog.Builder(context);
     	
-    	final Drawable btDisable= context.getResources().getDrawable(R.drawable.bluetooth_disable);
     	
     	pbuilder.setTitle("Select a device:");
     	pbuilder.setItems(items, new DialogInterface.OnClickListener() {

@@ -856,11 +856,13 @@ com.gallysoft.andromind.R$drawable
 com.gallysoft.andromind.R$string
 com.gallysoft.andromind.R$style
 net.thempra.overgame.GameLayer:
-    121:122:public void gameLogic(float)
-    126:169:public void update(float)
-    173:206:protected void addTarget()
-    210:223:public void spriteMoveFinished(java.lang.Object)
+    130:131:public void gameLogic(float)
+    135:178:public void update(float)
+    182:215:protected void addTarget()
+    219:232:public void spriteMoveFinished(java.lang.Object)
 net.thempra.overgame.GameOverLayer
+net.thempra.overgame.SimpleGame:
+    private java.lang.CharSequence[] choiceList
 net.thempra.overmind.BuildConfig
 net.thempra.overmind.CommunicationManager
 net.thempra.overmind.Eeg:

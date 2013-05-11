@@ -34,7 +34,9 @@ public class GameLayer extends CCColorLayer
 		CCScene scene = CCScene.node();
 		CCColorLayer layer = new GameLayer(ccColor4B.ccc4(255, 255, 255, 255));
 		
+		
 		scene.addChild(layer);
+		
 		
 		return scene;
 	}
@@ -50,11 +52,31 @@ public class GameLayer extends CCColorLayer
 		_projectilesDestroyed = 0;
 		
 		CGSize winSize = CCDirector.sharedDirector().displaySize();
-		CCSprite player = CCSprite.sprite("Player.png");
+		CCSprite player1 = CCSprite.sprite("eva01.png");
+		CCSprite player2 = CCSprite.sprite("sachiel.png");
 		
-		player.setPosition(CGPoint.ccp(player.getContentSize().width / 2.0f, winSize.height / 2.0f));
 		
-		addChild(player);
+		
+
+		CCSprite bckgImage = CCSprite .sprite("game_background2.jpg");
+		bckgImage.setScaleX( winSize.width /  bckgImage.getContentSize().width);
+		bckgImage.setScaleY( winSize.height /  bckgImage.getContentSize().height);
+		bckgImage.setPosition(CGPoint.ccp(winSize.width / 2.0f, winSize.height / 2.0f));
+		
+		addChild(bckgImage);
+		
+		
+		
+		
+		
+		
+		player1.setPosition(CGPoint.ccp(player1.getContentSize().width/2.0f, winSize.height / 2.0f));
+		player2.setPosition(CGPoint.ccp(winSize.width - player2.getContentSize().width/2.0f  , winSize.height / 2.0f));
+		
+		
+		
+		addChild(player1);
+		addChild(player2);
 		
 		// Handle sound
 		Context context = CCDirector.sharedDirector().getActivity();
@@ -71,15 +93,69 @@ public class GameLayer extends CCColorLayer
 		// Choose one of the touches to work with
 		CGPoint location = CCDirector.sharedDirector().convertToGL(CGPoint.ccp(event.getX(), event.getY()));
 		
+		return projectileP1(location) &&  projectileP2(location) ;
+	}
+
+	private boolean projectileP1(CGPoint location) {
 		// Set up initial location of projectile
 		CGSize winSize = CCDirector.sharedDirector().displaySize();
 		CCSprite projectile = CCSprite.sprite("Projectile.png");
 		
-		projectile.setPosition(20, winSize.height / 2.0f);
+		
+		projectile.setPosition(60, winSize.height / 2.0f);
 		
 		// Determine offset of location to projectile
 		int offX = (int)(location.x - projectile.getPosition().x);
 		int offY = (int)(location.y - projectile.getPosition().y);
+		
+		
+		// Bail out if we are shooting down or backwards
+		if (offX <= 0)
+			return true;
+		
+		// Ok to add now - we've double checked position
+		addChild(projectile);
+		
+		projectile.setTag(2);
+		_projectiles.add(projectile);
+		
+		// Determine where we wish to shoot the projectile to
+		int realX = (int)(winSize.width + (projectile.getContentSize().width / 2.0f));
+		float ratio = (float)offY / (float)offX;
+		int realY = (int)((realX * ratio) + projectile.getPosition().y);
+		CGPoint realDest = CGPoint.ccp(realX, realY);
+		
+		// Determine the length of how far we're shooting
+		int offRealX = (int)(realX - projectile.getPosition().x);
+		int offRealY = (int)(realY - projectile.getPosition().y);
+		float length = (float)Math.sqrt((offRealX * offRealX) + (offRealY * offRealY));
+		float velocity = 480.0f / 1.0f; // 480 pixels / 1 sec
+		float realMoveDuration = length / velocity;
+		
+		// Move projectile to actual endpoint
+		projectile.runAction(CCSequence.actions(
+				CCMoveTo.action(realMoveDuration, realDest),
+				CCCallFuncN.action(this, "spriteMoveFinished")));
+		
+		// Pew!
+		Context context = CCDirector.sharedDirector().getActivity();
+		SoundEngine.sharedEngine().playEffect(context, R.raw.pew_pew_lei);
+		
+		return true;
+	}
+	
+	private boolean projectileP2(CGPoint location) {
+		// Set up initial location of projectile
+		CGSize winSize = CCDirector.sharedDirector().displaySize();
+		CCSprite projectile = CCSprite.sprite("fireball.png");
+		
+		
+		projectile.setPosition(60, winSize.height / 2.0f);
+		
+		// Determine offset of location to projectile
+		int offX = (int)(location.x - projectile.getPosition().x);
+		int offY = (int)(location.y - projectile.getPosition().y);
+		
 		
 		// Bail out if we are shooting down or backwards
 		if (offX <= 0)
@@ -214,6 +290,8 @@ public class GameLayer extends CCColorLayer
 			_targets.remove(sprite);
 			
 			_projectilesDestroyed = 0;
+			
+			
 			CCDirector.sharedDirector().replaceScene(GameOverLayer.scene("You Lose :("));
 		}
 		else if (sprite.getTag() == 2)

@@ -20,9 +20,10 @@ public class Grafica_1 extends Activity {
 	private XYPlot mySimpleXYPlot;
 	private Handler mHandler = new Handler();
 	
-	Number[] series1Numbers = { 100, 0, 0, 0, 0, 0 };
-	Number[] series2Numbers = { 100, 0, 0, 0, 0, 0 };
-	int itemsConnected=0;
+	private Number[] series1Numbers = { 100, 0, 0, 0, 0, 0 };
+	private Number[] series2Numbers = { 100, 0, 0, 0, 0, 0 };
+	
+	private int itemsConnected=0;
 	private int selected=-1;
 	private CharSequence[] choiceList;
 	 
@@ -31,14 +32,14 @@ public class Grafica_1 extends Activity {
 		super.onCreate(savedInstanceState);
 		
 
-	   AlertDialog.Builder builder = 
+	   
+		AlertDialog.Builder builder = 
 	            new AlertDialog.Builder(this);
 	        builder.setTitle("Select device to analize");        
 	       
 			for(int i=0;i<MainActivity.currentEeg.length;i++)
 	        	 if (MainActivity.currentEeg[i]!= null)
-	        		 itemsConnected++;
-			
+	        		 itemsConnected++;		
 			int j=0;
 	         choiceList = new CharSequence[itemsConnected];
 	         for(int i=0;i<MainActivity.currentEeg.length;i++)
@@ -47,7 +48,6 @@ public class Grafica_1 extends Activity {
 	        		 choiceList[j]= MainActivity.currentEeg[i].getName().replace("\n", "");	
 	        		 j++;
 	        	 }
-	         
 	        builder.setItems(choiceList, new DialogInterface.OnClickListener() {
 	             
 	            @Override

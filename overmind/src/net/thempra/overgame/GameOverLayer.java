@@ -7,6 +7,8 @@ import org.cocos2d.layers.CCColorLayer;
 import org.cocos2d.layers.CCScene;
 import org.cocos2d.nodes.CCDirector;
 import org.cocos2d.nodes.CCLabel;
+import org.cocos2d.nodes.CCSprite;
+import org.cocos2d.types.CGPoint;
 import org.cocos2d.types.CGSize;
 import org.cocos2d.types.ccColor3B;
 import org.cocos2d.types.ccColor4B;
@@ -20,11 +22,20 @@ public class GameOverLayer extends CCColorLayer
 	public static CCScene scene(String message)
 	{
 		CCScene scene = CCScene.node();
+		CGSize winSize = CCDirector.sharedDirector().displaySize();
 		GameOverLayer layer = new GameOverLayer(ccColor4B.ccc4(255, 255, 255, 255));
 		
 		layer.getLabel().setString(message);
 		
+		CCSprite bckgImage = CCSprite .sprite("game_background.jpg");
+		bckgImage.setScaleX( winSize.width /  bckgImage.getContentSize().width);
+		bckgImage.setScaleY( winSize.height /  bckgImage.getContentSize().height);
+		bckgImage.setPosition(CGPoint.ccp(winSize.width / 2.0f, winSize.height / 2.0f));
+		
+		
+		
 		scene.addChild(layer);
+		scene.addChild(bckgImage);
 		
 		return scene;
 	}
@@ -42,8 +53,8 @@ public class GameOverLayer extends CCColorLayer
 		
 		CGSize winSize = CCDirector.sharedDirector().displaySize();
 		
-		_label = CCLabel.makeLabel("Won't See Me", "DroidSans", 32);
-		_label.setColor(ccColor3B.ccBLACK);
+		_label = CCLabel.makeLabel("Won't See Me", "DroidSans", 70);
+		_label.setColor(ccColor3B.ccWHITE);
 		_label.setPosition(winSize.width / 2.0f, winSize.height / 2.0f);
 		addChild(_label);
 		
