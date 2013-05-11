@@ -1483,35 +1483,1180 @@ com.androidplot.xy.YPositionMetric -> com.androidplot.xy.am:
 com.androidplot.xy.YPositionMetric$a -> com.androidplot.xy.an:
     int[] a -> a
 com.androidplot.xy.YValueMarker -> com.androidplot.xy.ao:
-net.thempra.overmind.Grafica_1 -> net.thempra.overmind.Grafica_1:
-    com.androidplot.xy.XYPlot mySimpleXYPlot -> a
+com.gallysoft.andromind.AndroMindLib -> com.a.a.a:
+    android.bluetooth.BluetoothSocket mmSocket -> a
+    android.bluetooth.BluetoothDevice mmDevice -> b
+    java.io.InputStream mmInStream -> c
+    java.io.OutputStream mmOutStream -> d
+    java.util.UUID UUID_RFCOMM_GENERIC -> e
+    double signal -> f
+    double meditation -> g
+    double attention -> h
+    double rawdelta -> i
+    double rawtheta -> j
+    double rawlalpha -> k
+    double rawhalpha -> l
+    double rawlbeta -> m
+    double rawhbeta -> n
+    double rawlgamma -> o
+    double rawhgamma -> p
+    double prodelta -> q
+    double protheta -> r
+    double prolalpha -> s
+    double prohalpha -> t
+    double prolbeta -> u
+    double prohbeta -> v
+    double prolgamma -> w
+    double prohgamma -> x
+    com.gallysoft.andromind.AndroMindListener alistener -> y
+    boolean connected -> z
+    int deviceN -> A
+    void run() -> run
+    void cancel() -> a
+    double getSignal() -> b
+    double getMeditation() -> c
+    double getAttention() -> d
+    double getProdelta() -> e
+    double getProtheta() -> f
+    double getProlalpha() -> g
+    double getProhalpha() -> h
+    double getProlbeta() -> i
+    double getProhbeta() -> j
+    double getProlgamma() -> k
+    double getProhgamma() -> l
+    void setNewCaptureListener(com.gallysoft.andromind.AndroMindListener) -> a
+com.gallysoft.andromind.AndroMindListener -> com.a.a.b:
+    void newCaptured(com.gallysoft.andromind.AndroMindLib,int) -> a
+net.thempra.overgame.GameLayer -> net.thempra.overgame.a:
+    java.util.ArrayList _targets -> a
+    java.util.ArrayList _projectiles -> b
+    int _projectilesDestroyed -> c
+    org.cocos2d.layers.CCScene scene() -> a
+    boolean ccTouchesEnded(android.view.MotionEvent) -> a
+net.thempra.overgame.SimpleGame -> net.thempra.overgame.SimpleGame:
+    org.cocos2d.opengl.CCGLSurfaceView _glSurfaceView -> a
     void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void onPause() -> onPause
+    void onResume() -> onResume
+    void onStop() -> onStop
+net.thempra.overmind.Eeg -> net.thempra.overmind.a:
+    java.lang.String address -> a
+    java.lang.String name -> b
+    int slotApp -> c
+    int signal -> d
+    int attention -> e
+    int meditation -> f
+    int theta -> g
+    int delta -> h
+    int lalpha -> i
+    int halpha -> j
+    int lbeta -> k
+    int hbeta -> l
+    int lgamma -> m
+    int hgamma -> n
+    java.lang.String getName() -> a
+    void setAdress(java.lang.String) -> a
+    void setName(java.lang.String) -> b
+    void setSlot(int) -> a
+net.thempra.overmind.Grafica_1 -> net.thempra.overmind.Grafica_1:
+    com.androidplot.xy.XYPlot mySimpleXYPlot -> d
+    android.os.Handler mHandler -> e
+    java.lang.Number[] series1Numbers -> a
+    java.lang.Number[] series2Numbers -> b
+    int itemsConnected -> c
+    int selected -> f
+    java.lang.CharSequence[] choiceList -> g
+    java.lang.Runnable mMuestraMensaje -> h
+    void onCreate(android.os.Bundle) -> onCreate
+    void access$0(net.thempra.overmind.Grafica_1,com.androidplot.xy.XYPlot) -> a
+    int access$1(net.thempra.overmind.Grafica_1) -> a
+    com.androidplot.xy.XYPlot access$2(net.thempra.overmind.Grafica_1) -> b
+    android.os.Handler access$3(net.thempra.overmind.Grafica_1) -> c
+    java.lang.Runnable access$4(net.thempra.overmind.Grafica_1) -> d
+    java.lang.CharSequence[] access$5(net.thempra.overmind.Grafica_1) -> e
+    void access$6(net.thempra.overmind.Grafica_1,int) -> a
+net.thempra.overmind.Grafica_1$1 -> net.thempra.overmind.b:
+    net.thempra.overmind.Grafica_1 this$0 -> a
+    void run() -> run
+net.thempra.overmind.Grafica_1$2 -> net.thempra.overmind.c:
+    net.thempra.overmind.Grafica_1 this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
 net.thempra.overmind.Grafica_2 -> net.thempra.overmind.Grafica_2:
     com.androidplot.xy.XYPlot mySimpleXYPlot -> a
     java.lang.Number[] series1Numbers -> b
     android.os.Handler mHandler -> c
-    java.lang.Runnable mMuestraMensaje -> d
+    int selected -> d
+    java.lang.Runnable mMuestraMensaje -> e
     void onCreate(android.os.Bundle) -> onCreate
     void access$0(net.thempra.overmind.Grafica_2,com.androidplot.xy.XYPlot) -> a
     java.lang.Number[] access$1(net.thempra.overmind.Grafica_2) -> a
-    com.androidplot.xy.XYPlot access$2(net.thempra.overmind.Grafica_2) -> b
-    android.os.Handler access$3(net.thempra.overmind.Grafica_2) -> c
-    java.lang.Runnable access$4(net.thempra.overmind.Grafica_2) -> d
-net.thempra.overmind.Grafica_2$1 -> net.thempra.overmind.a:
+    int access$2(net.thempra.overmind.Grafica_2) -> b
+    com.androidplot.xy.XYPlot access$3(net.thempra.overmind.Grafica_2) -> c
+    android.os.Handler access$4(net.thempra.overmind.Grafica_2) -> d
+    java.lang.Runnable access$5(net.thempra.overmind.Grafica_2) -> e
+    void access$6(net.thempra.overmind.Grafica_2,int) -> a
+net.thempra.overmind.Grafica_2$1 -> net.thempra.overmind.d:
     net.thempra.overmind.Grafica_2 this$0 -> a
     void run() -> run
+net.thempra.overmind.Grafica_2$2 -> net.thempra.overmind.e:
+    net.thempra.overmind.Grafica_2 this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
 net.thempra.overmind.MainActivity -> net.thempra.overmind.MainActivity:
-    android.widget.Button btnGrafica_1 -> a
-    android.widget.Button btnGrafica_2 -> b
-    android.widget.Button btnGame -> c
+    android.widget.Button btnGrafica_1 -> h
+    android.widget.Button btnGrafica_2 -> i
+    android.widget.Button btnGame -> j
+    android.widget.Button btndevice0 -> k
+    android.widget.Button btndevice1 -> l
+    android.widget.Button btndevice2 -> m
+    android.widget.Button btndevice3 -> n
+    android.widget.Button btndevice4 -> o
+    android.widget.Button btndevice5 -> p
+    android.widget.Button btndevice6 -> q
+    android.widget.Button btndevice7 -> r
+    android.widget.TextView txtStatus -> s
+    net.thempra.overmind.Eeg[] currentEeg -> a
+    int REQUEST_ENABLE_BT -> b
+    android.bluetooth.BluetoothAdapter mBluetoothAdapter -> c
+    java.util.Set pairedDevices -> d
+    com.gallysoft.andromind.AndroMindLib[] devBlue -> e
+    com.gallysoft.andromind.AndroMindListener mindListerner -> f
+    int devN -> g
     void onCreate(android.os.Bundle) -> onCreate
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
-net.thempra.overmind.MainActivity$1 -> net.thempra.overmind.b:
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void conectar(android.content.Context) -> b
+    java.lang.CharSequence[] getPairedDevices() -> i
+    void newCaptured(com.gallysoft.andromind.AndroMindLib,int) -> a
+    void onDestroy() -> onDestroy
+    void onClick(android.content.DialogInterface,int) -> onClick
+    void access$0(android.content.Context) -> a
+    android.widget.Button access$1() -> a
+    android.widget.Button access$2() -> b
+    android.widget.Button access$3() -> c
+    android.widget.Button access$4() -> d
+    android.widget.Button access$5() -> e
+    android.widget.Button access$6() -> f
+    android.widget.Button access$7() -> g
+    android.widget.Button access$8() -> h
+net.thempra.overmind.MainActivity$1 -> net.thempra.overmind.f:
     net.thempra.overmind.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-net.thempra.overmind.MainActivity$2 -> net.thempra.overmind.c:
+net.thempra.overmind.MainActivity$10 -> net.thempra.overmind.g:
     net.thempra.overmind.MainActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-net.thempra.overmind.WavesIndexFormat -> net.thempra.overmind.d:
+net.thempra.overmind.MainActivity$11 -> net.thempra.overmind.h:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.MainActivity$12 -> net.thempra.overmind.i:
+    void onClick(android.content.DialogInterface,int) -> onClick
+net.thempra.overmind.MainActivity$2 -> net.thempra.overmind.j:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.MainActivity$3 -> net.thempra.overmind.k:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.MainActivity$4 -> net.thempra.overmind.l:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.MainActivity$5 -> net.thempra.overmind.m:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.MainActivity$6 -> net.thempra.overmind.n:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.MainActivity$7 -> net.thempra.overmind.o:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.MainActivity$8 -> net.thempra.overmind.p:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.MainActivity$9 -> net.thempra.overmind.q:
+    net.thempra.overmind.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+net.thempra.overmind.WavesIndexFormat -> net.thempra.overmind.r:
     java.lang.StringBuffer format(java.lang.Object,java.lang.StringBuffer,java.text.FieldPosition) -> format
     java.lang.Object parseObject(java.lang.String,java.text.ParsePosition) -> parseObject
+org.cocos2d.actions.CCActionManager -> a.a.a.a:
+    java.lang.String LOG_TAG -> b
+    org.cocos2d.utils.pool.ConcOneClassPool pool -> c
+    org.cocos2d.utils.collections.ConcurrentArrayHashMap targets -> d
+    org.cocos2d.actions.CCActionManager _sharedManager -> e
+    boolean $assertionsDisabled -> a
+    org.cocos2d.actions.CCActionManager sharedManager() -> a
+    void deleteHashElement(org.cocos2d.actions.CCActionManager$HashElement) -> a
+    void removeAction(int,org.cocos2d.actions.CCActionManager$HashElement) -> a
+    void addAction(org.cocos2d.actions.base.CCAction,org.cocos2d.nodes.CCNode,boolean) -> a
+    void removeAllActions(org.cocos2d.nodes.CCNode) -> a
+    void update(float) -> a
+    void resume(org.cocos2d.nodes.CCNode) -> b
+    void pause(org.cocos2d.nodes.CCNode) -> c
+org.cocos2d.actions.CCActionManager$1 -> a.a.a.b:
+    org.cocos2d.actions.CCActionManager this$0 -> a
+    org.cocos2d.actions.CCActionManager$HashElement allocate() -> a
+    java.lang.Object allocate() -> b
+org.cocos2d.actions.CCActionManager$HashElement -> a.a.a.c:
+    java.util.ArrayList actions -> a
+    org.cocos2d.nodes.CCNode target -> b
+    int actionIndex -> c
+    boolean paused -> d
+org.cocos2d.actions.CCScheduler -> a.a.a.d:
+    java.util.ArrayList updatesNeg -> a
+    java.util.ArrayList updates0 -> b
+    java.util.ArrayList updatesPos -> c
+    org.cocos2d.utils.collections.ConcurrentArrayHashMap hashForSelectors -> d
+    java.util.concurrent.ConcurrentHashMap hashForUpdates -> e
+    org.cocos2d.actions.CCScheduler$tListEntry currentEntry -> f
+    org.cocos2d.actions.CCScheduler$tHashSelectorEntry currentTarget -> g
+    boolean currentTargetSalvaged -> h
+    java.lang.String updateSelector -> i
+    float timeScale_ -> k
+    org.cocos2d.actions.CCScheduler _sharedScheduler -> l
+    boolean $assertionsDisabled -> j
+    org.cocos2d.actions.CCScheduler sharedScheduler() -> a
+    void tick(float) -> a
+    void schedule(java.lang.String,java.lang.Object,float,boolean) -> a
+    void unscheduleUpdate(java.lang.Object) -> a
+    void unscheduleAllSelectors(java.lang.Object) -> b
+    void unscheduleAllSelectors() -> b
+    void resume(java.lang.Object) -> c
+    void pause(java.lang.Object) -> d
+    void scheduleUpdate(org.cocos2d.actions.UpdateCallback,int,boolean) -> a
+    void finalize() -> finalize
+    void append(java.util.ArrayList,java.lang.Object,boolean) -> a
+    void priority(java.util.ArrayList,java.lang.Object,int,boolean) -> a
+org.cocos2d.actions.CCScheduler$tHashSelectorEntry -> a.a.a.e:
+    java.util.ArrayList timers -> a
+    java.lang.Object target -> b
+    java.util.ArrayList list -> c
+    org.cocos2d.actions.CCScheduler$tListEntry entry -> d
+    int timerIndex -> e
+    org.cocos2d.actions.CCTimer currentTimer -> f
+    boolean currentTimerSalvaged -> g
+    boolean paused -> h
+    void setPaused(boolean) -> a
+org.cocos2d.actions.CCScheduler$tListEntry -> a.a.a.f:
+    java.lang.reflect.Method impMethod -> a
+    org.cocos2d.actions.UpdateCallback callback -> b
+    java.lang.Object target -> c
+    int priority -> d
+    boolean paused -> e
+org.cocos2d.actions.CCTimer -> a.a.a.g:
+    java.lang.Object target -> a
+    java.lang.String selector -> b
+    java.lang.reflect.Method invocation -> c
+    org.cocos2d.actions.UpdateCallback callback -> d
+    float interval -> e
+    float elapsed -> f
+    void update(float) -> a
+org.cocos2d.actions.UpdateCallback -> a.a.a.h:
+    void update(float) -> a
+org.cocos2d.actions.base.CCAction -> a.a.a.a.a:
+    org.cocos2d.nodes.CCNode target -> a
+    org.cocos2d.nodes.CCNode originalTarget -> b
+    int tag -> c
+    void start(org.cocos2d.nodes.CCNode) -> a
+    void stop() -> a
+    boolean isDone() -> b
+    void step(float) -> a
+org.cocos2d.actions.base.CCFiniteTimeAction -> a.a.a.a.b:
+    java.lang.String LOG_TAG -> c
+    float duration -> b
+    org.cocos2d.actions.base.CCFiniteTimeAction action(float) -> b
+    float getDuration() -> c
+    void step(float) -> a
+    void update(float) -> c
+org.cocos2d.actions.instant.CCCallFunc -> a.a.a.b.a:
+    java.lang.Object targetCallback -> c
+    java.lang.String selector -> d
+    java.lang.Class[] partypes -> e
+    java.lang.reflect.Method invocation -> f
+    void start(org.cocos2d.nodes.CCNode) -> a
+    void execute() -> d
+org.cocos2d.actions.instant.CCCallFuncN -> a.a.a.b.b:
+    org.cocos2d.actions.instant.CCCallFuncN action(java.lang.Object,java.lang.String) -> a
+    void execute() -> d
+org.cocos2d.actions.instant.CCInstantAction -> a.a.a.b.c:
+    boolean isDone() -> b
+    void step(float) -> a
+    void update(float) -> c
+org.cocos2d.actions.interval.CCIntervalAction -> a.a.a.c.a:
+    float elapsed -> c
+    boolean firstTick -> e
+    boolean $assertionsDisabled -> d
+    boolean isDone() -> b
+    void step(float) -> a
+    void start(org.cocos2d.nodes.CCNode) -> a
+org.cocos2d.actions.interval.CCMoveTo -> a.a.a.c.b:
+    org.cocos2d.types.CGPoint endPosition -> f
+    org.cocos2d.types.CGPoint startPosition -> g
+    org.cocos2d.types.CGPoint delta -> e
+    org.cocos2d.actions.interval.CCMoveTo action(float,org.cocos2d.types.CGPoint) -> a
+    void start(org.cocos2d.nodes.CCNode) -> a
+    void update(float) -> c
+org.cocos2d.actions.interval.CCSequence -> a.a.a.c.c:
+    org.cocos2d.actions.base.CCFiniteTimeAction[] actions -> e
+    float split -> f
+    int last -> g
+    org.cocos2d.actions.interval.CCSequence actions(org.cocos2d.actions.base.CCFiniteTimeAction,org.cocos2d.actions.base.CCFiniteTimeAction[]) -> a
+    void start(org.cocos2d.nodes.CCNode) -> a
+    void stop() -> a
+    void update(float) -> c
+org.cocos2d.config.ccMacros -> a.a.b.a:
+    void CCLOG(java.lang.String,java.lang.String) -> a
+    void CCLOGINFO(java.lang.String,java.lang.String) -> b
+    void CCLOGERROR(java.lang.String,java.lang.String) -> c
+    float CC_DEGREES_TO_RADIANS(float) -> a
+    void CC_ENABLE_DEFAULT_GL_STATES(javax.microedition.khronos.opengles.GL10) -> a
+    void CC_DISABLE_DEFAULT_GL_STATES(javax.microedition.khronos.opengles.GL10) -> b
+org.cocos2d.events.CCKeyDispatcher -> a.a.c.a:
+    java.util.ArrayList keyHandlers -> a
+    boolean dispatchEvents -> b
+    org.cocos2d.events.CCKeyDispatcher _sharedDispatcher -> c
+    org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue eventQueue -> d
+    org.cocos2d.events.CCKeyDispatcher sharedDispatcher() -> a
+    void addHandler(org.cocos2d.events.CCKeyHandler) -> a
+    void addDelegate(org.cocos2d.protocols.CCKeyDelegateProtocol,int) -> a
+    void removeDelegate(org.cocos2d.protocols.CCKeyDelegateProtocol) -> a
+    void update() -> b
+    void onKeyDown(android.view.KeyEvent) -> a
+    void onKeyUp(android.view.KeyEvent) -> b
+org.cocos2d.events.CCKeyHandler -> a.a.c.b:
+    org.cocos2d.protocols.CCKeyDelegateProtocol delegate_ -> c
+    boolean enabledSelectors_ -> a
+    int priority_ -> d
+    boolean $assertionsDisabled -> b
+    org.cocos2d.protocols.CCKeyDelegateProtocol getDelegate() -> a
+    int getPriority() -> b
+    boolean ccKeyDown(int,android.view.KeyEvent) -> a
+    boolean ccKeyUp(int,android.view.KeyEvent) -> b
+org.cocos2d.events.CCTargetedTouchHandler -> a.a.c.c:
+    boolean swallowsTouches -> a
+    java.util.ArrayList claimedSet -> d
+    void addClaimed(int) -> a
+    void removeClaimed(int) -> b
+    boolean hasClaimed(int) -> c
+org.cocos2d.events.CCTouchDispatcher -> a.a.c.d:
+    java.util.ArrayList motionListeners -> a
+    java.util.ArrayList targetedHandlers -> b
+    java.util.ArrayList touchHandlers -> c
+    boolean dispatchEvents -> d
+    org.cocos2d.events.CCTouchDispatcher _sharedDispatcher -> e
+    org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue eventQueue -> f
+    void setDispatchEvents(boolean) -> a
+    org.cocos2d.events.CCTouchDispatcher sharedDispatcher() -> a
+    void addHandler(org.cocos2d.events.CCTouchHandler,java.util.ArrayList) -> a
+    void addDelegate(org.cocos2d.protocols.CCTouchDelegateProtocol,int) -> a
+    void removeDelegate(org.cocos2d.protocols.CCTouchDelegateProtocol) -> a
+    void removeAllDelegates() -> b
+    void queueMotionEvent(android.view.MotionEvent) -> a
+    void update() -> c
+    void touchesBegan(android.view.MotionEvent) -> b
+    void touchesMoved(android.view.MotionEvent) -> c
+    void touchesEnded(android.view.MotionEvent) -> d
+    void touchesCancelled(android.view.MotionEvent) -> e
+    void proccessTouches(android.view.MotionEvent) -> f
+    java.util.ArrayList access$0(org.cocos2d.events.CCTouchDispatcher) -> a
+    java.util.ArrayList access$1(org.cocos2d.events.CCTouchDispatcher) -> b
+org.cocos2d.events.CCTouchDispatcher$1 -> a.a.c.e:
+    org.cocos2d.events.CCTouchDispatcher this$0 -> a
+    java.util.ArrayList val$array -> b
+    org.cocos2d.events.CCTouchHandler val$handler -> c
+    void perform(javax.microedition.khronos.opengles.GL10) -> a
+org.cocos2d.events.CCTouchDispatcher$2 -> a.a.c.f:
+    org.cocos2d.events.CCTouchDispatcher this$0 -> a
+    org.cocos2d.protocols.CCTouchDelegateProtocol val$delegate -> b
+    void perform(javax.microedition.khronos.opengles.GL10) -> a
+org.cocos2d.events.CCTouchDispatcher$3 -> a.a.c.g:
+    org.cocos2d.events.CCTouchDispatcher this$0 -> a
+    void perform(javax.microedition.khronos.opengles.GL10) -> a
+org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag -> a.a.c.h:
+    org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag ccTouchSelectorNoneBit -> a
+    org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag ccTouchSelectorBeganBit -> b
+    org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag ccTouchSelectorMovedBit -> c
+    org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag ccTouchSelectorEndedBit -> d
+    org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag ccTouchSelectorCancelledBit -> e
+    org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag ccTouchSelectorAllBits -> f
+    int flag -> g
+    org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag[] ENUM$VALUES -> h
+    int getFlag() -> a
+    org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag[] values() -> values
+    org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag valueOf(java.lang.String) -> valueOf
+org.cocos2d.events.CCTouchHandler -> a.a.c.i:
+    org.cocos2d.protocols.CCTouchDelegateProtocol delegate_ -> a
+    int priority_ -> d
+    int enabledSelectors_ -> b
+    boolean $assertionsDisabled -> c
+    org.cocos2d.protocols.CCTouchDelegateProtocol getDelegate() -> a
+    int getPriority() -> b
+    boolean ccTouchesBegan(android.view.MotionEvent) -> b
+    boolean ccTouchesMoved(android.view.MotionEvent) -> c
+    boolean ccTouchesEnded(android.view.MotionEvent) -> a
+    boolean ccTouchesCancelled(android.view.MotionEvent) -> d
+org.cocos2d.grid.CCGrabber -> a.a.d.a:
+    int[] fbo -> a
+    int[] oldFBO -> b
+    void beforeRender(org.cocos2d.opengl.CCTexture2D) -> a
+    void afterRender(org.cocos2d.opengl.CCTexture2D) -> b
+    void finalize() -> finalize
+org.cocos2d.grid.CCGridBase -> a.a.d.b:
+    boolean active_ -> a
+    org.cocos2d.types.ccGridSize gridSize_ -> b
+    org.cocos2d.opengl.CCTexture2D texture_ -> c
+    org.cocos2d.grid.CCGrabber grabber_ -> d
+    boolean isActive() -> a
+    void setActive(boolean) -> a
+    java.lang.String toString() -> toString
+    void applyLandscape(javax.microedition.khronos.opengles.GL10) -> a
+    void set2DProjection(javax.microedition.khronos.opengles.GL10) -> b
+    void set3DProjection(javax.microedition.khronos.opengles.GL10) -> c
+    void beforeDraw(javax.microedition.khronos.opengles.GL10) -> d
+    void afterDraw(javax.microedition.khronos.opengles.GL10,org.cocos2d.nodes.CCNode) -> a
+    void finalize() -> finalize
+    void blit(javax.microedition.khronos.opengles.GL10) -> e
+org.cocos2d.layers.CCColorLayer -> a.a.e.a:
+    org.cocos2d.types.ccColor3B color_ -> d
+    int opacity_ -> e
+    org.cocos2d.types.ccBlendFunc blendFunc_ -> f
+    org.cocos2d.utils.FastFloatBuffer squareVertices_ -> a
+    org.cocos2d.utils.FastFloatBuffer squareColors_ -> b
+    void init(org.cocos2d.types.ccColor4B,float,float) -> a
+    void updateColor() -> a
+    void draw(javax.microedition.khronos.opengles.GL10) -> a
+    void setContentSize(org.cocos2d.types.CGSize) -> a
+org.cocos2d.layers.CCLayer -> a.a.e.b:
+    boolean isTouchEnabled_ -> g
+    boolean isAccelerometerEnabled_ -> h
+    int accelerometerUpdateRate -> i
+    android.hardware.SensorManager sensorManager -> j
+    android.hardware.Sensor accelerometer -> k
+    boolean isKeyEnabled_ -> l
+    boolean $assertionsDisabled -> m
+    void setIsTouchEnabled(boolean) -> a
+    void registerWithTouchDispatcher() -> b
+    void registerWithAccelerometer() -> c
+    void unregisterWithAccelerometer() -> d
+    void onEnter() -> e
+    void onExit() -> f
+    boolean ccTouchesBegan(android.view.MotionEvent) -> b
+    boolean ccTouchesMoved(android.view.MotionEvent) -> c
+    boolean ccTouchesEnded(android.view.MotionEvent) -> a
+    boolean ccTouchesCancelled(android.view.MotionEvent) -> d
+    void ccAccelerometerChanged(float,float,float) -> a
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+    boolean ccKeyDown(int,android.view.KeyEvent) -> a
+    boolean ccKeyUp(int,android.view.KeyEvent) -> b
+org.cocos2d.layers.CCScene -> a.a.e.c:
+    org.cocos2d.layers.CCScene node() -> a
+org.cocos2d.nodes.CCAtlasNode -> a.a.f.a:
+    org.cocos2d.opengl.CCTextureAtlas textureAtlas_ -> a
+    int itemsPerRow -> b
+    int itemsPerColumn -> c
+    float texStepX -> d
+    float texStepY -> e
+    int itemWidth -> f
+    int itemHeight -> g
+    org.cocos2d.types.ccBlendFunc blendFunc_ -> h
+    int opacity_ -> i
+    org.cocos2d.types.ccColor3B color_ -> j
+    org.cocos2d.types.ccColor3B colorUnmodified_ -> k
+    boolean opacityModifyRGB_ -> l
+    void calculateMaxItems() -> c
+    void calculateTexCoordsSteps() -> d
+    void draw(javax.microedition.khronos.opengles.GL10) -> a
+    void updateBlendFunc() -> a
+    void updateOpacityModifyRGB() -> b
+org.cocos2d.nodes.CCDirector -> a.a.f.b:
+    java.lang.String LOG_TAG -> f
+    int projection_ -> g
+    android.app.Activity theApp -> a
+    int depthBufferFormat_ -> h
+    int pixelFormat_ -> i
+    int deviceOrientation_ -> b
+    int frames_ -> j
+    float accumDt_ -> k
+    float frameRate_ -> l
+    org.cocos2d.nodes.CCLabelAtlas FPSLabel_ -> c
+    boolean isPaused -> m
+    org.cocos2d.layers.CCScene runningCCScene_ -> n
+    org.cocos2d.layers.CCScene nextCCScene_ -> o
+    boolean sendCleanupToCCScene_ -> p
+    java.util.ArrayList CCScenesStack_ -> q
+    long lastUpdate_ -> r
+    float dt -> s
+    boolean nextDeltaTimeZero_ -> t
+    android.opengl.GLSurfaceView openGLView_ -> u
+    org.cocos2d.types.CGSize screenSize_ -> v
+    org.cocos2d.types.CGSize surfaceSize_ -> w
+    float contentScaleFactor_ -> x
+    boolean isContentScaleSupported_ -> y
+    double animationInterval_ -> z
+    double oldAnimationInterval_ -> A
+    boolean displayFPS -> B
+    org.cocos2d.nodes.CCDirector _sharedDirector -> C
+    double sleepInterval -> D
+    org.cocos2d.utils.javolution.TextBuilder fpsBuilder -> E
+    boolean mTranslucentBackground -> F
+    javax.microedition.khronos.opengles.GL10 gl -> d
+    boolean $assertionsDisabled -> e
+    int getProjection() -> a
+    void setProjection(int) -> a
+    android.app.Activity getActivity() -> b
+    float getZEye() -> c
+    void setDeviceOrientation(int) -> b
+    void applyOrientation(javax.microedition.khronos.opengles.GL10) -> c
+    void setAnimationInterval(double) -> a
+    void setDisplayFPS(boolean) -> a
+    org.cocos2d.nodes.CCDirector sharedDirector() -> d
+    void setGLDefaultValues(javax.microedition.khronos.opengles.GL10) -> a
+    void onSurfaceChanged(javax.microedition.khronos.opengles.GL10,int,int) -> onSurfaceChanged
+    void onSurfaceCreated(javax.microedition.khronos.opengles.GL10,javax.microedition.khronos.egl.EGLConfig) -> onSurfaceCreated
+    void onDrawFrame(javax.microedition.khronos.opengles.GL10) -> onDrawFrame
+    void waitForFPS() -> l
+    void drawCCScene(javax.microedition.khronos.opengles.GL10) -> b
+    void calculateDeltaTime() -> m
+    org.cocos2d.types.CGSize winSize() -> e
+    org.cocos2d.types.CGSize displaySize() -> f
+    boolean getLandscape() -> g
+    boolean attachInView(android.view.View) -> a
+    boolean initOpenGLViewWithView(android.view.View,org.cocos2d.types.CGRect) -> a
+    org.cocos2d.types.CGPoint convertToGL(org.cocos2d.types.CGPoint) -> a
+    void runWithScene(org.cocos2d.layers.CCScene) -> a
+    void pushScene(org.cocos2d.layers.CCScene) -> b
+    void end() -> h
+    void setNextScene() -> i
+    void pause() -> j
+    void resume() -> k
+    void setAlphaBlending(javax.microedition.khronos.opengles.GL10,boolean) -> a
+    void setDepthTest(javax.microedition.khronos.opengles.GL10,boolean) -> b
+    void showFPS(javax.microedition.khronos.opengles.GL10) -> d
+org.cocos2d.nodes.CCLabelAtlas -> a.a.f.c:
+    org.cocos2d.utils.javolution.TextBuilder string_ -> m
+    char mapStartChar -> n
+    org.cocos2d.nodes.CCLabelAtlas label(java.lang.CharSequence,java.lang.String,int,int,char) -> a
+    void updateAtlasValues() -> c
+    void setString(java.lang.CharSequence) -> a
+    void draw(javax.microedition.khronos.opengles.GL10) -> a
+org.cocos2d.nodes.CCNode -> a.a.f.d:
+    java.lang.String LOG_TAG -> a
+    float rotation_ -> o
+    float scaleX_ -> p
+    float scaleY_ -> q
+    org.cocos2d.types.CGPoint anchorPointInPixels_ -> r
+    boolean isRelativeAnchorPoint_ -> b
+    org.cocos2d.types.CGPoint anchorPoint_ -> s
+    org.cocos2d.types.CGSize contentSize_ -> t
+    float[] transformGL_ -> c
+    org.cocos2d.types.CGAffineTransform transform_ -> d
+    org.cocos2d.types.CGAffineTransform inverse_ -> e
+    boolean isTransformDirty_ -> f
+    boolean isInverseDirty_ -> g
+    boolean isTransformGLDirty_ -> h
+    org.cocos2d.types.CGPoint position_ -> u
+    org.cocos2d.opengl.CCCamera camera_ -> i
+    org.cocos2d.grid.CCGridBase grid_ -> v
+    boolean visible_ -> w
+    org.cocos2d.nodes.CCNode parent_ -> x
+    int tag_ -> j
+    float vertexZ_ -> y
+    int zOrder_ -> k
+    java.util.List children_ -> z
+    java.lang.Object userData -> l
+    boolean isRunning_ -> m
+    java.util.Comparator zOrderComparator -> n
+    boolean $assertionsDisabled -> A
+    org.cocos2d.types.CGPoint getAnchorPointInPixels() -> g
+    void setRelativeAnchorPoint(boolean) -> b
+    void setContentSize(org.cocos2d.types.CGSize) -> a
+    void setContentSize(float,float) -> a
+    org.cocos2d.types.CGSize getContentSize() -> h
+    void setAnchorPoint(org.cocos2d.types.CGPoint) -> a
+    void setAnchorPoint(float,float) -> b
+    org.cocos2d.types.CGPoint getPosition() -> i
+    org.cocos2d.types.CGPoint getPositionRef() -> j
+    void setPosition(org.cocos2d.types.CGPoint) -> b
+    void setPosition(float,float) -> c
+    org.cocos2d.opengl.CCCamera getCamera() -> k
+    org.cocos2d.nodes.CCNode getParent() -> l
+    void setParent(org.cocos2d.nodes.CCNode) -> a
+    void setTag(int) -> a
+    int getZOrder() -> m
+    void _setZOrder(int) -> b
+    java.util.List getChildren() -> n
+    boolean isRunning() -> o
+    org.cocos2d.nodes.CCNode addChild(org.cocos2d.nodes.CCNode,int,int) -> a
+    org.cocos2d.nodes.CCNode addChild(org.cocos2d.nodes.CCNode) -> b
+    void draw(javax.microedition.khronos.opengles.GL10) -> a
+    void visit(javax.microedition.khronos.opengles.GL10) -> b
+    void transform(javax.microedition.khronos.opengles.GL10) -> c
+    void transformAncestors(javax.microedition.khronos.opengles.GL10) -> d
+    org.cocos2d.actions.base.CCAction runAction(org.cocos2d.actions.base.CCAction) -> a
+    void stopAllActions() -> p
+    void schedule(java.lang.String) -> a
+    void schedule(java.lang.String,float) -> a
+    void unscheduleAllSelectors() -> q
+    void resumeSchedulerAndActions() -> r
+    void pauseSchedulerAndActions() -> s
+    org.cocos2d.types.CGAffineTransform nodeToParentTransform() -> a
+    void childrenAlloc() -> b
+    void insertChild(org.cocos2d.nodes.CCNode,int) -> a
+    void cleanup() -> t
+    java.lang.String toString() -> toString
+    void onEnter() -> e
+    void onEnterTransitionDidFinish() -> u
+    void onExit() -> f
+    float RENDER_IN_SUBPIXEL(float) -> a
+    int access$0(org.cocos2d.nodes.CCNode) -> c
+org.cocos2d.nodes.CCNode$1 -> a.a.f.e:
+    int compare(org.cocos2d.nodes.CCNode,org.cocos2d.nodes.CCNode) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+org.cocos2d.nodes.CCSprite -> a.a.f.f:
+    java.util.HashMap animations_ -> I
+    boolean flipY_ -> a
+    boolean flipX_ -> b
+    int opacity_ -> c
+    org.cocos2d.types.ccColor3B color_ -> d
+    org.cocos2d.types.ccColor3B colorUnmodified_ -> e
+    boolean opacityModifyRGB_ -> f
+    org.cocos2d.opengl.CCTexture2D texture_ -> g
+    org.cocos2d.types.ccBlendFunc blendFunc_ -> h
+    org.cocos2d.types.CGRect rect_ -> i
+    java.lang.Boolean rectRotated_ -> j
+    org.cocos2d.types.CGPoint offsetPosition_ -> k
+    org.cocos2d.types.CGPoint unflippedOffsetPositionFromCenter_ -> l
+    org.cocos2d.opengl.CCTextureAtlas textureAtlas_ -> m
+    int atlasIndex -> n
+    org.cocos2d.nodes.CCSpriteSheet spriteSheet_ -> B
+    int honorParentTransform_ -> C
+    boolean dirty_ -> D
+    boolean recursiveDirty_ -> E
+    boolean hasChildren_ -> F
+    org.cocos2d.utils.FastFloatBuffer texCoords -> J
+    org.cocos2d.utils.FastFloatBuffer vertexes -> K
+    org.cocos2d.utils.FastFloatBuffer colors -> L
+    boolean usesSpriteSheet_ -> G
+    org.cocos2d.types.ccColor4B tmpColor4B -> M
+    org.cocos2d.types.ccColor4B[] tmpColors -> N
+    org.cocos2d.types.CGAffineTransform tmpMatrix -> O
+    org.cocos2d.types.CGAffineTransform tmpNewMatrix -> P
+    float[] tmpV -> Q
+    boolean $assertionsDisabled -> H
+    void setOpacityModifyRGB(boolean) -> a
+    void setColor(org.cocos2d.types.ccColor3B) -> a
+    org.cocos2d.utils.FastFloatBuffer getTexCoords() -> a
+    org.cocos2d.utils.FastFloatBuffer getVertices() -> b
+    org.cocos2d.nodes.CCSprite sprite(java.lang.String) -> b
+    void init(org.cocos2d.opengl.CCTexture2D,org.cocos2d.types.CGRect) -> a
+    void setTextureRect(float,float,float,float,java.lang.Boolean) -> a
+    void setTextureRect(org.cocos2d.types.CGRect,java.lang.Boolean) -> a
+    void setTextureRect(org.cocos2d.types.CGRect) -> a
+    void useSelfRender() -> c
+    void useSpriteSheetRender(org.cocos2d.nodes.CCSpriteSheet) -> a
+    void init() -> d
+    void updateColor() -> v
+    void setTexture(org.cocos2d.opengl.CCTexture2D) -> a
+    void SET_DIRTY_RECURSIVELY() -> x
+    void updateBlendFunc() -> y
+    void setTextureRect(org.cocos2d.types.CGRect,org.cocos2d.types.CGSize,java.lang.Boolean) -> a
+    void setTextureRect(float,float,float,float,float,float,boolean) -> a
+    void setDirtyRecursively(boolean) -> c
+    void setPosition(org.cocos2d.types.CGPoint) -> b
+    void setPosition(float,float) -> c
+    void setAnchorPoint(org.cocos2d.types.CGPoint) -> a
+    void setRelativeAnchorPoint(boolean) -> b
+    org.cocos2d.nodes.CCNode addChild(org.cocos2d.nodes.CCNode,int,int) -> a
+    void draw(javax.microedition.khronos.opengles.GL10) -> a
+    void updateTextureCoords(org.cocos2d.types.CGRect) -> b
+    void updateTransform() -> w
+org.cocos2d.nodes.CCSpriteFrameCache -> a.a.f.g:
+    java.util.HashMap spriteFrames -> a
+    org.cocos2d.nodes.CCSpriteFrameCache sharedSpriteFrameCache_ -> b
+    void purgeSharedSpriteFrameCache() -> a
+    void removeAllSpriteFrames() -> b
+org.cocos2d.nodes.CCSpriteSheet -> a.a.f.h:
+    org.cocos2d.opengl.CCTextureAtlas textureAtlas_ -> a
+    org.cocos2d.types.ccBlendFunc blendFunc_ -> b
+    java.util.ArrayList descendants_ -> c
+    boolean $assertionsDisabled -> d
+    org.cocos2d.opengl.CCTextureAtlas getTextureAtlas() -> a
+    void visit(javax.microedition.khronos.opengles.GL10) -> b
+    org.cocos2d.nodes.CCNode addChild(org.cocos2d.nodes.CCNode,int,int) -> a
+    void draw(javax.microedition.khronos.opengles.GL10) -> a
+    void increaseAtlasCapacity() -> b
+    int highestAtlasIndexInChild(org.cocos2d.nodes.CCSprite) -> a
+    int atlasIndex(org.cocos2d.nodes.CCSprite,int) -> a
+    void insertChild(org.cocos2d.nodes.CCSprite,int) -> b
+org.cocos2d.nodes.CCTextureCache -> a.a.f.i:
+    java.util.HashMap textures -> b
+    org.cocos2d.nodes.CCTextureCache _sharedTextureCache -> c
+    boolean $assertionsDisabled -> a
+    org.cocos2d.nodes.CCTextureCache sharedTextureCache() -> a
+    void purgeSharedTextureCache() -> b
+    org.cocos2d.opengl.CCTexture2D addImage(java.lang.String) -> a
+    void removeAllTextures() -> c
+    org.cocos2d.opengl.CCTexture2D createTextureFromFilePath(java.lang.String) -> b
+org.cocos2d.nodes.CCTextureCache$2 -> a.a.f.j:
+    java.lang.String val$path -> a
+    void load(org.cocos2d.opengl.GLResourceHelper$Resource) -> a
+org.cocos2d.opengl.CCCamera -> a.a.g.a:
+    float eyeX -> a
+    float eyeY -> b
+    float eyeZ -> c
+    float centerX -> d
+    float centerY -> e
+    float centerZ -> f
+    float upX -> g
+    float upY -> h
+    float upZ -> i
+    boolean dirty -> j
+    boolean getDirty() -> a
+    java.lang.String toString() -> toString
+    void restore() -> b
+    void locate(javax.microedition.khronos.opengles.GL10) -> a
+    float getZEye() -> c
+org.cocos2d.opengl.CCGLSurfaceView -> a.a.g.b:
+    org.cocos2d.events.CCTouchDispatcher mDispatcher -> b
+    org.cocos2d.types.CGSize frame -> a
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+org.cocos2d.opengl.CCTexture2D -> a.a.g.c:
+    boolean premultipliedAlpha -> c
+    org.cocos2d.utils.FastFloatBuffer mVertices -> d
+    org.cocos2d.utils.FastFloatBuffer mCoordinates -> e
+    android.graphics.Bitmap mBitmap -> f
+    int _name -> g
+    org.cocos2d.types.CGSize mContentSize -> h
+    int mWidth -> i
+    int mHeight -> j
+    android.graphics.Bitmap$Config _format -> k
+    float _maxS -> l
+    float _maxT -> m
+    org.cocos2d.types.CCTexParams _texParams -> n
+    java.util.HashMap typefaces -> o
+    android.graphics.Bitmap$Config defaultAlphaPixelFormat_ -> a
+    boolean $assertionsDisabled -> b
+    android.graphics.Bitmap$Config pixelFormat() -> a
+    int pixelsWide() -> b
+    int pixelsHigh() -> c
+    int name() -> d
+    boolean hasPremultipliedAlpha() -> e
+    org.cocos2d.types.CGSize getContentSize() -> f
+    void releaseTexture(javax.microedition.khronos.opengles.GL10) -> a
+    void finalize() -> finalize
+    void setLoader(org.cocos2d.opengl.GLResourceHelper$GLResourceLoader) -> a
+    void initWithImage(android.graphics.Bitmap) -> a
+    void init(android.graphics.Bitmap,org.cocos2d.types.CGSize,org.cocos2d.types.CGSize) -> a
+    int toPow2(int) -> a
+    void loadTexture(javax.microedition.khronos.opengles.GL10) -> b
+    void applyTexParameters(javax.microedition.khronos.opengles.GL10) -> c
+    int access$0(org.cocos2d.opengl.CCTexture2D) -> a
+org.cocos2d.opengl.CCTexture2D$1 -> a.a.g.d:
+    org.cocos2d.opengl.CCTexture2D this$0 -> a
+    void perform(javax.microedition.khronos.opengles.GL10) -> a
+org.cocos2d.opengl.CCTexture2D$2 -> a.a.g.e:
+    org.cocos2d.opengl.CCTexture2D this$0 -> a
+    void perform(javax.microedition.khronos.opengles.GL10) -> a
+org.cocos2d.opengl.CCTextureAtlas -> a.a.g.f:
+    int totalQuads_ -> b
+    int capacity_ -> c
+    org.cocos2d.opengl.CCTexture2D texture_ -> d
+    org.cocos2d.utils.FastFloatBuffer textureCoordinates -> e
+    org.cocos2d.utils.FastFloatBuffer vertexCoordinates -> f
+    org.cocos2d.utils.FastFloatBuffer colors -> g
+    java.nio.ShortBuffer indices -> h
+    boolean withColorArray_ -> i
+    boolean $assertionsDisabled -> a
+    org.cocos2d.utils.FastFloatBuffer getVertexBuffer() -> a
+    int getTotalQuads() -> b
+    int capacity() -> c
+    org.cocos2d.opengl.CCTexture2D getTexture() -> d
+    java.lang.String toString() -> toString
+    void initColorArray() -> e
+    void initIndices() -> f
+    void updateQuad(org.cocos2d.types.ccQuad2,org.cocos2d.types.ccQuad3,int) -> a
+    void updateColor(org.cocos2d.types.ccColor4B[],int) -> a
+    void insertQuad(org.cocos2d.utils.FastFloatBuffer,org.cocos2d.utils.FastFloatBuffer,int) -> a
+    void resizeCapacity(int) -> a
+    void drawQuads(javax.microedition.khronos.opengles.GL10) -> a
+    void draw(javax.microedition.khronos.opengles.GL10,int) -> a
+    void putTexCoords(org.cocos2d.utils.FastFloatBuffer,org.cocos2d.types.ccQuad2,int) -> a
+    void putTexCoords(org.cocos2d.utils.FastFloatBuffer,int) -> a
+    void putVertex(org.cocos2d.utils.FastFloatBuffer,int) -> b
+    void putVertex(org.cocos2d.utils.FastFloatBuffer,org.cocos2d.types.ccQuad3,int) -> a
+    void putVertex(org.cocos2d.utils.FastFloatBuffer,float[],int) -> a
+    void putColor(org.cocos2d.utils.FastFloatBuffer,org.cocos2d.types.ccColor4B[],int) -> a
+    void arraycopyTexture(org.cocos2d.utils.FastFloatBuffer,int,org.cocos2d.utils.FastFloatBuffer,int,int) -> a
+    void arraycopyVertex(org.cocos2d.utils.FastFloatBuffer,int,org.cocos2d.utils.FastFloatBuffer,int,int) -> b
+    void arraycopyColor(org.cocos2d.utils.FastFloatBuffer,int,org.cocos2d.utils.FastFloatBuffer,int,int) -> c
+    void memmoveFloat(org.cocos2d.utils.FastFloatBuffer,int,org.cocos2d.utils.FastFloatBuffer,int,int) -> d
+    void memcopyFloat(org.cocos2d.utils.FastFloatBuffer,int,org.cocos2d.utils.FastFloatBuffer,int,int) -> e
+org.cocos2d.opengl.GLResourceHelper -> a.a.g.g:
+    org.cocos2d.opengl.GLResourceHelper _sharedResourceHelper -> a
+    java.util.concurrent.ConcurrentLinkedQueue taskQueue -> b
+    java.util.Map reloadMap -> c
+    boolean reloadTaskIsInQueue -> d
+    boolean inUpdate -> e
+    org.cocos2d.opengl.GLResourceHelper sharedHelper() -> a
+    void addLoader(org.cocos2d.opengl.GLResourceHelper$Resource,org.cocos2d.opengl.GLResourceHelper$GLResourceLoader,boolean) -> a
+    void reloadResources() -> b
+    void perform(org.cocos2d.opengl.GLResourceHelper$GLResorceTask) -> a
+    void update(javax.microedition.khronos.opengles.GL10) -> a
+    void setInUpdate(boolean) -> a
+    java.util.Map access$0(org.cocos2d.opengl.GLResourceHelper) -> a
+    void access$1(org.cocos2d.opengl.GLResourceHelper,boolean) -> a
+org.cocos2d.opengl.GLResourceHelper$1 -> a.a.g.h:
+    org.cocos2d.opengl.GLResourceHelper this$0 -> a
+    org.cocos2d.opengl.GLResourceHelper$GLResourceLoader val$loader -> b
+    org.cocos2d.opengl.GLResourceHelper$Resource val$res -> c
+    void perform(javax.microedition.khronos.opengles.GL10) -> a
+org.cocos2d.opengl.GLResourceHelper$2 -> a.a.g.i:
+    org.cocos2d.opengl.GLResourceHelper this$0 -> a
+    void perform(javax.microedition.khronos.opengles.GL10) -> a
+org.cocos2d.opengl.GLResourceHelper$GLResorceTask -> a.a.g.j:
+    void perform(javax.microedition.khronos.opengles.GL10) -> a
+org.cocos2d.opengl.GLResourceHelper$GLResourceLoader -> a.a.g.k:
+    void load(org.cocos2d.opengl.GLResourceHelper$Resource) -> a
+org.cocos2d.opengl.GLResourceHelper$Resource -> a.a.g.l:
+org.cocos2d.protocols.CCKeyDelegateProtocol -> a.a.h.a:
+    boolean ccKeyDown(int,android.view.KeyEvent) -> a
+    boolean ccKeyUp(int,android.view.KeyEvent) -> b
+org.cocos2d.protocols.CCMotionEventProtocol -> a.a.h.b:
+    void onTouch(android.view.MotionEvent) -> a
+org.cocos2d.protocols.CCTouchDelegateProtocol -> a.a.h.c:
+    boolean ccTouchesBegan(android.view.MotionEvent) -> b
+    boolean ccTouchesMoved(android.view.MotionEvent) -> c
+    boolean ccTouchesEnded(android.view.MotionEvent) -> a
+    boolean ccTouchesCancelled(android.view.MotionEvent) -> d
+org.cocos2d.sound.SoundEngine -> a.a.i.a:
+    org.cocos2d.utils.collections.IntMap effectsMap -> a
+    org.cocos2d.utils.collections.IntMap streamsMap -> b
+    org.cocos2d.utils.collections.IntMap soundsMap -> c
+    android.media.SoundPool sp -> d
+    int lastSndId -> e
+    java.lang.Float prevEffectsVolume -> f
+    java.lang.Float prevSoundsVolume -> g
+    java.lang.Float effectsVolume -> h
+    java.lang.Float soundsVolume -> i
+    boolean mute -> j
+    org.cocos2d.sound.SoundEngine _sharedEngine -> k
+    org.cocos2d.sound.SoundEngine sharedEngine() -> a
+    void preloadEffect(android.content.Context,int) -> a
+    void playEffect(android.content.Context,int) -> b
+org.cocos2d.transitions.CCTransitionScene -> a.a.j.a:
+    org.cocos2d.layers.CCScene inScene -> a
+    org.cocos2d.layers.CCScene outScene -> b
+    boolean inSceneOnTop -> c
+    boolean sendCleanupToScene -> d
+    boolean $assertionsDisabled -> e
+    void draw(javax.microedition.khronos.opengles.GL10) -> a
+    void onEnter() -> e
+    void onExit() -> f
+    void onEnterTransitionDidFinish() -> u
+    void cleanup() -> t
+org.cocos2d.types.CCTexParams -> a.a.k.a:
+    int minFilter -> a
+    int magFilter -> b
+    int wrapS -> c
+    int wrapT -> d
+org.cocos2d.types.CGAffineTransform -> a.a.k.b:
+    double m00 -> a
+    double m10 -> b
+    double m01 -> c
+    double m11 -> d
+    double m02 -> e
+    double m12 -> f
+    int type -> g
+    org.cocos2d.types.CGAffineTransform identity() -> a
+    void setToIdentity() -> b
+    void set(double,double,double,double,double,double) -> a
+    void translate(double,double) -> a
+    void rotate(double) -> a
+    void scale(double,double) -> b
+    void multiply(org.cocos2d.types.CGAffineTransform) -> a
+    java.lang.String toString() -> toString
+    java.lang.Object clone() -> clone
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    void CGAffineToGL(org.cocos2d.types.CGAffineTransform,float[]) -> a
+org.cocos2d.types.CGPoint -> a.a.k.c:
+    float x -> a
+    float y -> b
+    org.cocos2d.types.CGPoint ZERO_POINT -> c
+    org.cocos2d.types.CGPoint getZero() -> a
+    org.cocos2d.types.CGPoint zero() -> b
+    org.cocos2d.types.CGPoint make(float,float) -> a
+    void set(float,float) -> b
+    void set(org.cocos2d.types.CGPoint) -> a
+    java.lang.String toString() -> toString
+    boolean equalToPoint(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint) -> a
+    org.cocos2d.types.CGPoint ccp(float,float) -> c
+    org.cocos2d.types.CGPoint ccpMult(org.cocos2d.types.CGPoint,float) -> a
+org.cocos2d.types.CGRect -> a.a.k.d:
+    org.cocos2d.types.CGPoint origin -> a
+    org.cocos2d.types.CGSize size -> b
+    org.cocos2d.types.CGRect ZERO_RECT -> c
+    org.cocos2d.types.CGRect sRect -> d
+    org.cocos2d.types.CGRect rRect -> e
+    org.cocos2d.types.CGRect make(float,float,float,float) -> a
+    void set(float,float,float,float) -> b
+    java.lang.String toString() -> toString
+org.cocos2d.types.CGSize -> a.a.k.e:
+    float width -> a
+    float height -> b
+    org.cocos2d.types.CGSize ZERO_SIZE -> c
+    org.cocos2d.types.CGSize make(float,float) -> a
+    org.cocos2d.types.CGSize zero() -> a
+    void set(float,float) -> b
+    float getWidth() -> b
+    float getHeight() -> c
+    java.lang.String toString() -> toString
+org.cocos2d.types.HashCode -> a.a.k.f:
+    org.cocos2d.types.HashCode hashCode -> a
+    int hashCode() -> hashCode
+    org.cocos2d.types.HashCode append(double) -> a
+org.cocos2d.types.ccBlendFunc -> a.a.k.g:
+    int src -> a
+    int dst -> b
+    java.lang.String toString() -> toString
+org.cocos2d.types.ccColor3B -> a.a.k.h:
+    org.cocos2d.types.ccColor3B ccWHITE -> a
+    org.cocos2d.types.ccColor3B ccYELLOW -> b
+    org.cocos2d.types.ccColor3B ccBLUE -> c
+    org.cocos2d.types.ccColor3B ccGREEN -> d
+    org.cocos2d.types.ccColor3B ccRED -> e
+    org.cocos2d.types.ccColor3B ccMAGENTA -> f
+    org.cocos2d.types.ccColor3B ccBLACK -> g
+    org.cocos2d.types.ccColor3B ccORANGE -> h
+    org.cocos2d.types.ccColor3B ccGRAY -> i
+    int r -> j
+    int g -> k
+    int b -> l
+    void set(org.cocos2d.types.ccColor3B) -> a
+    org.cocos2d.types.ccColor3B ccc3(int,int,int) -> a
+    java.lang.String toString() -> toString
+org.cocos2d.types.ccColor4B -> a.a.k.i:
+    int r -> a
+    int g -> b
+    int b -> c
+    int a -> d
+    org.cocos2d.types.ccColor4B ccc4(int,int,int,int) -> a
+    java.lang.String toString() -> toString
+org.cocos2d.types.ccGridSize -> a.a.k.j:
+    int x -> a
+    int y -> b
+org.cocos2d.types.ccQuad2 -> a.a.k.k:
+    float tl_x -> a
+    float tl_y -> b
+    float tr_x -> c
+    float tr_y -> d
+    float bl_x -> e
+    float bl_y -> f
+    float br_x -> g
+    float br_y -> h
+    java.lang.String toString() -> toString
+org.cocos2d.types.ccQuad3 -> a.a.k.l:
+    float bl_x -> a
+    float bl_y -> b
+    float bl_z -> c
+    float br_x -> d
+    float br_y -> e
+    float br_z -> f
+    float tl_x -> g
+    float tl_y -> h
+    float tl_z -> i
+    float tr_x -> j
+    float tr_y -> k
+    float tr_z -> l
+    java.lang.String toString() -> toString
+org.cocos2d.types.util.PoolHolder -> a.a.k.a.a:
+    java.lang.ThreadLocal instance -> a
+    org.cocos2d.utils.pool.ObjectPool objectPool -> b
+    org.cocos2d.utils.pool.OneClassPool pointPool -> c
+    org.cocos2d.utils.pool.OneClassPool ccQuad2Pool -> d
+    org.cocos2d.utils.pool.OneClassPool ccQuad3Pool -> e
+    org.cocos2d.utils.pool.OneClassPool rectPool -> f
+    org.cocos2d.utils.pool.OneClassPool affineTransformPool -> g
+    org.cocos2d.types.util.PoolHolder getInstance() -> a
+    org.cocos2d.utils.pool.OneClassPool getccQuad2Pool() -> b
+    org.cocos2d.utils.pool.OneClassPool getccQuad3Pool() -> c
+org.cocos2d.types.util.PoolHolder$1 -> a.a.k.a.b:
+    org.cocos2d.types.util.PoolHolder initialValue() -> a
+    java.lang.Object initialValue() -> initialValue
+org.cocos2d.types.util.PoolHolder$2 -> a.a.k.a.c:
+    org.cocos2d.types.util.PoolHolder this$0 -> a
+    org.cocos2d.types.CGPoint allocate() -> a
+    java.lang.Object allocate() -> b
+org.cocos2d.types.util.PoolHolder$3 -> a.a.k.a.d:
+    org.cocos2d.types.util.PoolHolder this$0 -> a
+    org.cocos2d.types.ccQuad2 allocate() -> a
+    java.lang.Object allocate() -> b
+org.cocos2d.types.util.PoolHolder$4 -> a.a.k.a.e:
+    org.cocos2d.types.util.PoolHolder this$0 -> a
+    org.cocos2d.types.ccQuad3 allocate() -> a
+    java.lang.Object allocate() -> b
+org.cocos2d.types.util.PoolHolder$5 -> a.a.k.a.f:
+    org.cocos2d.types.util.PoolHolder this$0 -> a
+    org.cocos2d.types.CGRect allocate() -> a
+    java.lang.Object allocate() -> b
+org.cocos2d.types.util.PoolHolder$6 -> a.a.k.a.g:
+    org.cocos2d.types.util.PoolHolder this$0 -> a
+    org.cocos2d.types.CGAffineTransform allocate() -> a
+    java.lang.Object allocate() -> b
+org.cocos2d.utils.CCFormatter -> a.a.l.a:
+    java.lang.StringBuilder sb -> a
+    java.util.Formatter formatter -> b
+    java.lang.String format(java.lang.String,java.lang.Object[]) -> a
+org.cocos2d.utils.FastFloatBuffer -> a.a.l.b:
+    java.nio.ByteBuffer bytes -> a
+    java.nio.FloatBuffer floats -> b
+    java.nio.IntBuffer ints -> c
+    int bufferID -> d
+    boolean loaded -> e
+    java.lang.ref.SoftReference intArray -> f
+    org.cocos2d.utils.FastFloatBuffer createBuffer(java.nio.ByteBuffer) -> a
+    org.cocos2d.utils.FastFloatBuffer put(float) -> a
+    org.cocos2d.utils.FastFloatBuffer put(float[]) -> a
+    org.cocos2d.utils.FastFloatBuffer put(org.cocos2d.utils.FastFloatBuffer) -> a
+    int capacity() -> a
+    int position() -> b
+    void position(int) -> a
+    int limit() -> c
+    void put(int,float) -> a
+    float get() -> d
+    float get(int) -> b
+org.cocos2d.utils.Util5 -> a.a.l.c:
+    int getPointerId(android.view.MotionEvent,int) -> a
+org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue -> a.a.l.a.a:
+    java.util.concurrent.atomic.AtomicReferenceFieldUpdater tailUpdater -> b
+    java.util.concurrent.atomic.AtomicReferenceFieldUpdater headUpdater -> c
+    org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node head -> d
+    org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node tail -> e
+    org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node freeNode -> a
+    java.util.concurrent.atomic.AtomicReferenceFieldUpdater freeNodeUpdater -> f
+    boolean casTail(org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node,org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node) -> a
+    boolean casHead(org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node,org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node) -> b
+    boolean casNewNode(org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node,org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node) -> c
+    org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node newNode() -> b
+    void freeNode(org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node) -> a
+    void push(java.lang.Object) -> a
+    java.lang.Object poll() -> a
+org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node -> a.a.l.a.b:
+    java.lang.Object item -> a
+    org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node next -> b
+    java.util.concurrent.atomic.AtomicReferenceFieldUpdater nextUpdater -> c
+    boolean casNext(org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node,org.cocos2d.utils.collections.ConcNodeCachingLinkedQueue$Node) -> a
+org.cocos2d.utils.collections.ConcNodeCachingStack -> a.a.l.a.c:
+    org.cocos2d.utils.collections.ConcNodeCachingStack$Node head -> a
+    java.util.concurrent.atomic.AtomicReferenceFieldUpdater headUpdater -> c
+    org.cocos2d.utils.collections.ConcNodeCachingStack$Node freeNode -> b
+    java.util.concurrent.atomic.AtomicReferenceFieldUpdater freeNodeUpdater -> d
+    boolean casHead(org.cocos2d.utils.collections.ConcNodeCachingStack$Node,org.cocos2d.utils.collections.ConcNodeCachingStack$Node) -> a
+    boolean casNewNode(org.cocos2d.utils.collections.ConcNodeCachingStack$Node,org.cocos2d.utils.collections.ConcNodeCachingStack$Node) -> b
+    org.cocos2d.utils.collections.ConcNodeCachingStack$Node newNode() -> b
+    void freeNode(org.cocos2d.utils.collections.ConcNodeCachingStack$Node) -> a
+    void push(java.lang.Object) -> a
+    java.lang.Object pop() -> a
+org.cocos2d.utils.collections.ConcNodeCachingStack$Node -> a.a.l.a.d:
+    java.lang.Object item -> a
+    org.cocos2d.utils.collections.ConcNodeCachingStack$Node next -> b
+org.cocos2d.utils.collections.ConcurrentArrayHashMap -> a.a.l.a.e:
+    java.util.ArrayList array -> b
+    java.util.HashMap map -> c
+    org.cocos2d.utils.pool.OneClassPool pool -> a
+    void put(java.lang.Object,java.lang.Object) -> a
+    java.lang.Object get(java.lang.Object) -> a
+    java.lang.Object remove(java.lang.Object) -> b
+    org.cocos2d.utils.collections.ConcurrentArrayHashMap$Entry firstValue() -> a
+    org.cocos2d.utils.collections.ConcurrentArrayHashMap$Entry nextValue(org.cocos2d.utils.collections.ConcurrentArrayHashMap$Entry) -> a
+org.cocos2d.utils.collections.ConcurrentArrayHashMap$1 -> a.a.l.a.f:
+    org.cocos2d.utils.collections.ConcurrentArrayHashMap this$0 -> a
+    org.cocos2d.utils.collections.ConcurrentArrayHashMap$Entry allocate() -> a
+    java.lang.Object allocate() -> b
+org.cocos2d.utils.collections.ConcurrentArrayHashMap$Entry -> a.a.l.a.g:
+    java.lang.Object key -> a
+    java.lang.Object value -> b
+    org.cocos2d.utils.collections.ConcurrentArrayHashMap$Entry next -> c
+    org.cocos2d.utils.collections.ConcurrentArrayHashMap this$0 -> d
+    java.lang.Object getValue() -> a
+org.cocos2d.utils.collections.IntMap -> a.a.l.a.h:
+    org.cocos2d.utils.collections.IntMap$Entry[] table -> a
+    float loadFactor -> b
+    int size -> c
+    int mask -> d
+    int capacity -> e
+    int threshold -> f
+    org.cocos2d.utils.collections.IntMap clone() -> a
+    java.lang.Object get(int) -> a
+    java.lang.Object put(int,java.lang.Object) -> a
+    java.util.Iterator iterator() -> iterator
+    java.lang.Object clone() -> clone
+    org.cocos2d.utils.collections.IntMap$Entry[] access$1(org.cocos2d.utils.collections.IntMap) -> a
+    int access$2(org.cocos2d.utils.collections.IntMap) -> b
+org.cocos2d.utils.collections.IntMap$Entry -> a.a.l.a.i:
+    int key -> a
+    java.lang.Object value -> b
+    org.cocos2d.utils.collections.IntMap$Entry next -> c
+    java.lang.String toString() -> toString
+    org.cocos2d.utils.collections.IntMap$Entry clone() -> a
+    java.lang.Object clone() -> clone
+org.cocos2d.utils.collections.IntMap$IntMapIterator -> a.a.l.a.j:
+    org.cocos2d.utils.collections.IntMap$Entry cur -> b
+    int idx -> c
+    int el -> d
+    org.cocos2d.utils.collections.IntMap this$0 -> a
+    boolean hasNext() -> hasNext
+    org.cocos2d.utils.collections.IntMap$Entry next() -> a
+    void remove() -> remove
+    java.lang.Object next() -> next
+org.cocos2d.utils.javolution.MathLib -> a.a.l.b.a:
+    java.util.Random RANDOM -> g
+    byte[] BIT_LENGTH -> h
+    int[] POW5_INT -> i
+    double INV_LOG10 -> j
+    double[] atanhi -> a
+    double[] atanlo -> b
+    double[] aT -> c
+    double[] halF -> d
+    double[] ln2HI -> e
+    double[] ln2LO -> f
+    int digitLength(int) -> a
+org.cocos2d.utils.javolution.TextBuilder -> a.a.l.b.b:
+    char[] _low -> a
+    char[][] _high -> b
+    int _length -> c
+    int _capacity -> d
+    char[] DIGIT_TO_CHAR -> e
+    long[] POW10_LONG -> f
+    int length() -> length
+    char charAt(int) -> charAt
+    void getChars(int,int,char[],int) -> a
+    java.lang.CharSequence subSequence(int,int) -> subSequence
+    org.cocos2d.utils.javolution.TextBuilder append(char) -> a
+    org.cocos2d.utils.javolution.TextBuilder append(java.lang.CharSequence) -> a
+    org.cocos2d.utils.javolution.TextBuilder append(java.lang.CharSequence,int,int) -> a
+    org.cocos2d.utils.javolution.TextBuilder append(java.lang.String) -> a
+    org.cocos2d.utils.javolution.TextBuilder append(java.lang.String,int,int) -> a
+    org.cocos2d.utils.javolution.TextBuilder append(int) -> a
+    java.lang.String toString() -> toString
+    void reset() -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    void increaseCapacity() -> b
+    java.lang.Appendable append(java.lang.CharSequence,int,int) -> append
+    java.lang.Appendable append(java.lang.CharSequence) -> append
+    java.lang.Appendable append(char) -> append
+org.cocos2d.utils.pool.ConcOneClassPool -> a.a.l.c.a:
+    org.cocos2d.utils.collections.ConcNodeCachingStack objs -> a
+    java.lang.Object allocate() -> b
+    java.lang.Object get() -> c
+    void free(java.lang.Object) -> a
+org.cocos2d.utils.pool.ObjectPool -> a.a.l.c.b:
+    java.util.HashMap lists -> a
+    org.cocos2d.utils.pool.OneClassPool registerPool(java.lang.Class,org.cocos2d.utils.pool.OneClassPool) -> a
+org.cocos2d.utils.pool.OneClassPool -> a.a.l.c.c:
+    java.util.ArrayList objs -> a
+    java.lang.Object allocate() -> b
+    java.lang.Object get() -> c
+    void free(java.lang.Object) -> a

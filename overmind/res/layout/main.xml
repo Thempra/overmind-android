@@ -5,42 +5,70 @@
     android:background="@drawable/background"
     android:orientation="vertical" >
 
-    
-    <Button
-        android:id="@+id/btnGrafica_1"
-        style="@style/button_black"
-        android:layout_width="200dp"
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dip"
-        android:text="@string/data_analice" />
+        android:layout_gravity="center"
+        android:layout_margin="5dip"
+        android:text="@string/app_name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="43dp" />
 
-    <Button
-        android:id="@+id/btnGrafica_2"
-        style="@style/button_black"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:id="@+id/buttomBox"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dip"
-        android:text="@string/levels" />
+        android:orientation="horizontal"
+         android:gravity="center_vertical" >
 
-    <Button
-        android:id="@+id/btnGame"
-        style="@style/button_black"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dip"
-        android:text="@string/play" 
-        />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.50"
+            
+            android:orientation="vertical"
+            android:layout_gravity="center"
+             >
 
-    
+            <Button
+                android:id="@+id/btnGrafica_1"
+                style="@style/button_black"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="@string/data_analice"
+                            android:layout_gravity="center"
+                 />
+
+            <Button
+                android:id="@+id/btnGrafica_2"
+                style="@style/button_black"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="@string/levels" 
+                            android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGame"
+            style="@style/button_black"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            android:text="@string/play" 
+             android:layout_weight="0.50"/>
+    </LinearLayout>
     
     <LinearLayout 
     android:id="@+id/linearLayout4"
     android:layout_width="wrap_content"
     android:layout_height="fill_parent"
-    android:layout_below="@+id/btnGame"
+    android:layout_below="@+id/buttomBox"
     android:layout_centerHorizontal="true"
     android:layout_gravity="center_horizontal"
     android:orientation="vertical" 

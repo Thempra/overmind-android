@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.LinearGradient;
@@ -12,6 +14,7 @@ import android.graphics.Paint;
 import android.graphics.Shader;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 import com.androidplot.Plot;
 import com.androidplot.series.XYSeries;
@@ -27,12 +30,41 @@ public class Grafica_2 extends Activity  {
 	private XYPlot mySimpleXYPlot;
 	private Number[] series1Numbers={ 0, 0,0,0,0,0,0,0,0,0,0,0};
 	private Handler mHandler = new Handler();
+	private int selected;
 
 	 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		 AlertDialog.Builder builder = 
+		            new AlertDialog.Builder(this);
+		        builder.setTitle("Select device to analize");        
+		        int itemsConnected=0;;
+				for(int i=0;i<MainActivity.currentEeg.length;i++)
+		        	 if (MainActivity.currentEeg[i]!= null)
+		        		 itemsConnected++;
+				
+				
+		         CharSequence[] choiceList = new CharSequence[itemsConnected];
+		         for(int i=0;i<itemsConnected;i++)
+		        	 if (MainActivity.currentEeg[i]!= null)
+		        		 choiceList[i]= MainActivity.currentEeg[i].getName();	         	         
+		         
+		        builder.setItems(choiceList, new DialogInterface.OnClickListener() {
+		             
+		            @Override
+		            public void onClick(
+		                    DialogInterface dialog, 
+		                    int which) {
+		            	selected= which;
+		                Toast.makeText(getBaseContext(), "Select "+MainActivity.currentEeg[which].getName(), Toast.LENGTH_SHORT).show();
+		                
+		            }
+		        });
+		AlertDialog alert = builder.create();   
+        alert.show();
+
 
 		
 		mHandler.removeCallbacks(mMuestraMensaje);
@@ -55,17 +87,17 @@ public class Grafica_2 extends Activity  {
      		for(int i=0; i< N_VALUE; i++)
      			series1Numbers[i] = r.nextInt(100);
      		*/
-     		series1Numbers[0] = MainActivity.currentEeg[0].signal;
-     		series1Numbers[1] = MainActivity.currentEeg[0].attention;
-     		series1Numbers[2] = MainActivity.currentEeg[0].meditation;
-     		series1Numbers[3] = MainActivity.currentEeg[0].theta;
-     		series1Numbers[4] = MainActivity.currentEeg[0].delta;
-     		series1Numbers[5] = MainActivity.currentEeg[0].lalpha;
-     		series1Numbers[6] = MainActivity.currentEeg[0].halpha;
-     		series1Numbers[7] = MainActivity.currentEeg[0].lbeta;
-     		series1Numbers[8] = MainActivity.currentEeg[0].hbeta;
-     		series1Numbers[9] = MainActivity.currentEeg[0].lgamma;
-     		series1Numbers[10] = MainActivity.currentEeg[0].hgamma;
+     		series1Numbers[0] = MainActivity.currentEeg[selected].signal;
+     		series1Numbers[1] = MainActivity.currentEeg[selected].attention;
+     		series1Numbers[2] = MainActivity.currentEeg[selected].meditation;
+     		series1Numbers[3] = MainActivity.currentEeg[selected].theta;
+     		series1Numbers[4] = MainActivity.currentEeg[selected].delta;
+     		series1Numbers[5] = MainActivity.currentEeg[selected].lalpha;
+     		series1Numbers[6] = MainActivity.currentEeg[selected].halpha;
+     		series1Numbers[7] = MainActivity.currentEeg[selected].lbeta;
+     		series1Numbers[8] = MainActivity.currentEeg[selected].hbeta;
+     		series1Numbers[9] = MainActivity.currentEeg[selected].lgamma;
+     		series1Numbers[10] = MainActivity.currentEeg[selected].hgamma;
      		series1Numbers[11] = 0;
      		
      		

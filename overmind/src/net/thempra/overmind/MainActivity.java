@@ -31,20 +31,21 @@ import com.gallysoft.andromind.*;
 
 public class MainActivity extends Activity implements android.content.DialogInterface.OnClickListener, AndroMindListener {
 
+	private final static int MAX_NUM_BLUETOOTH=8;
 	private Button btnGrafica_1;
 	private Button btnGrafica_2;
 	private Button btnGame;
 	private static Button btndevice0;
 	private static Button btndevice1;
 	private static Button btndevice2;
-	private Button btndevice3;
-	private Button btndevice4;
-	private Button btndevice5;
-	private Button btndevice6;
-	private Button btndevice7;
+	private static Button btndevice3;
+	private static Button btndevice4;
+	private static Button btndevice5;
+	private static Button btndevice6;
+	private static Button btndevice7;
 	  
 	private static TextView txtStatus;
-	public static Eeg currentEeg[] = new Eeg[8];
+	public static Eeg currentEeg[] = new Eeg[MAX_NUM_BLUETOOTH];
 
 	//private Handler mHandlerTest = new Handler();
 
@@ -54,7 +55,7 @@ public class MainActivity extends Activity implements android.content.DialogInte
 	int REQUEST_ENABLE_BT = 2;
 	static BluetoothAdapter mBluetoothAdapter;
 	static Set<BluetoothDevice> pairedDevices;
-	static ArrayList<AndroMindLib> devBlue = new ArrayList<AndroMindLib>();
+	static AndroMindLib devBlue[] = new AndroMindLib[MAX_NUM_BLUETOOTH];
 	static AndroMindListener mindListerner;
 	static int devN;
 
@@ -143,6 +144,90 @@ public class MainActivity extends Activity implements android.content.DialogInte
 			       	}
 			}
 	     });
+	   //················· Device 2 ································
+	     btndevice2 = (Button) findViewById(R.id.device2);
+	     btndevice2.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				 if (!mBluetoothAdapter.isEnabled()) {
+			       	    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);	   
+						startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);	
+			       	}else{
+			       		devN=2;
+			       		MainActivity.conectar(MainActivity.this);
+			       	}
+			}
+	     });
+	   //················· Device 3 ································
+	     btndevice3 = (Button) findViewById(R.id.device3);
+	     btndevice3.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				 if (!mBluetoothAdapter.isEnabled()) {
+			       	    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);	   
+						startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);	
+			       	}else{
+			       		devN=3;
+			       		MainActivity.conectar(MainActivity.this);
+			       	}
+			}
+	     });
+	   //················· Device 4 ································
+	     btndevice4 = (Button) findViewById(R.id.device4);
+	     btndevice4.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				 if (!mBluetoothAdapter.isEnabled()) {
+			       	    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);	   
+						startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);	
+			       	}else{
+			       		devN=4;
+			       		MainActivity.conectar(MainActivity.this);
+			       	}
+			}
+	     });
+	   //················· Device 5 ································
+	     btndevice5 = (Button) findViewById(R.id.device5);
+	     btndevice5.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				 if (!mBluetoothAdapter.isEnabled()) {
+			       	    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);	   
+						startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);	
+			       	}else{
+			       		devN=5;
+			       		MainActivity.conectar(MainActivity.this);
+			       	}
+			}
+	     });
+	   //················· Device 6 ································
+	     btndevice6 = (Button) findViewById(R.id.device6);
+	     btndevice6.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				 if (!mBluetoothAdapter.isEnabled()) {
+			       	    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);	   
+						startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);	
+			       	}else{
+			       		devN=6;
+			       		MainActivity.conectar(MainActivity.this);
+			       	}
+			}
+	     });
+	   //················· Device 7 ································
+	     btndevice7 = (Button) findViewById(R.id.device7);
+	     btndevice7.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				 if (!mBluetoothAdapter.isEnabled()) {
+			       	    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);	   
+						startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);	
+			       	}else{
+			       		devN=7;
+			       		MainActivity.conectar(MainActivity.this);
+			       	}
+			}
+	     });
 	     
 	     
 	     
@@ -159,44 +244,12 @@ public class MainActivity extends Activity implements android.content.DialogInte
 	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
-		/*boolean bool = true;
-		switch (item.getItemId()) {
-		case R.id.menu_connect: {
-			CharSequence[] arrayOfCharSequence = new CharSequence[cManager.get_num_devices()];;
-			
-			arrayOfCharSequence= cManager.get_devices();
-			AlertDialog.Builder localBuilder = new AlertDialog.Builder(this);
-            localBuilder.setTitle("Select a device:");
-            localBuilder.setItems(arrayOfCharSequence, this);
-            localBuilder.create().show();
-		}
 
-		}
-		return bool;
-		
-		*/
 		int id = item.getItemId();
-    	if (id == R.id.menu_connect) {
-    		if (!mBluetoothAdapter.isEnabled()) {
-          	    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-          	   
-  				startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-  				
-          	}else{
-          		this.conectar(this);
-          	}
+    	if (id == R.id.menu_about) {
+    		// Dialog about
              return true;
-    	/*} else if (id == R.id.menu_desconectar) {
-    		
-    		dvblue.cancel();
-        	
-        	
-        	
-        	
-            return true;
-    	} else {
-    		return super.onOptionsItemSelected(item);
-    	*/}
+    	}
     	
     	return false;
 	}
@@ -220,7 +273,7 @@ public class MainActivity extends Activity implements android.content.DialogInte
     }
     
     
-    private static void conectar(  final Context context){
+    private static void conectar( Context context){
     	//Toast.makeText(this, "Bluetooth is enable", Toast.LENGTH_LONG).show();
     	txtStatus.setText("Bluetooth is enable");
     	
@@ -228,6 +281,8 @@ public class MainActivity extends Activity implements android.content.DialogInte
     	
 
     	AlertDialog.Builder pbuilder = new AlertDialog.Builder(context);
+    	
+    	final Drawable btDisable= context.getResources().getDrawable(R.drawable.bluetooth_disable);
     	
     	pbuilder.setTitle("Select a device:");
     	pbuilder.setItems(items, new DialogInterface.OnClickListener() {
@@ -240,26 +295,55 @@ public class MainActivity extends Activity implements android.content.DialogInte
     	    	
     	    		BluetoothDevice tmp = (BluetoothDevice) pairedDevices.toArray()[item];
     	    		
-    	    		devBlue.add(devN, new AndroMindLib(tmp, devN ));
-    	    		devBlue.get(devN).setNewCaptureListener(mindListerner);
-    	    		devBlue.get(devN).start();
+    	    		devBlue[devN]= new AndroMindLib(tmp, devN );
+    	    		devBlue[devN].setNewCaptureListener(mindListerner);
+    	    		devBlue[devN].start();
     	    		
     	    		switch(devN)
     	    		{
 	    	    		case 0:
-	    	    			//btndevice0.setCompoundDrawables(null, context.getResources().getDrawable(R.drawable.bluetooth_enable),null,null);
-	    	    			btndevice0.setText(pairedDevices.toArray()[item].toString());
+	    	    			//btndevice0.setCompoundDrawables(null,btDisable,null,null);
+	    	    			btndevice0.setText(tmp.getName());
+	    	    			
 	    	    			btndevice0.setBackgroundColor(Color.GREEN);
 	    	    			break;
 	    	    		case 1:
 	    	    			btndevice1.setBackgroundColor(Color.GREEN);
-	    	    			btndevice1.setText(pairedDevices.toArray()[item].toString());
+	    	    			btndevice1.setText(tmp.getName());
+	    	    			break;
+	    	    		case 2:
+	    	    			btndevice2.setBackgroundColor(Color.GREEN);
+	    	    			btndevice2.setText(tmp.getName());
+	    	    			break;
+	    	    		case 3:
+	    	    			btndevice3.setBackgroundColor(Color.GREEN);
+	    	    			btndevice3.setText(tmp.getName());
+	    	    			break;
+	    	    		case 4:
+	    	    			btndevice4.setBackgroundColor(Color.GREEN);
+	    	    			btndevice4.setText(tmp.getName());
+	    	    			break;
+	    	    		case 5:
+	    	    			btndevice5.setBackgroundColor(Color.GREEN);
+	    	    			btndevice5.setText(tmp.getName());
+	    	    			break;
+	    	    		case 6:
+	    	    			btndevice6.setBackgroundColor(Color.GREEN);
+	    	    			btndevice6.setText(tmp.getName());
+	    	    			break;
+	    	    		case 7:
+	    	    			btndevice7.setBackgroundColor(Color.GREEN);
+	    	    			btndevice7.setText(tmp.getName());
 	    	    			break;
 	    	    			
 	    	    			default:
 	    	    				
     	    		}
     	    		currentEeg[devN] = new Eeg();
+    	    		currentEeg[devN].setAdress(tmp.getAddress());
+    	    		currentEeg[devN].setName(tmp.getName());
+    	    		currentEeg[devN].setSlot(devN);
+    	    		
     	    		
     	    		/*
     	    		if (devBlue.isconected() )
@@ -413,10 +497,10 @@ public class MainActivity extends Activity implements android.content.DialogInte
 
 	 @Override
 	    protected void onDestroy(){
-			 for(int n=0;n<8;n++)
-		    	if(devBlue.get(n) != null){
-			    	devBlue.get(n).cancel();
-			    	devBlue = null;
+			 for(int n=0;n<MAX_NUM_BLUETOOTH;n++)
+		    	if((devBlue != null)&& (devBlue[n]!= null)){
+			    	devBlue[n].cancel();
+			    	devBlue[n]= null;
 		    	}
 	    	super.onDestroy();
 	    }

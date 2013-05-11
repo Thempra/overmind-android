@@ -165,27 +165,62 @@ com.androidplot.xy.XYStepMode: com.androidplot.xy.XYStepMode[] values()
 com.androidplot.xy.XYStepMode: com.androidplot.xy.XYStepMode valueOf(java.lang.String)
 com.androidplot.xy.YLayoutStyle: com.androidplot.xy.YLayoutStyle[] values()
 com.androidplot.xy.YLayoutStyle: com.androidplot.xy.YLayoutStyle valueOf(java.lang.String)
+com.gallysoft.andromind.R$drawable: int ic_launcher
+com.gallysoft.andromind.R$string: int app_name
+com.gallysoft.andromind.R$style: int AppBaseTheme
+com.gallysoft.andromind.R$style: int AppTheme
+net.thempra.overgame.SimpleGame
+net.thempra.overgame.SimpleGame: SimpleGame()
 net.thempra.overmind.Grafica_1
 net.thempra.overmind.Grafica_1: Grafica_1()
 net.thempra.overmind.Grafica_2
 net.thempra.overmind.Grafica_2: Grafica_2()
 net.thempra.overmind.MainActivity
 net.thempra.overmind.MainActivity: MainActivity()
+net.thempra.overmind.R$drawable: int background
+net.thempra.overmind.R$drawable: int background_2
+net.thempra.overmind.R$drawable: int background_original
+net.thempra.overmind.R$drawable: int black_button
+net.thempra.overmind.R$drawable: int bluetooth
+net.thempra.overmind.R$drawable: int bluetooth_disable
+net.thempra.overmind.R$drawable: int bluetooth_disable_original
+net.thempra.overmind.R$drawable: int bluetooth_enable
+net.thempra.overmind.R$drawable: int bluetooth_enable_original
+net.thempra.overmind.R$drawable: int button_black
+net.thempra.overmind.R$drawable: int button_black_tap
+net.thempra.overmind.R$drawable: int button_blacktap
 net.thempra.overmind.R$drawable: int ic_launcher
+net.thempra.overmind.R$id: int HorizontalScrollView01
+net.thempra.overmind.R$id: int LinearLayout02
+net.thempra.overmind.R$id: int ScrollView01
 net.thempra.overmind.R$id: int btnGame
 net.thempra.overmind.R$id: int btnGrafica_1
 net.thempra.overmind.R$id: int btnGrafica_2
+net.thempra.overmind.R$id: int buttomBox
+net.thempra.overmind.R$id: int device0
+net.thempra.overmind.R$id: int device1
+net.thempra.overmind.R$id: int device2
+net.thempra.overmind.R$id: int device3
+net.thempra.overmind.R$id: int device4
+net.thempra.overmind.R$id: int device5
+net.thempra.overmind.R$id: int device6
+net.thempra.overmind.R$id: int device7
+net.thempra.overmind.R$id: int linearLayout4
 net.thempra.overmind.R$id: int menu_about
-net.thempra.overmind.R$id: int menu_connect
 net.thempra.overmind.R$id: int mySimpleXYPlot
 net.thempra.overmind.R$id: int textView1
-net.thempra.overmind.R$id: int textView2
+net.thempra.overmind.R$id: int txtStatus
 net.thempra.overmind.R$layout: int grafica_1
 net.thempra.overmind.R$layout: int grafica_2
 net.thempra.overmind.R$layout: int main
+net.thempra.overmind.R$layout: int simplegame
 net.thempra.overmind.R$menu: int main
+net.thempra.overmind.R$raw: int background_music_aac
+net.thempra.overmind.R$raw: int pew_pew_lei
 net.thempra.overmind.R$string: int app_name
+net.thempra.overmind.R$string: int bluetooth_disconnect
 net.thempra.overmind.R$string: int data_analice
+net.thempra.overmind.R$string: int device_not_assigned
 net.thempra.overmind.R$string: int hello_world
 net.thempra.overmind.R$string: int levels
 net.thempra.overmind.R$string: int menu_about
@@ -193,3 +228,16 @@ net.thempra.overmind.R$string: int menu_connect
 net.thempra.overmind.R$string: int play
 net.thempra.overmind.R$string: int reading_minds
 net.thempra.overmind.R$string: int title_activity_main
+net.thempra.overmind.R$style: int AppBaseTheme
+net.thempra.overmind.R$style: int AppTheme
+net.thempra.overmind.R$style: int button_black
+org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag: org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag[] values()
+org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag: org.cocos2d.events.CCTouchDispatcher$ccTouchSelectorFlag valueOf(java.lang.String)
+org.cocos2d.menus.CCMenu$MenuState: org.cocos2d.menus.CCMenu$MenuState[] values()
+org.cocos2d.menus.CCMenu$MenuState: org.cocos2d.menus.CCMenu$MenuState valueOf(java.lang.String)
+org.cocos2d.nodes.CCLabel$TextAlignment: org.cocos2d.nodes.CCLabel$TextAlignment[] values()
+org.cocos2d.nodes.CCLabel$TextAlignment: org.cocos2d.nodes.CCLabel$TextAlignment valueOf(java.lang.String)
+org.cocos2d.opengl.TGA$TGAError: org.cocos2d.opengl.TGA$TGAError[] values()
+org.cocos2d.opengl.TGA$TGAError: org.cocos2d.opengl.TGA$TGAError valueOf(java.lang.String)
+org.cocos2d.types.CGRect$Edge: org.cocos2d.types.CGRect$Edge[] values()
+org.cocos2d.types.CGRect$Edge: org.cocos2d.types.CGRect$Edge valueOf(java.lang.String)

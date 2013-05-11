@@ -833,13 +833,1109 @@ com.androidplot.xy.YValueMarker:
     42:43:public YValueMarker(java.lang.Number,java.lang.String)
     54:55:public YValueMarker(java.lang.Number,java.lang.String,com.androidplot.xy.XPositionMetric,android.graphics.Paint,android.graphics.Paint)
     66:67:public YValueMarker(java.lang.Number,java.lang.String,com.androidplot.xy.XPositionMetric,int,int)
+com.gallysoft.andromind.AndroMindLib:
+    public static final int OK
+    private static final int BAD_DATA
+    private static final int IOERROR
+    private static final int UNSUCCESSFUL
+    49:63:public AndroMindLib(android.bluetooth.BluetoothDevice)
+    197:199:public void close()
+    226:226:public synchronized double getRawdelta()
+    233:233:public synchronized double getRawtheta()
+    240:240:public synchronized double getRawlalpha()
+    247:247:public synchronized double getRawhalpha()
+    254:254:public synchronized double getRawlbeta()
+    261:261:public synchronized double getRawhbeta()
+    268:268:public synchronized double getRawlgamma()
+    275:275:public synchronized double getRawhgamma()
+    342:345:public synchronized boolean isconected()
+com.gallysoft.andromind.AndroMindListener:
+    public abstract void newCaptured(com.gallysoft.andromind.AndroMindLib)
+com.gallysoft.andromind.R
+com.gallysoft.andromind.R$drawable
+com.gallysoft.andromind.R$string
+com.gallysoft.andromind.R$style
+net.thempra.overgame.GameLayer:
+    121:122:public void gameLogic(float)
+    126:169:public void update(float)
+    173:206:protected void addTarget()
+    210:223:public void spriteMoveFinished(java.lang.Object)
+net.thempra.overgame.GameOverLayer
 net.thempra.overmind.BuildConfig
+net.thempra.overmind.CommunicationManager
+net.thempra.overmind.Eeg:
+    25:36:void Egg()
+    39:39:public int getAttention()
+    44:44:public int getMeditation()
+    54:54:public int getSlot()
 net.thempra.overmind.Grafica_2:
     private static final int N_VALUE
+net.thempra.overmind.MainActivity:
+    private static final int MAX_NUM_BLUETOOTH
+    android.bluetooth.BluetoothSocket cone
+    java.io.InputStream in
+    520:520:public void newCaptured(com.gallysoft.andromind.AndroMindLib)
 net.thempra.overmind.R
 net.thempra.overmind.R$attr
 net.thempra.overmind.R$drawable
 net.thempra.overmind.R$id
 net.thempra.overmind.R$layout
 net.thempra.overmind.R$menu
+net.thempra.overmind.R$raw
 net.thempra.overmind.R$string
+net.thempra.overmind.R$style
+net.thempra.overmind.WavesIndexFormat:
+    private static final long serialVersionUID
+org.cocos2d.Cocos2D
+org.cocos2d.Cocos2D$1
+org.cocos2d.actions.CCActionManager:
+    125:126:public void pauseAllActions(org.cocos2d.nodes.CCNode)
+    135:136:public void resumeAllActions(org.cocos2d.nodes.CCNode)
+    173:180:public void removeAllActions()
+    212:227:public void removeAction(org.cocos2d.actions.base.CCAction)
+    233:248:public void removeAction(int,org.cocos2d.nodes.CCNode)
+    256:272:public org.cocos2d.actions.base.CCAction getAction(int,org.cocos2d.nodes.CCNode)
+    282:289:public int numberOfRunningActions(org.cocos2d.nodes.CCNode)
+    347:351:public static void purgeSharedManager()
+org.cocos2d.actions.CCProgressTimer
+org.cocos2d.actions.CCScheduler:
+    85:85:public float getTimeScale()
+    89:90:public void setTimeScale(float)
+    111:112:public static void purgeSharedScheduler()
+    341:364:public void schedule(org.cocos2d.actions.UpdateCallback,java.lang.Object,float,boolean)
+    372:409:public void unschedule(java.lang.String,java.lang.Object)
+    417:454:public void unschedule(org.cocos2d.actions.UpdateCallback,java.lang.Object)
+    589:602:public void scheduleUpdate(java.lang.Object,int,boolean)
+    633:634:public void scheduleTimer(org.cocos2d.actions.CCTimer)
+    641:642:public void unscheduleTimer(org.cocos2d.actions.CCTimer)
+    651:652:public void unscheduleAllTimers()
+org.cocos2d.actions.CCScheduler$SchedulerTimerAlreadyScheduled
+org.cocos2d.actions.CCScheduler$SchedulerTimerNotFound
+org.cocos2d.actions.CCTimer:
+    25:25:public java.lang.String getSelector()
+    29:29:public org.cocos2d.actions.UpdateCallback getCallback()
+    34:35:public CCTimer(java.lang.Object,java.lang.String)
+    54:60:public CCTimer(java.lang.Object,org.cocos2d.actions.UpdateCallback,float)
+    63:64:public void setInterval(float)
+    67:67:public float getInterval()
+org.cocos2d.actions.base.CCAction:
+    public static final int kCCActionTagInvalid
+    29:29:public org.cocos2d.nodes.CCNode getOriginalTarget()
+    33:34:public void setOriginalTarget(org.cocos2d.nodes.CCNode)
+    37:37:public org.cocos2d.nodes.CCNode getTarget()
+    41:42:public void setTarget(org.cocos2d.nodes.CCNode)
+    45:45:public int getTag()
+    49:50:public void setTag(int)
+    54:54:public static org.cocos2d.actions.base.CCAction action()
+    public abstract org.cocos2d.actions.base.CCAction copy()
+    public abstract void update(float)
+    1:1:public bridge synthetic java.lang.Object copy()
+org.cocos2d.actions.base.CCFiniteTimeAction:
+    30:31:public void setDuration(float)
+    35:35:public org.cocos2d.actions.base.CCFiniteTimeAction copy()
+    40:41:public org.cocos2d.actions.base.CCFiniteTimeAction reverse()
+    1:1:public bridge synthetic java.lang.Object copy()
+    1:1:public bridge synthetic org.cocos2d.actions.base.CCAction copy()
+org.cocos2d.actions.base.CCFollow
+org.cocos2d.actions.base.CCRepeatForever
+org.cocos2d.actions.base.CCSpeed
+org.cocos2d.actions.camera.CCCameraAction
+org.cocos2d.actions.camera.CCOrbitCamera
+org.cocos2d.actions.ease.CCEaseAction
+org.cocos2d.actions.ease.CCEaseBackIn
+org.cocos2d.actions.ease.CCEaseBackInOut
+org.cocos2d.actions.ease.CCEaseBackOut
+org.cocos2d.actions.ease.CCEaseBounce
+org.cocos2d.actions.ease.CCEaseBounceIn
+org.cocos2d.actions.ease.CCEaseBounceInOut
+org.cocos2d.actions.ease.CCEaseBounceOut
+org.cocos2d.actions.ease.CCEaseElastic
+org.cocos2d.actions.ease.CCEaseElasticIn
+org.cocos2d.actions.ease.CCEaseElasticInOut
+org.cocos2d.actions.ease.CCEaseElasticOut
+org.cocos2d.actions.ease.CCEaseExponentialIn
+org.cocos2d.actions.ease.CCEaseExponentialInOut
+org.cocos2d.actions.ease.CCEaseExponentialOut
+org.cocos2d.actions.ease.CCEaseIn
+org.cocos2d.actions.ease.CCEaseInOut
+org.cocos2d.actions.ease.CCEaseOut
+org.cocos2d.actions.ease.CCEaseRateAction
+org.cocos2d.actions.ease.CCEaseSineIn
+org.cocos2d.actions.ease.CCEaseSineInOut
+org.cocos2d.actions.ease.CCEaseSineOut
+org.cocos2d.actions.grid.CCAccelAmplitude
+org.cocos2d.actions.grid.CCAccelDeccelAmplitude
+org.cocos2d.actions.grid.CCDeccelAmplitude
+org.cocos2d.actions.grid.CCFlipX3D
+org.cocos2d.actions.grid.CCFlipY3D
+org.cocos2d.actions.grid.CCGrid3DAction
+org.cocos2d.actions.grid.CCGridAction
+org.cocos2d.actions.grid.CCLens3D
+org.cocos2d.actions.grid.CCLiquid
+org.cocos2d.actions.grid.CCPageTurn3D
+org.cocos2d.actions.grid.CCReuseGrid
+org.cocos2d.actions.grid.CCRipple3D
+org.cocos2d.actions.grid.CCShaky3D
+org.cocos2d.actions.grid.CCStopGrid
+org.cocos2d.actions.grid.CCTwirl
+org.cocos2d.actions.grid.CCWaves
+org.cocos2d.actions.grid.CCWaves3D
+org.cocos2d.actions.instant.CCCallFunc:
+    23:23:public static org.cocos2d.actions.instant.CCCallFunc action(java.lang.Object,java.lang.String)
+    55:55:public org.cocos2d.actions.instant.CCCallFunc copy()
+    1:1:public bridge synthetic java.lang.Object copy()
+    1:1:public bridge synthetic org.cocos2d.actions.instant.CCInstantAction copy()
+org.cocos2d.actions.instant.CCCallFuncN:
+    1:1:public static bridge synthetic org.cocos2d.actions.instant.CCCallFunc action(java.lang.Object,java.lang.String)
+org.cocos2d.actions.instant.CCCallFuncND
+org.cocos2d.actions.instant.CCFlipX
+org.cocos2d.actions.instant.CCFlipY
+org.cocos2d.actions.instant.CCHide
+org.cocos2d.actions.instant.CCInstantAction:
+    16:16:public org.cocos2d.actions.instant.CCInstantAction copy()
+    36:36:public org.cocos2d.actions.base.CCFiniteTimeAction reverse()
+    1:1:public bridge synthetic java.lang.Object copy()
+    1:1:public bridge synthetic org.cocos2d.actions.base.CCFiniteTimeAction copy()
+org.cocos2d.actions.instant.CCPlace
+org.cocos2d.actions.instant.CCShow
+org.cocos2d.actions.instant.CCToggleVisibility
+org.cocos2d.actions.interval.CCAnimate
+org.cocos2d.actions.interval.CCBezierBy
+org.cocos2d.actions.interval.CCBezierTo
+org.cocos2d.actions.interval.CCBlink
+org.cocos2d.actions.interval.CCDelayTime
+org.cocos2d.actions.interval.CCFadeIn
+org.cocos2d.actions.interval.CCFadeOut
+org.cocos2d.actions.interval.CCFadeTo
+org.cocos2d.actions.interval.CCIntervalAction:
+    30:30:public float getElapsed()
+    35:35:public static org.cocos2d.actions.interval.CCIntervalAction action(float)
+    49:49:public org.cocos2d.actions.interval.CCIntervalAction copy()
+    79:80:public org.cocos2d.actions.interval.CCIntervalAction reverse()
+    84:85:public void setAmplitudeRate(float)
+    88:89:public float getAmplitudeRate()
+    1:1:public static bridge synthetic org.cocos2d.actions.base.CCFiniteTimeAction action(float)
+    1:1:public bridge synthetic org.cocos2d.actions.base.CCFiniteTimeAction reverse()
+    1:1:public bridge synthetic java.lang.Object copy()
+    1:1:public bridge synthetic org.cocos2d.actions.base.CCFiniteTimeAction copy()
+org.cocos2d.actions.interval.CCJumpBy
+org.cocos2d.actions.interval.CCJumpTo
+org.cocos2d.actions.interval.CCMoveBy
+org.cocos2d.actions.interval.CCMoveTo:
+    34:35:public void setEndPosition(org.cocos2d.types.CGPoint)
+    39:39:public org.cocos2d.actions.interval.CCIntervalAction copy()
+    1:1:public bridge synthetic java.lang.Object copy()
+org.cocos2d.actions.interval.CCProgressFromTo
+org.cocos2d.actions.interval.CCProgressTo
+org.cocos2d.actions.interval.CCPropertyAction
+org.cocos2d.actions.interval.CCRepeat
+org.cocos2d.actions.interval.CCReverseTime
+org.cocos2d.actions.interval.CCRotateBy
+org.cocos2d.actions.interval.CCRotateTo
+org.cocos2d.actions.interval.CCScaleBy
+org.cocos2d.actions.interval.CCScaleTo
+org.cocos2d.actions.interval.CCSequence:
+    44:44:public org.cocos2d.actions.interval.CCSequence copy()
+    100:100:public org.cocos2d.actions.interval.CCSequence reverse()
+    1:1:public bridge synthetic org.cocos2d.actions.interval.CCIntervalAction reverse()
+    1:1:public bridge synthetic java.lang.Object copy()
+    1:1:public bridge synthetic org.cocos2d.actions.interval.CCIntervalAction copy()
+org.cocos2d.actions.interval.CCSpawn
+org.cocos2d.actions.interval.CCTintBy
+org.cocos2d.actions.interval.CCTintTo
+org.cocos2d.actions.tile.CCFadeOutBLTiles
+org.cocos2d.actions.tile.CCFadeOutDownTiles
+org.cocos2d.actions.tile.CCFadeOutTRTiles
+org.cocos2d.actions.tile.CCFadeOutUpTiles
+org.cocos2d.actions.tile.CCJumpTiles3D
+org.cocos2d.actions.tile.CCShakyTiles3D
+org.cocos2d.actions.tile.CCShatteredTiles3D
+org.cocos2d.actions.tile.CCShuffleTiles
+org.cocos2d.actions.tile.CCSplitCols
+org.cocos2d.actions.tile.CCSplitRows
+org.cocos2d.actions.tile.CCTiledGrid3DAction
+org.cocos2d.actions.tile.CCTurnOffTiles
+org.cocos2d.actions.tile.CCWavesTiles3D
+org.cocos2d.actions.tile.Tile
+org.cocos2d.config.ccConfig
+org.cocos2d.config.ccMacros:
+    public static final float FLT_EPSILON
+    public static final int INT_MIN
+    public static final int CC_MAX_PARTICLE_SIZE
+    public static final float M_PI_2
+    18:18:public ccMacros()
+    63:63:public static final float CCRANDOM_MINUS1_1()
+    70:70:public static final float CCRANDOM_0_1()
+    90:90:public static final float CC_RADIANS_TO_DEGREES(float)
+    140:149:public static final void CC_DIRECTOR_INIT(android.app.Activity)
+    159:164:public static final void CC_DIRECTOR_END()
+org.cocos2d.events.CCKeyDispatcher:
+    public static final boolean kEventHandled
+    public static final boolean kEventIgnored
+    17:17:public boolean getDispatchEvents()
+    21:22:public void setDispatchEvents(boolean)
+    69:70:public void removeAllDelegates()
+    76:79:public void queueMotionEvent(android.view.KeyEvent)
+org.cocos2d.events.CCKeyHandler:
+    18:19:public void setSelectorFlag(boolean)
+    22:22:public boolean getSelectorFlag()
+    30:31:public void setPriority(int)
+    34:34:public static org.cocos2d.events.CCKeyHandler makeHandler(org.cocos2d.protocols.CCKeyDelegateProtocol,int)
+org.cocos2d.events.CCTargetedTouchHandler:
+    14:17:public CCTargetedTouchHandler(org.cocos2d.protocols.CCTouchDelegateProtocol,int,boolean)
+org.cocos2d.events.CCTouchDispatcher:
+    public static final int ccTouchBegan
+    public static final int ccTouchMoved
+    public static final int ccTouchEnded
+    public static final int ccTouchCancelled
+    public static final int ccTouchMax
+    public static final boolean kEventHandled
+    public static final boolean kEventIgnored
+    94:94:public boolean getDispatchEvents()
+    152:153:public void addTargetedDelegate(org.cocos2d.protocols.CCTouchDelegateProtocol,int,boolean)
+    198:202:public void addMotionListener(org.cocos2d.protocols.CCMotionEventProtocol)
+    206:210:public void removeMotionListener(org.cocos2d.protocols.CCMotionEventProtocol)
+    214:218:public void removeAllMotionListeners()
+    224:265:public void setPriority(int,org.cocos2d.events.CCTouchHandler)
+    127:127:static synthetic void access$2(org.cocos2d.events.CCTouchDispatcher,org.cocos2d.events.CCTouchHandler,java.util.ArrayList)
+org.cocos2d.events.CCTouchDispatcher$4
+org.cocos2d.events.CCTouchDispatcher$ccTouchHandlerHelperData
+org.cocos2d.events.CCTouchHandler:
+    37:38:public void setPriority(int)
+    41:42:public void setSelectorFlag(int)
+    45:45:public int getSelectorFlag()
+    50:50:public static org.cocos2d.events.CCTouchHandler makeHandler(org.cocos2d.protocols.CCTouchDelegateProtocol,int)
+org.cocos2d.grid.CCGrabber:
+    14:24:public CCGrabber()
+    27:53:public void grab(org.cocos2d.opengl.CCTexture2D)
+org.cocos2d.grid.CCGrid3D
+org.cocos2d.grid.CCGridBase:
+    protected int reuseGrid_
+    protected org.cocos2d.types.CGPoint step_
+    protected boolean isTextureFlipped_
+    protected javax.microedition.khronos.opengles.GL10 gl
+    public static final int kTextureSize
+    41:41:public org.cocos2d.types.CGPoint getStep()
+    53:53:public boolean isTextureFlipped()
+    57:61:public void setIsTextureFlipped(javax.microedition.khronos.opengles.GL10,boolean)
+    66:66:public int reuseGrid()
+    70:71:public void setReuseGrid(int)
+    88:88:public int getGridWidth()
+    92:92:public int getGridHeight()
+    95:97:public CCGridBase(javax.microedition.khronos.opengles.GL10,org.cocos2d.types.ccGridSize,org.cocos2d.opengl.CCTexture2D,boolean)
+    100:112:private void init(org.cocos2d.types.ccGridSize,org.cocos2d.opengl.CCTexture2D,boolean)
+    114:139:public CCGridBase(org.cocos2d.types.ccGridSize)
+    public abstract void reuse(javax.microedition.khronos.opengles.GL10)
+    public abstract void calculateVertexPoints()
+    99:99:static synthetic void access$0(org.cocos2d.grid.CCGridBase,org.cocos2d.types.ccGridSize,org.cocos2d.opengl.CCTexture2D,boolean)
+org.cocos2d.grid.CCGridBase$1
+org.cocos2d.grid.CCTiledGrid3D
+org.cocos2d.layers.CCColorLayer:
+    41:42:public static org.cocos2d.layers.CCColorLayer node(org.cocos2d.types.ccColor4B)
+    47:47:public static org.cocos2d.layers.CCColorLayer node(org.cocos2d.types.ccColor4B,float,float)
+    57:59:protected CCColorLayer(org.cocos2d.types.ccColor4B,float,float)
+    133:133:public org.cocos2d.types.ccColor3B getColor()
+    138:140:public void setColor(org.cocos2d.types.ccColor3B)
+    144:146:public void setOpacity(int)
+    149:149:public int getOpacity()
+    156:156:public float getWidth()
+    161:161:public float getHeight()
+    181:182:public void changeWidthAndHeight(float,float)
+    186:187:public void changeWidth(float)
+    191:192:public void changeHeight(float)
+    197:197:public boolean doesOpacityModifyRGB()
+    204:204:public void setOpacityModifyRGB(boolean)
+org.cocos2d.layers.CCLayer:
+    55:55:public boolean isTouchEnabled()
+    71:71:public boolean isAccelerometerEnabled()
+    75:84:public void setIsAccelerometerEnabled(boolean)
+    91:91:public boolean isKeyEnabled()
+    96:103:public void setIsKeyEnabled(boolean)
+    106:106:public static org.cocos2d.layers.CCLayer node()
+    1:1:public static bridge synthetic org.cocos2d.nodes.CCNode node()
+org.cocos2d.layers.CCMultiplexLayer
+org.cocos2d.layers.CCScene:
+    1:1:public static bridge synthetic org.cocos2d.nodes.CCNode node()
+org.cocos2d.layers.CCTMXLayer
+org.cocos2d.layers.CCTMXLayerInfo
+org.cocos2d.layers.CCTMXMapInfo
+org.cocos2d.layers.CCTMXMapInfo$CCTMXXMLParser
+org.cocos2d.layers.CCTMXObjectGroup
+org.cocos2d.layers.CCTMXTiledMap
+org.cocos2d.layers.CCTMXTilesetInfo
+org.cocos2d.menus.CCMenu
+org.cocos2d.menus.CCMenu$MenuState
+org.cocos2d.menus.CCMenuItem
+org.cocos2d.menus.CCMenuItemAtlasFont
+org.cocos2d.menus.CCMenuItemFont
+org.cocos2d.menus.CCMenuItemImage
+org.cocos2d.menus.CCMenuItemLabel
+org.cocos2d.menus.CCMenuItemSprite
+org.cocos2d.menus.CCMenuItemToggle
+org.cocos2d.nodes.CCAnimation
+org.cocos2d.nodes.CCAtlasNode:
+    public abstract void updateAtlasValues()
+    134:140:public void setOpacity(int)
+    143:143:public int getOpacity()
+    148:155:public void setColor(org.cocos2d.types.ccColor3B)
+    158:162:public org.cocos2d.types.ccColor3B getColor()
+    176:179:public void setTexture(org.cocos2d.opengl.CCTexture2D)
+    182:182:public org.cocos2d.opengl.CCTexture2D getTexture()
+    186:187:public void setOpacityModifyRGB(boolean)
+    190:190:public boolean doesOpacityModifyRGB()
+org.cocos2d.nodes.CCDirector:
+    public static final int kCCPixelFormatRGB565
+    public static final int kCCPixelFormatRGBA8888
+    public static final int kCCPixelFormatDefault
+    public static final int kCCDepthBufferNone
+    public static final int kCCDepthBuffer16
+    public static final int kCCDepthBuffer24
+    public static final int kCCDirectorProjection2D
+    public static final int kCCDirectorProjection3D
+    public static final int kCCDirectorProjectionCustom
+    public static final int kCCDirectorProjectionDefault
+    public static final int kCCDirectorTypeNSTimer
+    public static final int kCCDirectorTypeMainLoop
+    public static final int kCCDirectorTypeThreadMainLoop
+    public static final int kCCDirectorTypeDisplayLink
+    public static final int kCCDirectorTypeDefault
+    public static final int kCCDeviceOrientationPortrait
+    public static final int kCCDeviceOrientationLandscapeLeft
+    private static final double kDefaultFPS
+    private static final boolean FAST_FPS_DISPLAY
+    private float accumDtForProfiler_
+    226:228:public void setDepthBufferFormat(int)
+    234:234:public int getPixelFormat()
+    250:252:public void setPixelFormat(int)
+    259:259:public int getDeviceOrientation()
+    311:311:public boolean getIsPaused()
+    329:329:public boolean getSendCleanupToScene()
+    344:344:public boolean getNextDeltaTimeZero()
+    347:348:public void setNextDeltaTimeZero(boolean)
+    357:357:public android.opengl.GLSurfaceView getOpenGLView()
+    398:408:public void setContentScaleFactor(javax.microedition.khronos.opengles.GL10,float)
+    411:411:public float getContentScaleFactor()
+    424:424:public org.cocos2d.layers.CCScene getRunningScene()
+    436:436:public double getAnimationInterval()
+    745:745:public org.cocos2d.types.CGSize winSizeRef()
+    758:762:public void setLandscape(boolean)
+    767:767:public boolean isOpenGLAttached()
+    776:787:private boolean detach()
+    796:796:public boolean attachInWindow(android.view.View)
+    838:838:public boolean attachInView(android.view.View,org.cocos2d.types.CGRect)
+    864:864:public boolean attachInView(android.view.View,float)
+    869:889:private org.cocos2d.types.CGRect getAppFrameRect(float)
+    893:894:public void setScreenSize(float,float)
+    992:997:public void showProfilers()
+    1032:1033:public void convertToGL(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    1042:1058:public void convertToGL(float,float,org.cocos2d.types.CGPoint)
+    1064:1082:public org.cocos2d.types.CGPoint convertToUI(org.cocos2d.types.CGPoint)
+    1103:1110:public void replaceScene(org.cocos2d.layers.CCScene)
+    1133:1143:public void popScene()
+    1152:1155:public void purgeCachedData()
+    1228:1230:public void onPause()
+    1236:1238:public void onResume()
+    1324:1328:public void setCCTexture2D(javax.microedition.khronos.opengles.GL10,boolean)
+    1357:1357:public void updateContentScaleFactor()
+    1360:1378:public int[] getConfigSpec()
+    1447:1450:public boolean onKeyDown(android.view.KeyEvent)
+    1455:1459:public boolean onKeyUp(android.view.KeyEvent)
+    1464:1465:public void setIsEnableKeyEvent(boolean)
+    1469:1469:public boolean isEnableKeyEvent()
+org.cocos2d.nodes.CCLabel
+org.cocos2d.nodes.CCLabel$StringReloader
+org.cocos2d.nodes.CCLabel$TextAlignment
+org.cocos2d.nodes.CCLabelAtlas:
+    140:140:public float getWidth()
+    145:145:public float getHeight()
+    151:151:public org.cocos2d.types.ccBlendFunc getBlendFunc()
+    158:158:public void setBlendFunc(org.cocos2d.types.ccBlendFunc)
+org.cocos2d.nodes.CCMotionStreak
+org.cocos2d.nodes.CCNode:
+    public static final int kCCNodeTagInvalid
+    101:101:public float getRotation()
+    106:111:public void setRotation(float)
+    121:121:public float getScaleX()
+    125:130:public void setScaleX(float)
+    136:136:public float getScaleY()
+    140:145:public void setScaleY(float)
+    151:156:public void setScale(float)
+    159:164:public float getScale()
+    195:195:public boolean getRelativeAnchorPoint()
+    231:231:public org.cocos2d.types.CGSize getContentSizeRef()
+    260:260:public org.cocos2d.types.CGPoint getAnchorPoint()
+    264:264:public org.cocos2d.types.CGPoint getAnchorPointRef()
+    286:287:public org.cocos2d.types.CGRect getBoundingBox()
+    339:339:public org.cocos2d.grid.CCGridBase getGrid()
+    343:344:public void setGrid(org.cocos2d.grid.CCGridBase)
+    351:351:public boolean getVisible()
+    355:356:public void setVisible(boolean)
+    375:375:public int getTag()
+    394:394:public float getVertexZ()
+    398:399:public void setVertexZ(float)
+    427:427:public java.lang.Object getUserData()
+    431:432:public void setUserData(java.lang.Object)
+    447:447:public static org.cocos2d.nodes.CCNode node()
+    523:525:public org.cocos2d.nodes.CCNode addChild(org.cocos2d.nodes.CCNode,int)
+    544:547:public void removeFromParentAndCleanup(boolean)
+    553:554:public void removeSelf()
+    566:571:public void removeChild(org.cocos2d.nodes.CCNode,boolean)
+    578:585:public void removeChildByTag(int,boolean)
+    593:608:public void removeAllChildren(boolean)
+    615:625:public org.cocos2d.nodes.CCNode getChildByTag(int)
+    632:644:private void detachChild(org.cocos2d.nodes.CCNode,boolean)
+    650:653:public void reorderChild(org.cocos2d.nodes.CCNode,int)
+    820:821:public void stopAction(org.cocos2d.actions.base.CCAction)
+    827:829:public void stopAction(int)
+    836:838:public org.cocos2d.actions.base.CCAction getAction(int)
+    848:848:public int numberOfRunningActions()
+    860:861:public void scheduleUpdate()
+    870:871:public void scheduleUpdate(int)
+    878:879:public void unscheduleUpdate()
+    907:908:public void schedule(org.cocos2d.actions.UpdateCallback)
+    919:923:public void schedule(org.cocos2d.actions.UpdateCallback,float)
+    928:932:public void unschedule(java.lang.String)
+    942:946:public void unschedule(org.cocos2d.actions.UpdateCallback)
+    1007:1013:public org.cocos2d.types.CGAffineTransform parentToNodeTransform()
+    1020:1027:private org.cocos2d.types.CGAffineTransform nodeToWorldTransform()
+    1031:1036:private void nodeToWorldTransform(org.cocos2d.types.CGAffineTransform)
+    1042:1042:public org.cocos2d.types.CGAffineTransform worldToNodeTransform()
+    1049:1051:private void worldToNodeTransform(org.cocos2d.types.CGAffineTransform)
+    1057:1066:public org.cocos2d.types.CGPoint convertToNodeSpace(float,float)
+    1073:1073:public org.cocos2d.types.CGPoint convertToNodeSpace(org.cocos2d.types.CGPoint)
+    1080:1081:public void convertToNodeSpace(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    1087:1095:public void convertToNodeSpace(float,float,org.cocos2d.types.CGPoint)
+    1101:1102:public org.cocos2d.types.CGPoint convertToWorldSpace(float,float)
+    1109:1117:public void convertToWorldSpace(float,float,org.cocos2d.types.CGPoint)
+    1124:1125:public org.cocos2d.types.CGPoint convertToNodeSpaceAR(float,float)
+    1133:1135:public org.cocos2d.types.CGPoint convertToWorldSpaceAR(float,float)
+    1143:1157:public org.cocos2d.types.CGPoint convertTouchToNodeSpace(android.view.MotionEvent)
+    1164:1173:public void convertTouchToNodeSpace(android.view.MotionEvent,org.cocos2d.types.CGPoint)
+    1179:1193:public org.cocos2d.types.CGPoint convertTouchToNodeSpaceAR(android.view.MotionEvent)
+    1197:1198:public org.cocos2d.types.CGPoint convertToWindowSpace(org.cocos2d.types.CGPoint)
+org.cocos2d.nodes.CCNode$CocosNodeSize
+org.cocos2d.nodes.CCParallaxNode
+org.cocos2d.nodes.CCParallaxNode$CCPointObject
+org.cocos2d.nodes.CCRibbon
+org.cocos2d.nodes.CCRibbon$CCRibbonSegment
+org.cocos2d.nodes.CCSprite:
+    public static final int CCSpriteIndexNotInitialized
+    public static final int CC_HONOR_PARENT_TRANSFORM_TRANSLATE
+    public static final int CC_HONOR_PARENT_TRANSFORM_ROTATE
+    public static final int CC_HONOR_PARENT_TRANSFORM_SCALE
+    public static final int CC_HONOR_PARENT_TRANSFORM_ALL
+    101:101:public int getOpacity()
+    105:111:public void setOpacity(int)
+    127:130:public org.cocos2d.types.ccColor3B getColor()
+    195:197:public float[] getTexCoordsArray()
+    202:204:public float[] getVertexArray()
+    224:224:public org.cocos2d.types.CGRect getTextureRect()
+    229:229:public java.lang.Boolean getTextureRectRotated()
+    237:237:public static org.cocos2d.nodes.CCSprite sprite(org.cocos2d.opengl.CCTexture2D)
+    244:244:public static org.cocos2d.nodes.CCSprite sprite(org.cocos2d.opengl.CCTexture2D,org.cocos2d.types.CGRect)
+    250:250:public static org.cocos2d.nodes.CCSprite sprite(org.cocos2d.nodes.CCSpriteFrame)
+    259:259:public static org.cocos2d.nodes.CCSprite sprite(java.lang.String,boolean)
+    274:274:public static org.cocos2d.nodes.CCSprite sprite(java.lang.String,org.cocos2d.types.CGRect)
+    284:284:public static org.cocos2d.nodes.CCSprite sprite(android.graphics.Bitmap)
+    298:298:public static org.cocos2d.nodes.CCSprite sprite(android.graphics.Bitmap,java.lang.String)
+    304:304:public static org.cocos2d.nodes.CCSprite sprite(org.cocos2d.nodes.CCSpriteSheet,org.cocos2d.types.CGRect)
+    312:316:public CCSprite(org.cocos2d.opengl.CCTexture2D)
+    318:320:public CCSprite(org.cocos2d.opengl.CCTexture2D,org.cocos2d.types.CGRect)
+    335:337:public CCSprite(org.cocos2d.nodes.CCSpriteFrame)
+    340:345:protected void init(org.cocos2d.nodes.CCSpriteFrame)
+    352:357:public CCSprite(java.lang.String,boolean)
+    383:390:public CCSprite(java.lang.String,org.cocos2d.types.CGRect)
+    395:406:public CCSprite(android.graphics.Bitmap)
+    414:424:public CCSprite(android.graphics.Bitmap,java.lang.String)
+    428:431:public CCSprite(org.cocos2d.nodes.CCSpriteSheet,org.cocos2d.types.CGRect)
+    542:551:public void setDisplayFrame(org.cocos2d.nodes.CCSpriteFrame)
+    556:562:public void setDisplayFrame(java.lang.String,int)
+    566:576:public void setVisible(boolean)
+    582:586:public void addAnimation(org.cocos2d.nodes.CCAnimation)
+    590:591:public org.cocos2d.nodes.CCAnimation animationByName(java.lang.String)
+    625:629:public void setFlipX(boolean)
+    632:632:public boolean getFlipX()
+    636:640:public void setFlipY(boolean)
+    643:643:public boolean getFlipY()
+    657:657:public org.cocos2d.opengl.CCTexture2D getTexture()
+    662:664:public boolean isFrameDisplayed(org.cocos2d.nodes.CCSpriteFrame)
+    671:671:public org.cocos2d.nodes.CCSpriteFrame displayedFrame()
+    700:701:private void initAnimationDictionary()
+    757:763:protected org.cocos2d.nodes.CCSprite$TransformValues getTransformValues()
+    767:767:public boolean doesOpacityModifyRGB()
+    793:795:public void setRotation(float)
+    798:800:public void setScaleX(float)
+    803:805:public void setScaleY(float)
+    808:810:public void setScale(float)
+    813:815:public void setVertexZ(float)
+    831:841:public void reorderChild(org.cocos2d.nodes.CCNode,int)
+    859:867:public void removeChild(org.cocos2d.nodes.CCNode,boolean)
+    870:879:public void removeAllChildren(boolean)
+    1102:1102:public org.cocos2d.types.ccBlendFunc getBlendFunc()
+    1106:1107:public void setBlendFunc(org.cocos2d.types.ccBlendFunc)
+org.cocos2d.nodes.CCSprite$TransformValues
+org.cocos2d.nodes.CCSpriteFrame
+org.cocos2d.nodes.CCSpriteFrameCache:
+    31:34:public static org.cocos2d.nodes.CCSpriteFrameCache sharedSpriteFrameCache()
+    37:39:protected CCSpriteFrameCache()
+    42:42:public org.cocos2d.nodes.CCSpriteFrame spriteFrameByName(java.lang.String)
+    67:154:public java.util.Set addSpriteFrames(java.util.HashMap,org.cocos2d.opengl.CCTexture2D)
+    163:169:public java.util.Set addSpriteFrames(java.lang.String)
+    177:178:public java.util.Set addSpriteFrames(java.lang.String,org.cocos2d.opengl.CCTexture2D)
+    189:190:public void addSpriteFrame(org.cocos2d.nodes.CCSpriteFrame,java.lang.String)
+    199:200:public void removeSpriteFrames()
+    214:215:public void removeSpriteFrame(java.lang.String)
+    222:227:public org.cocos2d.nodes.CCSpriteFrame getSpriteFrame(java.lang.String)
+    236:237:public org.cocos2d.nodes.CCSprite createSprite(java.lang.String)
+org.cocos2d.nodes.CCSpriteSheet:
+    public static final int defaultCapacity
+    45:45:public org.cocos2d.types.ccBlendFunc getBlendFunc()
+    55:55:public static org.cocos2d.nodes.CCSpriteSheet spriteSheet(org.cocos2d.opengl.CCTexture2D)
+    62:62:public static org.cocos2d.nodes.CCSpriteSheet spriteSheet(org.cocos2d.opengl.CCTexture2D,int)
+    70:70:public static org.cocos2d.nodes.CCSpriteSheet spriteSheet(java.lang.String)
+    78:78:public static org.cocos2d.nodes.CCSpriteSheet spriteSheet(java.lang.String,int)
+    84:93:protected CCSpriteSheet(org.cocos2d.opengl.CCTexture2D,int)
+    100:101:protected CCSpriteSheet(java.lang.String,int)
+    111:114:public org.cocos2d.nodes.CCSprite createSprite(org.cocos2d.types.CGRect)
+    159:161:public org.cocos2d.nodes.CCSprite initSprite(org.cocos2d.types.CGRect)
+    188:194:public void reorderChild(org.cocos2d.nodes.CCNode,int)
+    200:210:public void removeChild(org.cocos2d.nodes.CCNode,boolean)
+    216:218:public void removeChildAtIndex(int,boolean)
+    222:231:public void removeAllChildren(boolean)
+    291:310:public int rebuildIndexInOrder(org.cocos2d.nodes.CCSprite,int)
+    326:331:public int lowestAtlasIndexInChild(org.cocos2d.nodes.CCSprite)
+    408:432:public void removeSpriteFromAtlas(org.cocos2d.nodes.CCSprite)
+    435:439:public void updateBlendFunc()
+    442:444:public void setTexture(org.cocos2d.opengl.CCTexture2D)
+    447:447:public org.cocos2d.opengl.CCTexture2D getTexture()
+    452:453:public void setBlendFunc(org.cocos2d.types.ccBlendFunc)
+    465:485:protected void addQuadFromSprite(org.cocos2d.nodes.CCSprite,int)
+    491:508:protected org.cocos2d.nodes.CCSpriteSheet addSpriteWithoutQuad(org.cocos2d.nodes.CCSprite,int,int)
+org.cocos2d.nodes.CCTextureCache:
+    77:88:public org.cocos2d.opengl.CCTexture2D addImageExternal(java.lang.String)
+    102:131:public org.cocos2d.opengl.CCTexture2D addImage(android.graphics.Bitmap,java.lang.String)
+    168:168:public void removeUnusedTextures()
+    174:178:public void removeTexture(org.cocos2d.opengl.CCTexture2D)
+    184:187:public void addTexture(org.cocos2d.opengl.CCTexture2D)
+    193:196:public void removeTexture(java.lang.String)
+    227:248:private static org.cocos2d.opengl.CCTexture2D createTextureFromFilePathExternal(java.lang.String)
+org.cocos2d.nodes.CCTextureCache$1
+org.cocos2d.nodes.CCTextureCache$3
+org.cocos2d.nodes.CCTextureNode
+org.cocos2d.nodes.CCTileMapAtlas
+org.cocos2d.opengl.CCBitmapFontAtlas
+org.cocos2d.opengl.CCBitmapFontAtlas$CCBitmapFontConfiguration
+org.cocos2d.opengl.CCBitmapFontAtlas$ccBitmapFontDef
+org.cocos2d.opengl.CCBitmapFontAtlas$ccBitmapFontPadding
+org.cocos2d.opengl.CCBitmapFontAtlas$tKerningHashElement
+org.cocos2d.opengl.CCCamera:
+    48:49:public void setDirty(boolean)
+    95:99:public void setEye(float,float,float)
+    103:107:public void setCenter(float,float,float)
+    111:115:public void setUp(float,float,float)
+    119:122:public void getEye(float[],float[],float[])
+    126:129:public void getCenter(float[],float[],float[])
+    133:136:public void getUp(float[],float[],float[])
+org.cocos2d.opengl.CCDrawingPrimitives
+org.cocos2d.opengl.CCGLSurfaceView:
+    private static final int VIEWID
+org.cocos2d.opengl.CCPVRTexture
+org.cocos2d.opengl.CCPVRTexture$PVRTexHeader
+org.cocos2d.opengl.CCRenderTexture
+org.cocos2d.opengl.CCRenderTexture$1
+org.cocos2d.opengl.CCTexture2D:
+    public static final int kMaxTextureSize
+    private static synthetic int[] $SWITCH_TABLE$org$cocos2d$nodes$CCLabel$TextAlignment
+    79:79:public float getWidth()
+    86:86:public float getHeight()
+    102:102:public float maxS()
+    107:107:public float maxT()
+    253:261:public void initWithImage(android.graphics.Bitmap,org.cocos2d.types.CGSize)
+    264:272:public void initWithImage(android.graphics.Bitmap,org.cocos2d.types.CGSize,org.cocos2d.types.CGSize)
+    321:323:public void initWithText(java.lang.String,java.lang.String,float)
+    328:357:private static org.cocos2d.types.CGSize calculateTextSize(java.lang.String,java.lang.String,float)
+    377:438:public void initWithText(java.lang.String,org.cocos2d.types.CGSize,org.cocos2d.nodes.CCLabel$TextAlignment,java.lang.String,float)
+    442:480:protected java.util.ArrayList WrapText(android.graphics.Paint,java.lang.String,float)
+    504:504:public boolean isLoaded()
+    516:556:public void drawAtPoint(javax.microedition.khronos.opengles.GL10,org.cocos2d.types.CGPoint)
+    560:602:public void drawInRect(javax.microedition.khronos.opengles.GL10,org.cocos2d.types.CGRect)
+    617:618:public void setTexParameters(org.cocos2d.types.CCTexParams)
+    621:631:public void setTexParameters(int,int,int,int)
+    661:662:public void setAliasTexParameters()
+    672:673:public void setAntiAliasTexParameters()
+    680:693:public void generateMipmap()
+    714:715:public static void setDefaultAlphaPixelFormat(android.graphics.Bitmap$Config)
+    721:721:public static android.graphics.Bitmap$Config defaultAlphaPixelFormat()
+    51:51:static synthetic int[] $SWITCH_TABLE$org$cocos2d$nodes$CCLabel$TextAlignment()
+    637:637:static synthetic void access$2(org.cocos2d.opengl.CCTexture2D,javax.microedition.khronos.opengles.GL10)
+org.cocos2d.opengl.CCTexture2D$3
+org.cocos2d.opengl.CCTexture2D$4
+org.cocos2d.opengl.CCTextureAtlas:
+    45:45:public org.cocos2d.utils.FastFloatBuffer getTexCoordsBuffer()
+    71:72:public void setTexture(org.cocos2d.opengl.CCTexture2D)
+    75:75:public boolean withColorArray()
+    81:81:public static org.cocos2d.opengl.CCTextureAtlas textureAtlas(java.lang.String,int)
+    98:98:public static org.cocos2d.opengl.CCTextureAtlas textureAtlas(org.cocos2d.opengl.CCTexture2D,int)
+    177:183:public void updateQuad(org.cocos2d.utils.FastFloatBuffer,org.cocos2d.utils.FastFloatBuffer,int)
+    186:192:public void updateQuad(org.cocos2d.utils.FastFloatBuffer,float[],int)
+    249:280:public void insertQuad(int,int)
+    288:307:public void removeQuad(int)
+    316:317:public void removeAllQuads()
+    401:406:private float[] getTexCoords(org.cocos2d.utils.FastFloatBuffer,int)
+    426:430:protected void putTexCoords(org.cocos2d.utils.FastFloatBuffer,float[],int)
+    456:461:private float[] getVertex(org.cocos2d.utils.FastFloatBuffer,int)
+    494:503:private org.cocos2d.types.ccColor4B[] getColor(org.cocos2d.utils.FastFloatBuffer,int)
+    557:564:public static void memmoveByte(java.nio.ByteBuffer,int,java.nio.ByteBuffer,int,int)
+    567:570:public static void memcopyByte(java.nio.ByteBuffer,int,java.nio.ByteBuffer,int,int)
+org.cocos2d.opengl.GLDebugWrapper
+org.cocos2d.opengl.GLDebugWrapper$MyGLImplementation
+org.cocos2d.opengl.OpenGLViewAlreadyAttachedException
+org.cocos2d.opengl.OpenGLViewCantAttachException
+org.cocos2d.opengl.OpenGLViewCantDetachException
+org.cocos2d.opengl.OpenGLViewCantInitException
+org.cocos2d.opengl.OpenGLViewNotAttachedException
+org.cocos2d.opengl.TGA
+org.cocos2d.opengl.TGA$ImageTGA
+org.cocos2d.opengl.TGA$TGAError
+org.cocos2d.particlesystem.CCParticleExplosion
+org.cocos2d.particlesystem.CCParticleFire
+org.cocos2d.particlesystem.CCParticleFireworks
+org.cocos2d.particlesystem.CCParticleFlower
+org.cocos2d.particlesystem.CCParticleGalaxy
+org.cocos2d.particlesystem.CCParticleMeteor
+org.cocos2d.particlesystem.CCParticleRain
+org.cocos2d.particlesystem.CCParticleSmoke
+org.cocos2d.particlesystem.CCParticleSnow
+org.cocos2d.particlesystem.CCParticleSpiral
+org.cocos2d.particlesystem.CCParticleSun
+org.cocos2d.particlesystem.CCParticleSystem
+org.cocos2d.particlesystem.CCParticleSystem$CCParticle
+org.cocos2d.particlesystem.CCParticleSystem$CCParticle$ParticleModeA
+org.cocos2d.particlesystem.CCParticleSystem$CCParticle$ParticleModeB
+org.cocos2d.particlesystem.CCParticleSystem$ModeA
+org.cocos2d.particlesystem.CCParticleSystem$ModeB
+org.cocos2d.particlesystem.CCPointParticleSystem
+org.cocos2d.particlesystem.CCQuadParticleSystem
+org.cocos2d.particlesystem.CCQuadParticleSystem$1
+org.cocos2d.particlesystem.CCQuadParticleSystem$2
+org.cocos2d.protocols.CCBlendProtocol
+org.cocos2d.protocols.CCLabelProtocol
+org.cocos2d.protocols.CCRGBAProtocol
+org.cocos2d.protocols.CCTextureProtocol
+org.cocos2d.sound.SoundEngine:
+    41:44:public static void purgeSharedEngine()
+    47:51:public void setEffectsVolume(java.lang.Float)
+    54:54:public java.lang.Float getEffectsVolume()
+    58:66:public void setSoundVolume(java.lang.Float)
+    69:69:public java.lang.Float getSoundsVolume()
+    73:81:public void mute()
+    84:90:public void unmute()
+    93:93:public boolean isMute()
+    125:129:public void stopEffect(android.content.Context,int)
+    132:141:public void preloadSound(android.content.Context,int)
+    144:172:public void playSound(android.content.Context,int,boolean)
+    175:185:public void pauseSound()
+    188:198:public void resumeSound()
+    202:210:public void realesSound(int)
+    214:219:public void realesAllSounds()
+    222:223:public void realesAllEffects()
+org.cocos2d.transitions.CCCrossFadeTransition
+org.cocos2d.transitions.CCFadeBLTransition
+org.cocos2d.transitions.CCFadeDownTransition
+org.cocos2d.transitions.CCFadeTRTransition
+org.cocos2d.transitions.CCFadeTransition
+org.cocos2d.transitions.CCFadeUpTransition
+org.cocos2d.transitions.CCFlipAngularTransition
+org.cocos2d.transitions.CCFlipXTransition
+org.cocos2d.transitions.CCFlipYTransition
+org.cocos2d.transitions.CCJumpZoomTransition
+org.cocos2d.transitions.CCMoveInBTransition
+org.cocos2d.transitions.CCMoveInLTransition
+org.cocos2d.transitions.CCMoveInRTransition
+org.cocos2d.transitions.CCMoveInTTransition
+org.cocos2d.transitions.CCOrientedTransitionScene
+org.cocos2d.transitions.CCPageTurnTransition
+org.cocos2d.transitions.CCRadialCCWTransition
+org.cocos2d.transitions.CCRadialCWTransition
+org.cocos2d.transitions.CCRotoZoomTransition
+org.cocos2d.transitions.CCShrinkGrowTransition
+org.cocos2d.transitions.CCSlideInBTransition
+org.cocos2d.transitions.CCSlideInLTransition
+org.cocos2d.transitions.CCSlideInRTransition
+org.cocos2d.transitions.CCSlideInTTransition
+org.cocos2d.transitions.CCSplitColsTransition
+org.cocos2d.transitions.CCSplitRowsTransition
+org.cocos2d.transitions.CCTransitionEaseScene
+org.cocos2d.transitions.CCTransitionScene:
+    protected static final int kSceneFade
+    protected float duration
+    private org.cocos2d.actions.UpdateCallback setNewSceneCallback
+    43:43:public static org.cocos2d.transitions.CCTransitionScene transition(float,org.cocos2d.layers.CCScene)
+    49:65:protected CCTransitionScene(float,org.cocos2d.layers.CCScene)
+    69:70:protected void sceneOrder()
+    93:106:public void finish()
+    109:119:public void setNewScene(float)
+    125:127:public void hideOutShowIn()
+org.cocos2d.transitions.CCTransitionScene$1
+org.cocos2d.transitions.CCTransitionScene$TransitionWithInvalidSceneException
+org.cocos2d.transitions.CCTransitionScene$tOrientation
+org.cocos2d.transitions.CCTurnOffTilesTransition
+org.cocos2d.transitions.CCZoomFlipAngularTransition
+org.cocos2d.transitions.CCZoomFlipXTransition
+org.cocos2d.transitions.CCZoomFlipYTransition
+org.cocos2d.types.CCBezierConfig
+org.cocos2d.types.CCPointSize
+org.cocos2d.types.CCTexParams:
+    17:17:public org.cocos2d.types.CCTexParams copy()
+    21:25:public void set(int,int,int,int)
+    28:29:public void set(org.cocos2d.types.CCTexParams)
+org.cocos2d.types.CCVertex3D
+org.cocos2d.types.CGAffineTransform:
+    private static final long serialVersionUID
+    public static final int TYPE_IDENTITY
+    public static final int TYPE_TRANSLATION
+    public static final int TYPE_UNIFORM_SCALE
+    public static final int TYPE_GENERAL_SCALE
+    public static final int TYPE_QUADRANT_ROTATION
+    public static final int TYPE_GENERAL_ROTATION
+    public static final int TYPE_GENERAL_TRANSFORM
+    public static final int TYPE_FLIP
+    public static final int TYPE_MASK_SCALE
+    public static final int TYPE_MASK_ROTATION
+    static final int TYPE_UNKNOWN
+    public static final double ZERO
+    165:173:public CGAffineTransform(org.cocos2d.types.CGAffineTransform)
+    187:195:public CGAffineTransform(float,float,float,float,float,float)
+    209:217:public CGAffineTransform(double,double,double,double,double,double)
+    220:220:public static org.cocos2d.types.CGAffineTransform make(double,double,double,double,double,double)
+    237:247:public CGAffineTransform(float[])
+    263:273:public CGAffineTransform(double[])
+    300:336:public int getType()
+    346:346:public double getScaleX()
+    356:356:public double getScaleY()
+    366:366:public double getShearX()
+    376:376:public double getShearY()
+    385:385:public double getTranslateX()
+    394:394:public double getTranslateY()
+    403:403:public boolean isIdentity()
+    416:424:public void getMatrix(double[])
+    432:432:public double getDeterminant()
+    446:453:public void setTransform(double,double,double,double,double,double)
+    462:464:public void setTransform(org.cocos2d.types.CGAffineTransform)
+    486:495:public void setToTranslation(double,double)
+    507:515:public void setToScale(double,double)
+    527:536:public void setToShear(double,double)
+    547:561:public void setToRotation(double)
+    572:576:public void setToRotation(double,double,double)
+    590:592:public static org.cocos2d.types.CGAffineTransform makeTranslation(double,double)
+    606:608:public static org.cocos2d.types.CGAffineTransform makeScale(double,double)
+    622:624:public static org.cocos2d.types.CGAffineTransform makeShear(double,double)
+    637:639:public static org.cocos2d.types.CGAffineTransform makeRotation(double)
+    652:654:public static org.cocos2d.types.CGAffineTransform makeRotation(double,double,double)
+    664:664:public org.cocos2d.types.CGAffineTransform getTransformTranslate(double,double)
+    674:674:public org.cocos2d.types.CGAffineTransform getTransformScale(double,double)
+    684:685:public void shear(double,double)
+    693:693:public org.cocos2d.types.CGAffineTransform getTransformRotate(double)
+    705:706:public void rotate(double,double,double)
+    717:717:public static org.cocos2d.types.CGAffineTransform multiply(org.cocos2d.types.CGAffineTransform,org.cocos2d.types.CGAffineTransform)
+    732:732:public org.cocos2d.types.CGAffineTransform getTransformConcat(org.cocos2d.types.CGAffineTransform)
+    744:744:public org.cocos2d.types.CGAffineTransform preConcatenate(org.cocos2d.types.CGAffineTransform)
+    756:761:public org.cocos2d.types.CGAffineTransform getTransformInvert()
+    781:788:public org.cocos2d.types.CGPoint applyTransform(org.cocos2d.types.CGPoint)
+    806:818:public void transform(org.cocos2d.types.CGPoint[],int,org.cocos2d.types.CGPoint[],int,int)
+    838:852:public void transform(double[],int,double[],int,int)
+    872:886:public void transform(float[],int,float[],int,int)
+    907:913:public void transform(float[],int,double[],int,int)
+    934:940:public void transform(double[],int,float[],int,int)
+    955:964:public org.cocos2d.types.CGPoint deltaTransform(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    986:992:public void deltaTransform(double[],int,double[],int,int)
+    1008:1022:public org.cocos2d.types.CGPoint inverseTransform(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    1047:1058:public void inverseTransform(double[],int,double[],int,int)
+    1198:1199:private void writeObject(java.io.ObjectOutputStream)
+    1211:1213:private void readObject(java.io.ObjectInputStream)
+    1228:1230:public static void GLToCGAffine(float[],org.cocos2d.types.CGAffineTransform)
+org.cocos2d.types.CGPoint:
+    private static final float kCGPointEpsilon
+    54:54:public static org.cocos2d.types.CGPoint applyAffineTransform(org.cocos2d.types.CGPoint,org.cocos2d.types.CGAffineTransform)
+    73:73:public static org.cocos2d.types.CGPoint ccpNeg(org.cocos2d.types.CGPoint)
+    82:82:public static org.cocos2d.types.CGPoint ccpAdd(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    91:91:public static org.cocos2d.types.CGPoint ccpSub(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    109:109:public static org.cocos2d.types.CGPoint ccpMidpoint(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    118:118:public static float ccpDot(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    127:127:public static float ccpCross(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    136:136:public static org.cocos2d.types.CGPoint ccpPerp(org.cocos2d.types.CGPoint)
+    145:145:public static org.cocos2d.types.CGPoint ccpRPerp(org.cocos2d.types.CGPoint)
+    154:154:public static org.cocos2d.types.CGPoint ccpProject(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    163:163:public static org.cocos2d.types.CGPoint ccpRotate(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    172:172:public static org.cocos2d.types.CGPoint ccpUnrotate(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    181:181:public static float ccpLengthSQ(org.cocos2d.types.CGPoint)
+    189:189:public static float ccpLength(org.cocos2d.types.CGPoint)
+    198:198:public static float ccpDistance(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    207:207:public static org.cocos2d.types.CGPoint ccpNormalize(org.cocos2d.types.CGPoint)
+    216:216:public static org.cocos2d.types.CGPoint ccpForAngle(float)
+    225:225:public static float ccpToAngle(org.cocos2d.types.CGPoint)
+    238:249:public static float ccpCalcRotate(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    257:259:public static float ccpAngle(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    270:270:public static org.cocos2d.types.CGPoint ccpLerp(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint,float)
+    277:283:public static float clampf(float,float,float)
+    290:290:public static org.cocos2d.types.CGPoint ccpClamp(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    298:298:public static org.cocos2d.types.CGPoint ccpFromSize(org.cocos2d.types.CGSize)
+    305:308:public static boolean ccpFuzzyEqual(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint,float)
+    316:316:public static org.cocos2d.types.CGPoint ccpCompMult(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    323:327:public static float ccpAngleSigned(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+    338:345:public static org.cocos2d.types.CGPoint ccpRotateByAngle(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint,float)
+    375:404:public static boolean ccpLineIntersect(org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint,org.cocos2d.types.CGPoint)
+org.cocos2d.types.CGRect:
+    private static synthetic int[] $SWITCH_TABLE$org$cocos2d$types$CGRect$Edge
+    12:13:public CGRect(org.cocos2d.types.CGPoint,org.cocos2d.types.CGSize)
+    17:17:public static org.cocos2d.types.CGRect getZero()
+    21:21:public static org.cocos2d.types.CGRect zero()
+    25:25:public static org.cocos2d.types.CGRect make(org.cocos2d.types.CGPoint,org.cocos2d.types.CGSize)
+    33:33:public static org.cocos2d.types.CGRect make(org.cocos2d.types.CGRect)
+    42:44:public void set(org.cocos2d.types.CGRect)
+    52:52:public boolean contains(float,float)
+    63:63:public static boolean equalToRect(org.cocos2d.types.CGRect,org.cocos2d.types.CGRect)
+    70:70:public static boolean containsPoint(org.cocos2d.types.CGRect,org.cocos2d.types.CGPoint)
+    77:77:public static boolean containsRect(org.cocos2d.types.CGRect,org.cocos2d.types.CGRect)
+    86:86:public static boolean intersects(org.cocos2d.types.CGRect,org.cocos2d.types.CGRect)
+    91:119:public static org.cocos2d.types.CGRect applyAffineTransform(org.cocos2d.types.CGRect,org.cocos2d.types.CGAffineTransform)
+    126:126:public static float maxX(org.cocos2d.types.CGRect)
+    133:133:public static float maxY(org.cocos2d.types.CGRect)
+    140:140:public static float midX(org.cocos2d.types.CGRect)
+    147:147:public static float midY(org.cocos2d.types.CGRect)
+    154:154:public static float minX(org.cocos2d.types.CGRect)
+    161:161:public static float minY(org.cocos2d.types.CGRect)
+    168:168:public static float width(org.cocos2d.types.CGRect)
+    175:175:public static float height(org.cocos2d.types.CGRect)
+    179:179:public static boolean isEmptyRect(org.cocos2d.types.CGRect)
+    194:285:public static void divideRect(org.cocos2d.types.CGRect,org.cocos2d.types.CGRect[],org.cocos2d.types.CGRect[],float,org.cocos2d.types.CGRect$Edge)
+    3:3:static synthetic int[] $SWITCH_TABLE$org$cocos2d$types$CGRect$Edge()
+org.cocos2d.types.CGRect$Edge
+org.cocos2d.types.CGSize:
+    25:27:public void set(org.cocos2d.types.CGSize)
+    36:36:public static org.cocos2d.types.CGSize getZero()
+    48:48:public static boolean equalToSize(org.cocos2d.types.CGSize,org.cocos2d.types.CGSize)
+org.cocos2d.types.Copyable
+org.cocos2d.types.HashCode:
+    1251:1251:public final org.cocos2d.types.HashCode append(int)
+    1261:1261:public final org.cocos2d.types.HashCode append(long)
+    1271:1271:public final org.cocos2d.types.HashCode append(float)
+    1291:1291:public final org.cocos2d.types.HashCode append(boolean)
+    1301:1301:public final org.cocos2d.types.HashCode append(java.lang.Object)
+org.cocos2d.types.NoninvertibleTransformException
+org.cocos2d.types.ccBlendFunc:
+    20:21:public void setSrc(int)
+    24:24:public int getSrc()
+    28:29:public void setDst(int)
+    32:32:public int getDst()
+org.cocos2d.types.ccColor3B:
+    public static final int size
+    53:53:public byte[] toByteArray()
+org.cocos2d.types.ccColor4B:
+    public static final int size
+    22:22:public byte[] toByteArray()
+    26:26:public float[] toFloatArray()
+org.cocos2d.types.ccColor4F
+org.cocos2d.types.ccGridSize:
+    10:10:public static org.cocos2d.types.ccGridSize ccg(int,int)
+    13:16:public ccGridSize(int,int)
+    18:21:public ccGridSize(org.cocos2d.types.ccGridSize)
+org.cocos2d.types.ccPointSprite
+org.cocos2d.types.ccQuad2:
+    public static final int size
+    29:34:public ccQuad2(float[])
+    37:37:public float[] toFloatArray()
+org.cocos2d.types.ccQuad3:
+    public static final int size
+    18:23:public ccQuad3(float[])
+    41:41:public float[] toFloatArray()
+org.cocos2d.types.ccTex2F
+org.cocos2d.types.ccV2F_C4F_T2F
+org.cocos2d.types.ccV2F_C4F_T2F_Quad
+org.cocos2d.types.ccV3F_C4B_T2F
+org.cocos2d.types.ccV3F_C4B_T2F_Quad
+org.cocos2d.types.ccVertex2F
+org.cocos2d.types.ccVertex3F
+org.cocos2d.types.util.CGAffineTransformUtil
+org.cocos2d.types.util.CGPointUtil
+org.cocos2d.types.util.PoolHolder:
+    86:86:public org.cocos2d.utils.pool.ObjectPool getObjectPool()
+    90:90:public org.cocos2d.utils.pool.OneClassPool getCGPointPool()
+    102:102:public org.cocos2d.utils.pool.OneClassPool getCGRectPool()
+    106:106:public org.cocos2d.utils.pool.OneClassPool getCGAffineTransformPool()
+org.cocos2d.types.util.ccColor4FUtil
+org.cocos2d.types.util.ccQuad2Util
+org.cocos2d.utils.Base64
+org.cocos2d.utils.Base64$1
+org.cocos2d.utils.Base64$InputStream
+org.cocos2d.utils.Base64$OutputStream
+org.cocos2d.utils.BufferProvider
+org.cocos2d.utils.CCFormatter:
+    16:16:public static final int swapIntToLittleEndian(int)
+org.cocos2d.utils.FastFloatBuffer:
+    37:40:public static org.cocos2d.utils.FastFloatBuffer createBuffer(float[])
+    79:82:public void flip()
+    133:137:public org.cocos2d.utils.FastFloatBuffer put(int[])
+    148:153:public static varargs int[] convert(float[])
+    198:198:public java.nio.FloatBuffer slice()
+    205:205:public int remaining()
+    219:222:public void limit(int)
+    228:231:public void clear()
+    234:235:public void setBufferID(int)
+    238:238:public int getBufferID()
+    242:242:public boolean isLoaded()
+    246:247:public void setLoaded(boolean)
+    265:266:public void get(float[],int,int)
+    269:271:public void put(float[],int,int)
+    274:275:public void rewind()
+org.cocos2d.utils.GeometryUtil
+org.cocos2d.utils.PlistParser
+org.cocos2d.utils.TransformUtils
+org.cocos2d.utils.Util5:
+    5:5:public Util5()
+    11:11:public static float getX(android.view.MotionEvent,int)
+    15:15:public static float getY(android.view.MotionEvent,int)
+org.cocos2d.utils.Util7
+org.cocos2d.utils.ZwoptexParser
+org.cocos2d.utils.collections.ConcArrayStack
+org.cocos2d.utils.collections.IntMap:
+    23:24:public IntMap(int)
+    64:72:public boolean containsValue(java.lang.Object)
+    76:82:public boolean containsKey(int)
+    136:153:public java.lang.Object remove(int)
+    157:157:public int size()
+    161:166:public void clear()
+org.cocos2d.utils.collections.IntMap$Entry:
+    243:243:public int getKey()
+    247:247:public java.lang.Object getValue()
+org.cocos2d.utils.javolution.MathLib:
+    private static final long MASK_63
+    private static final long MASK_32
+    private static final double LOG2_DIV_LOG10
+    public static final double E
+    public static final double PI
+    public static final double HALF_PI
+    public static final double TWO_PI
+    public static final double FOUR_PI
+    public static final double PI_SQUARE
+    public static final double LOG2
+    public static final double LOG10
+    public static final double SQRT2
+    public static final double NaN
+    public static final double Infinity
+    private static final double NORMALIZATION_FACTOR
+    static final double one
+    static final double huge
+    static final double ln2_hi
+    static final double ln2_lo
+    static final double two54
+    static final double Lg1
+    static final double Lg2
+    static final double Lg3
+    static final double Lg4
+    static final double Lg5
+    static final double Lg6
+    static final double Lg7
+    static final double zero
+    static final double twom1000
+    static final double o_threshold
+    static final double u_threshold
+    static final double invln2
+    static final double P1
+    static final double P2
+    static final double P3
+    static final double P4
+    static final double P5
+    28:29:private MathLib()
+    40:51:public static int random(int,int)
+    64:75:public static long random(long,long)
+    87:87:public static float random(float,float)
+    99:100:public static double random(double,double)
+    116:118:public static int bitLength(int)
+    150:159:public static int bitLength(long)
+    175:181:public static int bitCount(long)
+    195:220:public static int numberOfLeadingZeros(long)
+    233:263:public static int numberOfTrailingZeros(long)
+    294:306:public static int digitLength(long)
+    318:341:public static double toDoublePow2(long,int)
+    354:456:public static double toDoublePow10(long,int)
+    479:499:public static long toLongPow2(double,int)
+    512:623:public static long toLongPow10(double,int)
+    637:645:public static int floorLog2(double)
+    659:665:public static int floorLog10(double)
+    733:733:public static double toRadians(double)
+    744:744:public static double toDegrees(double)
+    755:755:public static double sqrt(double)
+    767:771:public static double rem(double,double)
+    784:784:public static double ceil(double)
+    797:797:public static double floor(double)
+    808:808:public static double sin(double)
+    819:819:public static double cos(double)
+    830:830:public static double tan(double)
+    842:848:public static double asin(double)
+    860:860:public static double acos(double)
+    874:874:public static double atan(double)
+    887:900:public static double atan2(double,double)
+    911:911:public static double sinh(double)
+    922:922:public static double cosh(double)
+    933:933:public static double tanh(double)
+    946:946:public static double exp(double)
+    958:958:public static double log(double)
+    969:969:public static double log10(double)
+    983:983:public static double pow(double,double)
+    994:994:public static int round(float)
+    1006:1006:public static long round(double)
+    1017:1017:public static double random()
+    1029:1029:public static int abs(int)
+    1039:1039:public static long abs(long)
+    1049:1049:public static float abs(float)
+    1060:1060:public static double abs(double)
+    1072:1072:public static int max(int,int)
+    1083:1083:public static long max(long,long)
+    1094:1094:public static float max(float,float)
+    1106:1106:public static double max(double,double)
+    1118:1118:public static int min(int,int)
+    1129:1129:public static long min(long,long)
+    1140:1140:public static float min(float,float)
+    1152:1152:public static double min(double,double)
+    1221:1269:static double _atan(double)
+    1354:1415:static double _ieee754_log(double)
+    1509:1570:static double _ieee754_exp(double)
+org.cocos2d.utils.javolution.TextBuilder:
+    private static final int B0
+    private static final int C0
+    private static final int B1
+    private static final int C1
+    private static final int M1
+    68:70:public TextBuilder(java.lang.String)
+    144:147:public final void setCharAt(int,char)
+    157:158:public final void setLength(int)
+    170:178:public final void setLength(int,char)
+    222:226:public final org.cocos2d.utils.javolution.TextBuilder append(java.lang.Object)
+    231:239:private org.cocos2d.utils.javolution.TextBuilder appendNumber(java.lang.Object)
+    328:329:public final org.cocos2d.utils.javolution.TextBuilder append(char[])
+    343:359:public final org.cocos2d.utils.javolution.TextBuilder append(char[],int,int)
+    371:371:public final org.cocos2d.utils.javolution.TextBuilder append(boolean)
+    412:425:public final org.cocos2d.utils.javolution.TextBuilder append(int,int)
+    429:447:private void appendPositive(int,int)
+    462:476:public final org.cocos2d.utils.javolution.TextBuilder append(long)
+    488:501:public final org.cocos2d.utils.javolution.TextBuilder append(long,int)
+    505:523:private void appendPositive(long,int)
+    532:532:public final org.cocos2d.utils.javolution.TextBuilder append(float)
+    546:546:public final org.cocos2d.utils.javolution.TextBuilder append(double)
+    567:633:public final org.cocos2d.utils.javolution.TextBuilder append(double,int,boolean,boolean)
+    637:656:private final void appendFraction(long,int,boolean)
+    673:686:public final org.cocos2d.utils.javolution.TextBuilder insert(int,java.lang.CharSequence)
+    696:697:public final org.cocos2d.utils.javolution.TextBuilder clear()
+    710:716:public final org.cocos2d.utils.javolution.TextBuilder delete(int,int)
+    725:731:public final org.cocos2d.utils.javolution.TextBuilder reverse()
+    797:801:public void print(java.io.Writer)
+    810:812:public void println(java.io.Writer)
+    823:830:public final boolean contentEquals(java.lang.CharSequence)
+    842:849:public final boolean contentEquals(java.lang.String)
+org.cocos2d.utils.pool.ObjectPool:
+    25:25:public org.cocos2d.utils.pool.OneClassPool getPool(java.lang.Class)
+    29:32:public void clearAll()
+org.cocos2d.utils.pool.OneClassPool:
+    28:28:public int size()
+    32:33:public void clear()

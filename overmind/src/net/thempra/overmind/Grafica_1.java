@@ -8,9 +8,12 @@ import com.androidplot.xy.SimpleXYSeries;
 import com.androidplot.xy.XYPlot;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 public class Grafica_1 extends Activity {
 
@@ -19,16 +22,56 @@ public class Grafica_1 extends Activity {
 	
 	Number[] series1Numbers = { 100, 0, 0, 0, 0, 0 };
 	Number[] series2Numbers = { 100, 0, 0, 0, 0, 0 };
-	
-	
+	int itemsConnected=0;
+	private int selected=-1;
+	private CharSequence[] choiceList;
+	 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 
-		mHandler.removeCallbacks(mMuestraMensaje);
-	    mHandler.postDelayed(mMuestraMensaje, 1000);
+	   AlertDialog.Builder builder = 
+	            new AlertDialog.Builder(this);
+	        builder.setTitle("Select device to analize");        
+	       
+			for(int i=0;i<MainActivity.currentEeg.length;i++)
+	        	 if (MainActivity.currentEeg[i]!= null)
+	        		 itemsConnected++;
+			
+			int j=0;
+	         choiceList = new CharSequence[itemsConnected];
+	         for(int i=0;i<MainActivity.currentEeg.length;i++)
+	        	 if (MainActivity.currentEeg[i]!= null)
+	        	 {
+	        		 choiceList[j]= MainActivity.currentEeg[i].getName().replace("\n", "");	
+	        		 j++;
+	        	 }
+	         
+	        builder.setItems(choiceList, new DialogInterface.OnClickListener() {
+	             
+	            @Override
+	            public void onClick(
+	                    DialogInterface dialog, 
+	                    int which) {
+	            	
+	            	
+	            	for(int i=0;i<MainActivity.currentEeg.length;i++)
+	   	        	 	if ((MainActivity.currentEeg[i]!= null) && (choiceList[which].toString().contains((MainActivity.currentEeg[i].getName().replace("\n", "")))))
+	   	        	 		selected= i;	     
+	            	
+	                Toast.makeText(getBaseContext(), "Select "+MainActivity.currentEeg[selected].getName(), Toast.LENGTH_SHORT).show();
+	                
+	            }
+	        });
+	        AlertDialog alert = builder.create();   
+	        alert.show();
 
+	    	mHandler.removeCallbacks(mMuestraMensaje);
+		    mHandler.postDelayed(mMuestraMensaje, 1000);
+
+	        
+		    
 	  
 	}
 	
@@ -50,11 +93,15 @@ public class Grafica_1 extends Activity {
 			series2Numbers[i]=series2Numbers[i+1];
 			
 		}
+		
+
 		// Creamos dos arrays de prueba. En el caso real debemos reemplazar
 		// estos datos por los que realmente queremos mostrar
-		series1Numbers[series1Numbers.length-1] = MainActivity.currentEeg[0].attention;
-		series2Numbers[series2Numbers.length-1] = MainActivity.currentEeg[0].meditation;
-
+		if (selected >= 0)
+		{
+			series1Numbers[series1Numbers.length-1] = MainActivity.currentEeg[selected].attention;
+			series2Numbers[series2Numbers.length-1] = MainActivity.currentEeg[selected].meditation;
+		}
 		// Añadimos Línea Número UNO:
 		XYSeries series1 = new SimpleXYSeries(Arrays.asList(series1Numbers), // Array
 																				// de
