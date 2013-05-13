@@ -21,21 +21,32 @@ public class GameOverLayer extends CCColorLayer
 	
 	public static CCScene scene(String message)
 	{
+		CCSprite playerWin ;
 		CCScene scene = CCScene.node();
 		CGSize winSize = CCDirector.sharedDirector().displaySize();
-		GameOverLayer layer = new GameOverLayer(ccColor4B.ccc4(255, 255, 255, 255));
+		GameOverLayer txtLayer = new GameOverLayer(ccColor4B.ccc4(255, 255, 255, 255));
 		
-		layer.getLabel().setString(message);
+		txtLayer.getLabel().setString(message);
 		
 		CCSprite bckgImage = CCSprite .sprite("game_background.jpg");
+		
+		if (message.contains("Player1"))
+			playerWin= CCSprite.sprite("eva01.png");
+		else
+			playerWin= CCSprite.sprite("sachiel.png");
+		
 		bckgImage.setScaleX( winSize.width /  bckgImage.getContentSize().width);
 		bckgImage.setScaleY( winSize.height /  bckgImage.getContentSize().height);
 		bckgImage.setPosition(CGPoint.ccp(winSize.width / 2.0f, winSize.height / 2.0f));
+		playerWin.setPosition(CGPoint.ccp(winSize.width / 2.0f, winSize.height / 2.0f));
+		playerWin.setScale(2.0f);
 		
+		scene.addChild(txtLayer);
 		
-		
-		scene.addChild(layer);
 		scene.addChild(bckgImage);
+		scene.addChild(playerWin);
+		
+		
 		
 		return scene;
 	}
@@ -64,6 +75,7 @@ public class GameOverLayer extends CCColorLayer
 	public void gameOverDone()
 	{
 		CCDirector.sharedDirector().replaceScene(GameLayer.scene());
+		
 	}
 	
 	@Override

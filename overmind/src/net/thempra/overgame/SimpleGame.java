@@ -16,6 +16,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnMultiChoiceClickListener;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 
@@ -37,7 +38,10 @@ protected CCGLSurfaceView _glSurfaceView;
 		_glSurfaceView = new CCGLSurfaceView(this);
 		
 		setContentView(_glSurfaceView);
-		/*
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        
+		
 		AlertDialog.Builder builder = 
 	            new AlertDialog.Builder(this);
 		builder.setTitle("Select devices to play");        
@@ -75,18 +79,23 @@ protected CCGLSurfaceView _glSurfaceView;
 	        	      "Play",   
 	        	      new DialogInterface.OnClickListener() {  
 	        	        public void onClick(DialogInterface dialog, int which) {  
-
-	        	        	CCDirector.sharedDirector().resume();
+	        	        	if (selected.size()==1)
+	        	        	 GameLayer.setPlayers(selected.get(0),-1);
+	        	        	if (selected.size()>=2)
+		        	        	 GameLayer.setPlayers(selected.get(0),selected.get(1));
+	        	        	if (selected.size()==0)
+	        	        		GameLayer.setPlayers(-1,-1);
+	        	        	
+	        	        	GameLayer.pause(false);
 	        	        }  
 	        	      }  
 	        	    ); 
 	        
 	    AlertDialog alert = builder.create();   
 	    alert.show();
-	    */    
-		Toast.makeText(getBaseContext(), "Only touch, we are working to play with your mind", Toast.LENGTH_LONG).show();
         
-	    CCDirector.sharedDirector().pause();
+		//Toast.makeText(getBaseContext(), "Only touch, we are working to play with your mind", Toast.LENGTH_LONG).show();
+
 	}
 	
 	@Override
@@ -98,12 +107,16 @@ protected CCGLSurfaceView _glSurfaceView;
 		
 		CCDirector.sharedDirector().setDeviceOrientation(CCDirector.kCCDeviceOrientationLandscapeLeft);
 		
-		CCDirector.sharedDirector().setDisplayFPS(true);
+		//CCDirector.sharedDirector().setDisplayFPS(true);
 		
 		CCDirector.sharedDirector().setAnimationInterval(1.0f / 60.0f);
 		
-		CCScene scene = GameLayer.scene();
+		
+		//Run game
+    	CCScene scene = GameLayer.scene();
 		CCDirector.sharedDirector().runWithScene(scene);
+		
+		GameLayer.pause(true);
 	}
 	
 	@Override
