@@ -43,15 +43,12 @@ public class GameLayer extends CCColorLayer
 	private static int selectedP1=-1;
 	private static int selectedP2=-1;
 	
-	private int powerP1=0, powerP2=0, powerBar=0;
+	private int powerP1, powerP2, powerBar;
 	CCSprite player1, player2, powerBarSprite; 
-	private Handler mHandler = new Handler();
+	private Handler mHandler;
 	private static boolean pause=false;
 	
-	private Handler handlerp1 = new Handler();
-	private Handler handlerp2 = new Handler();
 	
-
 	Timer timer;
 	public static CCScene scene()
 	{
@@ -59,6 +56,7 @@ public class GameLayer extends CCColorLayer
 		CCColorLayer layer = new GameLayer(ccColor4B.ccc4(255, 255, 255, 255));
 		
 		scene.addChild(layer);
+		
 		
 		return scene;
 	}
@@ -91,12 +89,12 @@ public class GameLayer extends CCColorLayer
 		 
 		
 		
-		
+		powerP1=powerP2=0;
 		powerBar =(int) winSize.width/2;
 		
 		player1.setPosition(CGPoint.ccp(player1.getContentSize().width/2.0f, winSize.height / 2.0f));
 		player2.setPosition(CGPoint.ccp(winSize.width - player2.getContentSize().width/2.0f  , winSize.height / 2.0f));
-		powerBarSprite.setPosition(powerBar  ,powerBarSprite.getContentSize().height/2.0f);
+		powerBarSprite.setPosition(powerBar  ,CCDirector.sharedDirector().displaySize().height-powerBarSprite.getContentSize().height/2.0f);
 		
 		
 		addChild(player1);
@@ -115,10 +113,15 @@ public class GameLayer extends CCColorLayer
 		this.schedule("projectileLogic", 0.2f);
 		
 		
-		
-		mHandler.removeCallbacks(mGetMindValues);
-	    mHandler.postDelayed(mGetMindValues, 1000);
-	   
+		try
+		{
+			mHandler = new Handler();
+			mHandler.removeCallbacks(mGetMindValues);
+		    mHandler.postDelayed(mGetMindValues, 1000);
+		}catch (Exception e)
+		{
+			System.out.print(e.getMessage());
+		}
 	   
 	    
 	}
@@ -260,23 +263,22 @@ public class GameLayer extends CCColorLayer
 	{
 		//Only for DEMO PLAY
 		Random r = new Random();
-		if (selectedP1==-1)
+		
+		
+		if (selectedP1==-1 && !pause)
 			powerP1=r.nextInt(200-30)+30/MULTIPLIER_COUNTER;
-		if (selectedP2==-1)
+		if (selectedP2==-1 && !pause)
 			//powerP2=r.nextInt(200-30)+30/MULTIPLIER_COUNTER;
-			powerP2=r.nextInt(200-30)+30/MULTIPLIER_COUNTER;
-		
-		
-		
-	
+			powerP2=r.nextInt(100-30)+30/MULTIPLIER_COUNTER;
 		
 		powerBar=powerBar+ (powerP1-powerP2);
-		powerBarSprite.setPosition(powerBar  ,powerBarSprite.getContentSize().height/2.0f);
-	
+		powerBarSprite.setPosition(powerBar  ,CCDirector.sharedDirector().displaySize().height-powerBarSprite.getContentSize().height/2.0f);
+		
 	}
 	
 	public void projectileLogic(float dt)
 	{
+		
 		for(int i=0;i< powerP1/20;i++)
 			projectileP1();
 	
@@ -339,14 +341,10 @@ public class GameLayer extends CCColorLayer
 		
 		if (powerBar < 0)
 		{
-			mHandler.removeCallbacks(mGetMindValues);
-			mHandler = null;
 			CCDirector.sharedDirector().replaceScene(GameOverLayer.scene("Player2 wins"));
 		}
 		if (powerBar > (int) CCDirector.sharedDirector().displaySize().width)
 		{
-			mHandler.removeCallbacks(mGetMindValues);
-			mHandler = null;
 			CCDirector.sharedDirector().replaceScene(GameOverLayer.scene("Player1 wins"));
 		}
 	}
