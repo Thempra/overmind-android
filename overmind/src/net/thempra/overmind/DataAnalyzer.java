@@ -15,7 +15,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
 
-public class Grafica_1 extends Activity {
+public class DataAnalyzer extends Activity {
 
 	private XYPlot mySimpleXYPlot;
 	private Handler mHandler = new Handler();

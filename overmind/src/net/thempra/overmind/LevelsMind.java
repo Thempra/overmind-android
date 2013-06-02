@@ -24,7 +24,7 @@ import com.androidplot.xy.StepFormatter;
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYStepMode;
 
-public class Grafica_2 extends Activity  {
+public class LevelsMind extends Activity  {
 
 	private static final int N_VALUE = 11;
 	private XYPlot mySimpleXYPlot;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.thempra.overmind"
-    android:versionCode="6"
-    android:versionName="1.1.1" >
+    android:versionCode="7"
+    android:versionName="1.2" >
 
     <uses-sdk
        
@@ -25,11 +25,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Grafica_1"
+            android:name=".DataAnalyzer"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
-            android:name=".Grafica_2"
+            android:name=".LevelsMind"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         

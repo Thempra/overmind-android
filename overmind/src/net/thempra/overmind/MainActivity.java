@@ -78,7 +78,7 @@ public class MainActivity extends Activity implements android.content.DialogInte
 
 			@Override
 			public void onClick(View v) {
-				Intent grafica1 = new Intent(MainActivity.this, Grafica_1.class);
+				Intent grafica1 = new Intent(MainActivity.this, DataAnalyzer.class);
 				startActivity(grafica1);
 			}
 		});
@@ -88,7 +88,7 @@ public class MainActivity extends Activity implements android.content.DialogInte
 
 			@Override
 			public void onClick(View v) {
-				Intent grafica2 = new Intent(MainActivity.this, Grafica_2.class);
+				Intent grafica2 = new Intent(MainActivity.this, LevelsMind.class);
 				
 				startActivity(grafica2);
 			}
