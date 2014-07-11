@@ -273,6 +273,7 @@ public class GameLayer extends CCColorLayer
 		*/
 		
 		this.powerP1= (MainActivity.currentEeg[selectedP1].getAttention() + MainActivity.currentEeg[selectedP1].getMeditation())/MULTIPLIER_COUNTER;
+		this.powerP2= (MainActivity.currentEeg[selectedP2].getAttention() + MainActivity.currentEeg[selectedP2].getMeditation())/MULTIPLIER_COUNTER;
 		/*
 		try
 		{
