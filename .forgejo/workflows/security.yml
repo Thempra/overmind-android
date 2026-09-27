@@ -1,0 +1,64 @@
+name: security
+# Escáneres de seguridad → DefectDojo (engagement "CI", producto = PROJECT_KEY).
+# Job único: el runner es compartido y los binarios de escáner son estáticos.
+# Sin actions/checkout ni artifacts (necesitan Node) — checkout con git + FORGEJO_TOKEN.
+# Secrets de org requeridos: DOJO_URL, DOJO_API_TOKEN, FORGEJO_TOKEN (read-only).
+on:
+  push:
+    branches: [main, master, develop, dev]
+    paths-ignore: ["docs/**", "*.md"]
+  schedule:
+    - cron: "0 4 * * 1"  # lunes 04:00 re-escáner completo
+  workflow_dispatch: {}
+
+concurrency:
+  group: security-${{ github.repository }}
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: docker
+    container:
+      image: cimg/base:current
+    env:
+      PROJECT_KEY: ${{ vars.PRODUCT_NAME || github.repository }}
+      COMMIT_SHA: ${{ github.sha }}
+      GH_TOK: ${{ github.token }}
+    steps:
+      - name: Checkout
+        run: |
+          echo "192.168.50.5 code.thempra.net dojo.thempra.net sast.thempra.net" | sudo tee -a /etc/hosts >/dev/null
+          git clone --depth 5 -b "${{ github.ref_name }}" "https://x-access-token:${GH_TOK}@code.thempra.net/${PROJECT_KEY}.git" repo
+          ls repo | head -5
+      - name: Herramientas
+        run: |
+          set -e
+          sudo apt-get update -qq && sudo apt-get install -y -qq python3-pip git curl >/dev/null
+          curl -fsSL -o /tmp/gl.tgz https://github.com/gitleaks/gitleaks/releases/download/v8.18.4/gitleaks_8.18.4_linux_x64.tar.gz
+          sudo tar -xzf /tmp/gl.tgz -C /usr/local/bin gitleaks
+          curl -fsSL -o /tmp/tr.tgz https://github.com/aquasecurity/trivy/releases/download/v0.74.0/trivy_0.74.0_Linux-64bit.tar.gz
+          sudo tar -xzf /tmp/tr.tgz -C /usr/local/bin trivy
+          python3 -m pip install --no-cache-dir --quiet bandit semgrep checkov 2>/dev/null || \
+            python3 -m pip install --break-system-packages --no-cache-dir --quiet bandit semgrep checkov
+          gitleaks version; trivy --version | head -1; bandit --version 2>&1 | head -1; semgrep --version
+      - name: gitleaks (secretos)
+        run: mkdir -p scans && gitleaks detect --source repo --no-git -f json -r scans/gitleaks.json || true
+      - name: trivy (deps/vulns)
+        run: cd repo && trivy fs --scanners vuln,secret --format json --output ../scans/trivy.json . || true
+      - name: semgrep (SAST)
+        run: cd repo && semgrep scan --config auto --json --output ../scans/semgrep.json --metrics=off -q || true
+      - name: checkov (IaC)
+        run: cd repo && checkov -d . -o json --quiet --soft-fail > ../scans/checkov.json || true
+      - name: bandit (Python)
+        if: always()
+        run: |
+          if [ -f repo/requirements.txt ] || [ -f repo/pyproject.toml ]; then
+            cd repo && bandit -r . -f json -o ../scans/bandit.json -q || true
+          fi
+      - name: Subir a DefectDojo
+        if: always()
+        env:
+          DOJO_URL: ${{ secrets.DOJO_URL }}
+          DOJO_API_TOKEN: ${{ secrets.DOJO_API_TOKEN }}
+          CI_UPLOAD_DIR: scans
+        run: python3 repo/.security/dojo_upload.py
