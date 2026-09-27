@@ -14,7 +14,7 @@ import sys
 import time
 import uuid
 from pathlib import Path
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 DOJO = os.environ.get("DOJO_URL", "https://dojo.thempra.net").rstrip("/")

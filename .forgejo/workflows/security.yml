@@ -22,13 +22,14 @@ jobs:
       image: cimg/base:current
     env:
       PROJECT_KEY: ${{ vars.PRODUCT_NAME || github.repository }}
+      REPO_PATH: ${{ github.repository }}
       COMMIT_SHA: ${{ github.sha }}
       GH_TOK: ${{ github.token }}
     steps:
       - name: Checkout
         run: |
           echo "192.168.50.5 code.thempra.net dojo.thempra.net sast.thempra.net" | sudo tee -a /etc/hosts >/dev/null
-          git clone --depth 5 -b "${{ github.ref_name }}" "https://x-access-token:${GH_TOK}@code.thempra.net/${PROJECT_KEY}.git" repo
+          git clone --depth 5 -b "${{ github.ref_name }}" "https://x-access-token:${GH_TOK}@code.thempra.net/${REPO_PATH}.git" repo
           ls repo | head -5
       - name: Herramientas
         run: |
